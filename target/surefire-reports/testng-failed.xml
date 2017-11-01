@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.usgbc.dev.regression.UsgbcCoreTest">
+        <methods>
+          <include name="getDriver"/>
+          <include name="closeDriver"/>
+          <include name="testUsgbcCore"/>
+        </methods>
+      </class> <!-- com.usgbc.dev.regression.UsgbcCoreTest -->
+      <class name="com.usgbc.dev.regression.MembershipTest">
+        <methods>
+          <include name="getDriver"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- com.usgbc.dev.regression.MembershipTest -->
+      <class name="com.usgbc.dev.regression.UsgbcStoreTest">
+        <methods>
+          <include name="getDriver"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- com.usgbc.dev.regression.UsgbcStoreTest -->
+      <class name="com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest">
+        <methods>
+          <include name="getDriver"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest -->
+      <class name="com.usgbc.dev.regression.ErrorMessageCommRegTest">
+        <methods>
+          <include name="getDriver"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- com.usgbc.dev.regression.ErrorMessageCommRegTest -->
+      <class name="com.usgbc.dev.regression.LoggedUserTest">
+        <methods>
+          <include name="testLoggedUser2"/>
+          <include name="getDriver"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- com.usgbc.dev.regression.LoggedUserTest -->
+      <class name="com.usgbc.dev.regression.CommunityRegistrationTest">
+        <methods>
+          <include name="getDriver"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- com.usgbc.dev.regression.CommunityRegistrationTest -->
+      <class name="com.usgbc.dev.regression.StoreTest">
+        <methods>
+          <include name="getDriver"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- com.usgbc.dev.regression.StoreTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
