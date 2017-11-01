@@ -1,25 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="2" total="15" passed="13">
+<testng-results skipped="0" failed="3" total="19" passed="16">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="1102694" started-at="2017-10-31T04:46:05Z" finished-at="2017-10-31T05:04:28Z">
+  <suite name="Suite" duration-ms="1514101" started-at="2017-11-01T15:58:17Z" finished-at="2017-11-01T16:23:31Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="1102694" started-at="2017-10-31T04:46:05Z" finished-at="2017-10-31T05:04:28Z">
+    <test name="Test" duration-ms="1514101" started-at="2017-11-01T15:58:17Z" finished-at="2017-11-01T16:23:31Z">
       <class name="com.usgbc.dev.regression.StoreTest">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="getDriver" is-config="true" duration-ms="5351" started-at="2017-10-31T10:33:20Z" finished-at="2017-10-31T10:33:25Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="getDriver" is-config="true" duration-ms="4960" started-at="2017-11-01T21:47:09Z" finished-at="2017-11-01T21:47:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testStore()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="testStore" duration-ms="36842" started-at="2017-10-31T10:33:25Z" finished-at="2017-10-31T10:34:02Z">
+        <test-method status="PASS" signature="testShoppingCartLink()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="testShoppingCartLink" duration-ms="30994" started-at="2017-11-01T21:47:14Z" finished-at="2017-11-01T21:47:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testStore -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="closeDriver" is-config="true" duration-ms="617" started-at="2017-10-31T10:34:02Z" finished-at="2017-10-31T10:34:02Z">
+        </test-method> <!-- testShoppingCartLink -->
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="closeDriver" is-config="true" duration-ms="899" started-at="2017-11-01T21:47:45Z" finished-at="2017-11-01T21:47:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testStore status=SUCCESS method=StoreTest.testStore()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478] output={null}]]]>
+                <![CDATA[[TestResult name=testShoppingCartLink status=SUCCESS method=StoreTest.testShoppingCartLink()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="getDriver" is-config="true" duration-ms="4725" started-at="2017-11-01T21:47:46Z" finished-at="2017-11-01T21:47:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriver -->
+        <test-method status="PASS" signature="testShoppingCartLink2()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="testShoppingCartLink2" duration-ms="22820" started-at="2017-11-01T21:47:51Z" finished-at="2017-11-01T21:48:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShoppingCartLink2 -->
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="closeDriver" is-config="true" duration-ms="617" started-at="2017-11-01T21:48:14Z" finished-at="2017-11-01T21:48:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testShoppingCartLink2 status=SUCCESS method=StoreTest.testShoppingCartLink2()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="getDriver" is-config="true" duration-ms="4240" started-at="2017-11-01T21:48:14Z" finished-at="2017-11-01T21:48:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriver -->
+        <test-method status="PASS" signature="testShoppingCartLink3()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="testShoppingCartLink3" duration-ms="27588" started-at="2017-11-01T21:48:19Z" finished-at="2017-11-01T21:48:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testShoppingCartLink3 -->
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="closeDriver" is-config="true" duration-ms="697" started-at="2017-11-01T21:48:46Z" finished-at="2017-11-01T21:48:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testShoppingCartLink3 status=SUCCESS method=StoreTest.testShoppingCartLink3()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="getDriver" is-config="true" duration-ms="4635" started-at="2017-11-01T21:48:47Z" finished-at="2017-11-01T21:48:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriver -->
+        <test-method status="PASS" signature="testStoreGreen()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="testStoreGreen" duration-ms="132244" started-at="2017-11-01T21:48:52Z" finished-at="2017-11-01T21:51:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStoreGreen -->
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="closeDriver" is-config="true" duration-ms="943" started-at="2017-11-01T21:51:04Z" finished-at="2017-11-01T21:51:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testStoreGreen status=SUCCESS method=StoreTest.testStoreGreen()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="getDriver" is-config="true" duration-ms="4698" started-at="2017-11-01T21:51:05Z" finished-at="2017-11-01T21:51:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getDriver -->
+        <test-method status="FAIL" signature="testStoreLEED()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="testStoreLEED" duration-ms="47439" started-at="2017-11-01T21:51:10Z" finished-at="2017-11-01T21:51:57Z">
+          <exception class="java.lang.Error">
+            <message>
+              <![CDATA[Unable to locate element: {"method":"id","selector":"edit-attention-to"}
+Command duration or timeout: 18 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 547570ce-d677-4e3b-b0de-7b4419ff23b2
+*** Element info: {Using=id, value=edit-attention-to}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Error: Unable to locate element: {"method":"id","selector":"edit-attention-to"}
+Command duration or timeout: 18 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 547570ce-d677-4e3b-b0de-7b4419ff23b2
+*** Element info: {Using=id, value=edit-attention-to}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy5.sendKeys(Unknown Source)
+	at com.usgbc.dev.page.UsgbcWebLocators.contact_store(UsgbcWebLocators.java:393)
+	at com.usgbc.utility.ReusableMethods.Contact_Form(ReusableMethods.java:27)
+	at com.usgbc.dev.business.Store.StoreModuleLEED(Store.java:73)
+	at com.usgbc.dev.regression.StoreTest.testStoreLEED(StoreTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:178)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:92)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:96)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:113)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Error -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testStoreLEED -->
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478]" name="closeDriver" is-config="true" duration-ms="885" started-at="2017-11-01T21:51:57Z" finished-at="2017-11-01T21:51:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testStoreLEED status=FAILURE method=StoreTest.testStoreLEED()[pri:0, instance:com.usgbc.dev.regression.StoreTest@735b478] output={null}]]]>
               </value>
             </param>
           </params>
@@ -28,15 +180,15 @@
         </test-method> <!-- closeDriver -->
       </class> <!-- com.usgbc.dev.regression.StoreTest -->
       <class name="com.usgbc.dev.regression.LoggedUserTest">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.LoggedUserTest@3551a94]" name="getDriver" is-config="true" duration-ms="4960" started-at="2017-10-31T10:20:55Z" finished-at="2017-10-31T10:21:00Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.LoggedUserTest@3551a94]" name="getDriver" is-config="true" duration-ms="13295" started-at="2017-11-01T21:32:28Z" finished-at="2017-11-01T21:32:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testLoggedUser()[pri:0, instance:com.usgbc.dev.regression.LoggedUserTest@3551a94]" name="testLoggedUser" duration-ms="7805" started-at="2017-10-31T10:21:00Z" finished-at="2017-10-31T10:21:08Z">
+        <test-method status="PASS" signature="testLoggedUser()[pri:0, instance:com.usgbc.dev.regression.LoggedUserTest@3551a94]" name="testLoggedUser" duration-ms="11770" started-at="2017-11-01T21:32:41Z" finished-at="2017-11-01T21:32:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoggedUser -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.LoggedUserTest@3551a94]" name="closeDriver" is-config="true" duration-ms="593" started-at="2017-10-31T10:21:08Z" finished-at="2017-10-31T10:21:09Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.LoggedUserTest@3551a94]" name="closeDriver" is-config="true" duration-ms="994" started-at="2017-11-01T21:32:53Z" finished-at="2017-11-01T21:32:54Z">
           <params>
             <param index="0">
               <value>
@@ -47,32 +199,32 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.LoggedUserTest@3551a94]" name="getDriver" is-config="true" duration-ms="4308" started-at="2017-10-31T10:21:09Z" finished-at="2017-10-31T10:21:13Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.LoggedUserTest@3551a94]" name="getDriver" is-config="true" duration-ms="7591" started-at="2017-11-01T21:32:54Z" finished-at="2017-11-01T21:33:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="FAIL" signature="testLoggedUser2()[pri:0, instance:com.usgbc.dev.regression.LoggedUserTest@3551a94]" name="testLoggedUser2" duration-ms="18758" started-at="2017-10-31T10:21:13Z" finished-at="2017-10-31T10:21:32Z">
+        <test-method status="FAIL" signature="testLoggedUser2()[pri:0, instance:com.usgbc.dev.regression.LoggedUserTest@3551a94]" name="testLoggedUser2" duration-ms="38073" started-at="2017-11-01T21:33:02Z" finished-at="2017-11-01T21:33:40Z">
           <exception class="java.lang.Error">
             <message>
               <![CDATA[Unable to locate element: {"method":"link text","selector":"Community Registration"}
-Command duration or timeout: 16 milliseconds
+Command duration or timeout: 17 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
+Session ID: 0da966e9-dfff-4d99-834f-e542de884e3a
 *** Element info: {Using=link text, value=Community Registration}]]>
             </message>
             <full-stacktrace>
               <![CDATA[java.lang.Error: Unable to locate element: {"method":"link text","selector":"Community Registration"}
-Command duration or timeout: 16 milliseconds
+Command duration or timeout: 17 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
+Session ID: 0da966e9-dfff-4d99-834f-e542de884e3a
 *** Element info: {Using=link text, value=Community Registration}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -85,7 +237,7 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.usgbc.dev.page.UsgbcWebLocators.getCommunityRegistration(UsgbcWebLocators.java:258)
+	at com.usgbc.dev.page.UsgbcWebLocators.getCommunityRegistration(UsgbcWebLocators.java:261)
 	at com.usgbc.dev.business.LoggedUser.loggedUserVerification2(LoggedUser.java:39)
 	at com.usgbc.dev.regression.LoggedUserTest.testLoggedUser2(LoggedUserTest.java:47)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -127,7 +279,7 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLoggedUser2 -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.LoggedUserTest@3551a94]" name="closeDriver" is-config="true" duration-ms="2037" started-at="2017-10-31T10:21:32Z" finished-at="2017-10-31T10:21:34Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.LoggedUserTest@3551a94]" name="closeDriver" is-config="true" duration-ms="1140" started-at="2017-11-01T21:33:40Z" finished-at="2017-11-01T21:33:41Z">
           <params>
             <param index="0">
               <value>
@@ -140,15 +292,15 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
         </test-method> <!-- closeDriver -->
       </class> <!-- com.usgbc.dev.regression.LoggedUserTest -->
       <class name="com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest@36f6e879]" name="getDriver" is-config="true" duration-ms="5668" started-at="2017-10-31T10:19:09Z" finished-at="2017-10-31T10:19:15Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest@36f6e879]" name="getDriver" is-config="true" duration-ms="6150" started-at="2017-11-01T21:30:34Z" finished-at="2017-11-01T21:30:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testCommunityRegistrationCountryField()[pri:0, instance:com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest@36f6e879]" name="testCommunityRegistrationCountryField" duration-ms="0" started-at="2017-10-31T10:19:15Z" finished-at="2017-10-31T10:19:15Z">
+        <test-method status="PASS" signature="testCommunityRegistrationCountryField()[pri:0, instance:com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest@36f6e879]" name="testCommunityRegistrationCountryField" duration-ms="1" started-at="2017-11-01T21:30:40Z" finished-at="2017-11-01T21:30:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCommunityRegistrationCountryField -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest@36f6e879]" name="closeDriver" is-config="true" duration-ms="621" started-at="2017-10-31T10:19:15Z" finished-at="2017-10-31T10:19:16Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest@36f6e879]" name="closeDriver" is-config="true" duration-ms="716" started-at="2017-11-01T21:30:40Z" finished-at="2017-11-01T21:30:41Z">
           <params>
             <param index="0">
               <value>
@@ -161,15 +313,15 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
         </test-method> <!-- closeDriver -->
       </class> <!-- com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest -->
       <class name="com.usgbc.dev.regression.UsgbcStoreTest">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="getDriver" is-config="true" duration-ms="5081" started-at="2017-10-31T10:22:32Z" finished-at="2017-10-31T10:22:37Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="getDriver" is-config="true" duration-ms="5546" started-at="2017-11-01T21:35:33Z" finished-at="2017-11-01T21:35:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testUsgbcStore()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="testUsgbcStore" duration-ms="8138" started-at="2017-10-31T10:22:37Z" finished-at="2017-10-31T10:22:45Z">
+        <test-method status="PASS" signature="testUsgbcStore()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="testUsgbcStore" duration-ms="11775" started-at="2017-11-01T21:35:39Z" finished-at="2017-11-01T21:35:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsgbcStore -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="closeDriver" is-config="true" duration-ms="506" started-at="2017-10-31T10:22:45Z" finished-at="2017-10-31T10:22:46Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="closeDriver" is-config="true" duration-ms="758" started-at="2017-11-01T21:35:50Z" finished-at="2017-11-01T21:35:51Z">
           <params>
             <param index="0">
               <value>
@@ -180,15 +332,15 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="getDriver" is-config="true" duration-ms="4673" started-at="2017-10-31T10:22:46Z" finished-at="2017-10-31T10:22:50Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="getDriver" is-config="true" duration-ms="4634" started-at="2017-11-01T21:35:51Z" finished-at="2017-11-01T21:35:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testUsgbcStoreGreen()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="testUsgbcStoreGreen" duration-ms="173579" started-at="2017-10-31T10:22:50Z" finished-at="2017-10-31T10:25:44Z">
+        <test-method status="PASS" signature="testUsgbcStoreGreen()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="testUsgbcStoreGreen" duration-ms="199922" started-at="2017-11-01T21:35:56Z" finished-at="2017-11-01T21:39:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsgbcStoreGreen -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="closeDriver" is-config="true" duration-ms="717" started-at="2017-10-31T10:25:44Z" finished-at="2017-10-31T10:25:45Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="closeDriver" is-config="true" duration-ms="1194" started-at="2017-11-01T21:39:16Z" finished-at="2017-11-01T21:39:17Z">
           <params>
             <param index="0">
               <value>
@@ -199,15 +351,15 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="getDriver" is-config="true" duration-ms="4474" started-at="2017-10-31T10:25:45Z" finished-at="2017-10-31T10:25:49Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="getDriver" is-config="true" duration-ms="6717" started-at="2017-11-01T21:39:17Z" finished-at="2017-11-01T21:39:24Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testUsgbcStoreGreen2()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="testUsgbcStoreGreen2" duration-ms="133512" started-at="2017-10-31T10:25:49Z" finished-at="2017-10-31T10:28:03Z">
+        <test-method status="PASS" signature="testUsgbcStoreGreen2()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="testUsgbcStoreGreen2" duration-ms="168164" started-at="2017-11-01T21:39:24Z" finished-at="2017-11-01T21:42:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsgbcStoreGreen2 -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="closeDriver" is-config="true" duration-ms="756" started-at="2017-10-31T10:28:03Z" finished-at="2017-10-31T10:28:03Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="closeDriver" is-config="true" duration-ms="972" started-at="2017-11-01T21:42:12Z" finished-at="2017-11-01T21:42:13Z">
           <params>
             <param index="0">
               <value>
@@ -218,15 +370,15 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="getDriver" is-config="true" duration-ms="5049" started-at="2017-10-31T10:28:03Z" finished-at="2017-10-31T10:28:08Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="getDriver" is-config="true" duration-ms="5209" started-at="2017-11-01T21:42:13Z" finished-at="2017-11-01T21:42:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testUsgbcStoreLEED()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="testUsgbcStoreLEED" duration-ms="175586" started-at="2017-10-31T10:28:08Z" finished-at="2017-10-31T10:31:04Z">
+        <test-method status="PASS" signature="testUsgbcStoreLEED()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="testUsgbcStoreLEED" duration-ms="139712" started-at="2017-11-01T21:42:18Z" finished-at="2017-11-01T21:44:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsgbcStoreLEED -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="closeDriver" is-config="true" duration-ms="864" started-at="2017-10-31T10:31:04Z" finished-at="2017-10-31T10:31:05Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="closeDriver" is-config="true" duration-ms="917" started-at="2017-11-01T21:44:38Z" finished-at="2017-11-01T21:44:39Z">
           <params>
             <param index="0">
               <value>
@@ -237,15 +389,15 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="getDriver" is-config="true" duration-ms="4657" started-at="2017-10-31T10:31:05Z" finished-at="2017-10-31T10:31:09Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="getDriver" is-config="true" duration-ms="8388" started-at="2017-11-01T21:44:39Z" finished-at="2017-11-01T21:44:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testUsgbcStoreLEED2()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="testUsgbcStoreLEED2" duration-ms="129198" started-at="2017-10-31T10:31:09Z" finished-at="2017-10-31T10:33:19Z">
+        <test-method status="PASS" signature="testUsgbcStoreLEED2()[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="testUsgbcStoreLEED2" duration-ms="141495" started-at="2017-11-01T21:44:47Z" finished-at="2017-11-01T21:47:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsgbcStoreLEED2 -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="closeDriver" is-config="true" duration-ms="963" started-at="2017-10-31T10:33:19Z" finished-at="2017-10-31T10:33:20Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.UsgbcStoreTest@52af6cff]" name="closeDriver" is-config="true" duration-ms="875" started-at="2017-11-01T21:47:09Z" finished-at="2017-11-01T21:47:09Z">
           <params>
             <param index="0">
               <value>
@@ -258,15 +410,15 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
         </test-method> <!-- closeDriver -->
       </class> <!-- com.usgbc.dev.regression.UsgbcStoreTest -->
       <class name="com.usgbc.dev.regression.MembershipTest">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.MembershipTest@2c9f9fb0]" name="getDriver" is-config="true" duration-ms="5284" started-at="2017-10-31T10:34:02Z" finished-at="2017-10-31T10:34:08Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.MembershipTest@2c9f9fb0]" name="getDriver" is-config="true" duration-ms="4774" started-at="2017-11-01T21:51:58Z" finished-at="2017-11-01T21:52:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testMembership()[pri:0, instance:com.usgbc.dev.regression.MembershipTest@2c9f9fb0]" name="testMembership" duration-ms="19382" started-at="2017-10-31T10:34:08Z" finished-at="2017-10-31T10:34:27Z">
+        <test-method status="PASS" signature="testMembership()[pri:0, instance:com.usgbc.dev.regression.MembershipTest@2c9f9fb0]" name="testMembership" duration-ms="87241" started-at="2017-11-01T21:52:03Z" finished-at="2017-11-01T21:53:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMembership -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.MembershipTest@2c9f9fb0]" name="closeDriver" is-config="true" duration-ms="648" started-at="2017-10-31T10:34:27Z" finished-at="2017-10-31T10:34:28Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.MembershipTest@2c9f9fb0]" name="closeDriver" is-config="true" duration-ms="850" started-at="2017-11-01T21:53:30Z" finished-at="2017-11-01T21:53:31Z">
           <params>
             <param index="0">
               <value>
@@ -279,15 +431,15 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
         </test-method> <!-- closeDriver -->
       </class> <!-- com.usgbc.dev.regression.MembershipTest -->
       <class name="com.usgbc.dev.regression.CommunityRegistrationTest">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.CommunityRegistrationTest@54a097cc]" name="getDriver" is-config="true" duration-ms="7096" started-at="2017-10-31T10:16:05Z" finished-at="2017-10-31T10:16:12Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.CommunityRegistrationTest@54a097cc]" name="getDriver" is-config="true" duration-ms="6571" started-at="2017-11-01T21:28:17Z" finished-at="2017-11-01T21:28:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testCommunityRegistration()[pri:0, instance:com.usgbc.dev.regression.CommunityRegistrationTest@54a097cc]" name="testCommunityRegistration" duration-ms="175146" started-at="2017-10-31T10:16:12Z" finished-at="2017-10-31T10:19:07Z">
+        <test-method status="PASS" signature="testCommunityRegistration()[pri:0, instance:com.usgbc.dev.regression.CommunityRegistrationTest@54a097cc]" name="testCommunityRegistration" duration-ms="129423" started-at="2017-11-01T21:28:23Z" finished-at="2017-11-01T21:30:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCommunityRegistration -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.CommunityRegistrationTest@54a097cc]" name="closeDriver" is-config="true" duration-ms="1942" started-at="2017-10-31T10:19:07Z" finished-at="2017-10-31T10:19:09Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.CommunityRegistrationTest@54a097cc]" name="closeDriver" is-config="true" duration-ms="1277" started-at="2017-11-01T21:30:33Z" finished-at="2017-11-01T21:30:34Z">
           <params>
             <param index="0">
               <value>
@@ -300,15 +452,15 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
         </test-method> <!-- closeDriver -->
       </class> <!-- com.usgbc.dev.regression.CommunityRegistrationTest -->
       <class name="com.usgbc.dev.regression.ErrorMessageCommRegTest">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="getDriver" is-config="true" duration-ms="6233" started-at="2017-10-31T10:21:34Z" finished-at="2017-10-31T10:21:40Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="getDriver" is-config="true" duration-ms="9926" started-at="2017-11-01T21:33:41Z" finished-at="2017-11-01T21:33:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testErrorMessagesCommReg()[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="testErrorMessagesCommReg" duration-ms="10991" started-at="2017-10-31T10:21:40Z" finished-at="2017-10-31T10:21:51Z">
+        <test-method status="PASS" signature="testErrorMessagesCommReg()[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="testErrorMessagesCommReg" duration-ms="25840" started-at="2017-11-01T21:33:51Z" finished-at="2017-11-01T21:34:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testErrorMessagesCommReg -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="closeDriver" is-config="true" duration-ms="622" started-at="2017-10-31T10:21:51Z" finished-at="2017-10-31T10:21:52Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="closeDriver" is-config="true" duration-ms="1015" started-at="2017-11-01T21:34:17Z" finished-at="2017-11-01T21:34:18Z">
           <params>
             <param index="0">
               <value>
@@ -319,15 +471,15 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="getDriver" is-config="true" duration-ms="4714" started-at="2017-10-31T10:21:52Z" finished-at="2017-10-31T10:21:57Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="getDriver" is-config="true" duration-ms="5147" started-at="2017-11-01T21:34:18Z" finished-at="2017-11-01T21:34:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testErrorMessagesCommRegCondition2()[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="testErrorMessagesCommRegCondition2" duration-ms="13294" started-at="2017-10-31T10:21:57Z" finished-at="2017-10-31T10:22:10Z">
+        <test-method status="PASS" signature="testErrorMessagesCommRegCondition2()[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="testErrorMessagesCommRegCondition2" duration-ms="30984" started-at="2017-11-01T21:34:23Z" finished-at="2017-11-01T21:34:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testErrorMessagesCommRegCondition2 -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="closeDriver" is-config="true" duration-ms="601" started-at="2017-10-31T10:22:10Z" finished-at="2017-10-31T10:22:10Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="closeDriver" is-config="true" duration-ms="1069" started-at="2017-11-01T21:34:54Z" finished-at="2017-11-01T21:34:55Z">
           <params>
             <param index="0">
               <value>
@@ -338,15 +490,15 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="getDriver" is-config="true" duration-ms="4737" started-at="2017-10-31T10:22:10Z" finished-at="2017-10-31T10:22:15Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="getDriver" is-config="true" duration-ms="5235" started-at="2017-11-01T21:34:55Z" finished-at="2017-11-01T21:35:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testErrorMessagesCommRegCondition3()[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="testErrorMessagesCommRegCondition3" duration-ms="15915" started-at="2017-10-31T10:22:15Z" finished-at="2017-10-31T10:22:31Z">
+        <test-method status="PASS" signature="testErrorMessagesCommRegCondition3()[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="testErrorMessagesCommRegCondition3" duration-ms="32044" started-at="2017-11-01T21:35:00Z" finished-at="2017-11-01T21:35:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testErrorMessagesCommRegCondition3 -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="closeDriver" is-config="true" duration-ms="834" started-at="2017-10-31T10:22:31Z" finished-at="2017-10-31T10:22:32Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.ErrorMessageCommRegTest@531be3c5]" name="closeDriver" is-config="true" duration-ms="973" started-at="2017-11-01T21:35:32Z" finished-at="2017-11-01T21:35:33Z">
           <params>
             <param index="0">
               <value>
@@ -359,11 +511,11 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
         </test-method> <!-- closeDriver -->
       </class> <!-- com.usgbc.dev.regression.ErrorMessageCommRegTest -->
       <class name="com.usgbc.dev.regression.UsgbcCoreTest">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.UsgbcCoreTest@5a61f5df]" name="getDriver" is-config="true" duration-ms="4735" started-at="2017-10-31T10:19:16Z" finished-at="2017-10-31T10:19:20Z">
+        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.UsgbcCoreTest@5a61f5df]" name="getDriver" is-config="true" duration-ms="4559" started-at="2017-11-01T21:30:41Z" finished-at="2017-11-01T21:30:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="FAIL" signature="testUsgbcCore()[pri:0, instance:com.usgbc.dev.regression.UsgbcCoreTest@5a61f5df]" name="testUsgbcCore" duration-ms="94325" started-at="2017-10-31T10:19:20Z" finished-at="2017-10-31T10:20:55Z">
+        <test-method status="FAIL" signature="testUsgbcCore()[pri:0, instance:com.usgbc.dev.regression.UsgbcCoreTest@5a61f5df]" name="testUsgbcCore" duration-ms="100513" started-at="2017-11-01T21:30:45Z" finished-at="2017-11-01T21:32:26Z">
           <exception class="java.lang.Error">
             <message>
               <![CDATA[expected [https://test-dynamic-usgbc.pantheonsite.io/notauthorized] but found [https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment]]]>
@@ -375,7 +527,7 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:178)
 	at org.testng.Assert.assertEquals(Assert.java:188)
-	at com.usgbc.dev.business.UsgbcCore.UsgbcCoreForm(UsgbcCore.java:120)
+	at com.usgbc.dev.business.UsgbcCore.UsgbcCoreForm(UsgbcCore.java:80)
 	at com.usgbc.dev.regression.UsgbcCoreTest.testUsgbcCore(UsgbcCoreTest.java:26)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -416,7 +568,7 @@ Session ID: 2cce95e2-391d-41a5-8c3c-6f04f9866b4d
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testUsgbcCore -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.UsgbcCoreTest@5a61f5df]" name="closeDriver" is-config="true" duration-ms="819" started-at="2017-10-31T10:20:55Z" finished-at="2017-10-31T10:20:55Z">
+        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.UsgbcCoreTest@5a61f5df]" name="closeDriver" is-config="true" duration-ms="2226" started-at="2017-11-01T21:32:26Z" finished-at="2017-11-01T21:32:28Z">
           <params>
             <param index="0">
               <value>

@@ -41,18 +41,19 @@
           <include name="closeDriver"/>
         </methods>
       </class> <!-- com.usgbc.dev.regression.LoggedUserTest -->
+      <class name="com.usgbc.dev.regression.StoreTest">
+        <methods>
+          <include name="getDriver"/>
+          <include name="testStoreLEED"/>
+          <include name="closeDriver"/>
+        </methods>
+      </class> <!-- com.usgbc.dev.regression.StoreTest -->
       <class name="com.usgbc.dev.regression.CommunityRegistrationTest">
         <methods>
           <include name="getDriver"/>
           <include name="closeDriver"/>
         </methods>
       </class> <!-- com.usgbc.dev.regression.CommunityRegistrationTest -->
-      <class name="com.usgbc.dev.regression.StoreTest">
-        <methods>
-          <include name="getDriver"/>
-          <include name="closeDriver"/>
-        </methods>
-      </class> <!-- com.usgbc.dev.regression.StoreTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

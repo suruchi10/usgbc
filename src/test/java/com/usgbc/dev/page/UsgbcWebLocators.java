@@ -370,11 +370,11 @@ public class UsgbcWebLocators extends Base{
 	   	
 	    @FindBy(id="edit-attention-to")WebElement Contact_attention_to ;						
 		@FindBy(id="edit-company")WebElement Contact_Company;
-	   	@FindBy(xpath=".//*[@name='address[country_code]']")WebElement shipping_country;
-	 	@FindBy(xpath=".//*[@name='address[address_line1]']" )WebElement shipping_address;
-	 	@FindBy(xpath=".//*[@name='address[address_line2]']" )WebElement shipping_address_line2;
-		@FindBy(xpath=".//*[@name='address[locality]']" )WebElement Contact_City;
-	 	@FindBy(xpath=".//*[@id='edit-terms']" )WebElement terms;
+	   	@FindBy(xpath=".//*[@name='shipping_address[country_code]']")WebElement shipping_country;
+	 	@FindBy(xpath=".//*[@name='shipping_address[address_line1]']" )WebElement shipping_address;
+	 	@FindBy(xpath=".//*[@name='shipping_address[address_line2]']" )WebElement shipping_address_line2;
+		@FindBy(xpath=".//*[@name='shipping_address[locality]']" )WebElement Contact_City;
+	 	@FindBy(xpath=".//*[@id='edit-how-did-you-hear-2']" )WebElement how_did_you_hear_2;
 	 	@FindBy(xpath=".//*[@id='edit-submit']" )WebElement Contact_Continue;
 	 	public WebElement getContactContinue() {
    			return Contact_Continue;
@@ -399,7 +399,7 @@ public class UsgbcWebLocators extends Base{
     		shipping_address.sendKeys(s_address);
     		shipping_address_line2.sendKeys(s_address_line2);
     		Contact_City.sendKeys(city);
-    		terms.click();
+    		how_did_you_hear_2.click();
     		Contact_Continue.click();	
     	}
 	 	
@@ -423,7 +423,7 @@ public class UsgbcWebLocators extends Base{
 		 	
 	    @FindBy(xpath=".//*[@class='button js-form-submit form-submit'][@value='Remove']")WebElement Remove;
 		 	public WebElement getRemove() {
-	   			return RemoveGreen;
+	   			return Remove;
 	   			}
 		 	
 		@FindBy(xpath=".//*[@id='edit-items-1-remove']" )WebElement RemoveGreen;
@@ -454,7 +454,39 @@ public class UsgbcWebLocators extends Base{
 				return  CancelCart;
 		   		}
 			
-		
+		 	
+		   	/* Membership/contact  web locator */ 
+		   	
+		    @FindBy(id="edit-attention-to")WebElement Contact_attention_to_membership ;						
+			@FindBy(id="edit-company")WebElement Contact_Company_membership;
+		   	@FindBy(xpath=".//*[@name='address[country_code]']")WebElement country_membership;
+		 	@FindBy(xpath=".//*[@name='address[address_line1]']" )WebElement address_membership;
+		 	@FindBy(xpath=".//*[@name='address[address_line2]']" )WebElement address_line2_membership;
+			@FindBy(xpath=".//*[@name='address[locality]']" )WebElement Contact_City_membership;
+		 	@FindBy(xpath=".//*[@id='edit-terms']" )WebElement terms_membership;
+		 	@FindBy(xpath=".//*[@id='edit-submit']" )WebElement Contact_Continue_membership;
+		 	public WebElement getContactContinueMembership() {
+	   			return Contact_Continue_membership;
+	   			}
+		 	
+		 	
+		 	public void contact_membership(String attention,String company,String country,String s_address,String s_address_line2 ,String city) throws InterruptedException {
+	    		
+		 		Thread.sleep(3000);
+		 		((JavascriptExecutor)driver).executeScript("scroll(0,400)");
+				Thread.sleep(2000);
+	    		Contact_attention_to_membership.sendKeys(attention);
+	    		Contact_Company_membership.sendKeys(company);
+	    		//shipping_country.click();	
+	    		Select select = new Select(country_membership);
+		 	    select.selectByVisibleText(country);
+		 	    Thread.sleep(3000);
+	    		address_membership.sendKeys(s_address);
+	    		address_line2_membership.sendKeys(s_address_line2);
+	    		Contact_City_membership.sendKeys(city);
+	    		terms_membership.click();
+	    		Contact_Continue_membership.click();	
+	    	}
 			
 			
 	 	

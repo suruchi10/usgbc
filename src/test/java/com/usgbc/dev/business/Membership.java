@@ -24,7 +24,7 @@ public void membership() throws Exception {
 	 Select select3 = new Select(getRevenueScale());
 	    select3.selectByVisibleText("Less than $250,000");
 	    Thread.sleep(3000);
-	    getContactContinue().click();
+	    getContactContinueMembership().click();
 	 
 }
 
@@ -49,7 +49,7 @@ public void MembershipModule() throws Exception {
 				   if(membershipContatct_url.equalsIgnoreCase("https://test-dynamic-usgbc.pantheonsite.io/membership/contact")) {
 					   Assert.assertTrue(true);
 					   System.out.println("User registration is successful");
-					   Contact_Form("Sheet1" , 3);
+					   Contact_Form_membership("Sheet1" , 3);
 					   membership();
 					   Assert.assertEquals( driver.getCurrentUrl(),"https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment");
 					   receiptdownload();
@@ -60,7 +60,7 @@ public void MembershipModule() throws Exception {
 				   Assert.assertEquals(Signin_url, "https://test-dynamic-usgbc.pantheonsite.io/membership/contact");
 				   Assert.assertTrue(getContactinfo().getText().contains("You are signed in as"));
 				   System.out.println("Signin successful"); 
-				   Contact_Form("Sheet1" , 3);
+				   Contact_Form_membership("Sheet1" , 3);
 				   membership();
 				   Assert.assertEquals( driver.getCurrentUrl(),"https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment");
 				   receiptdownload();

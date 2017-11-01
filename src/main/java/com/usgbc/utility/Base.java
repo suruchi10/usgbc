@@ -69,12 +69,12 @@ public class Base extends Report{
 		
 		
 
-//	@AfterMethod
-//	public WebDriver closeDriver(ITestResult result ) {
-//		Report.afterMethod(driver, result);
-//		driver.quit();
-//		System.out.println("--------Browser Closed--------");
-//		return driver;
-//	}
-//	
+	@AfterMethod
+	public WebDriver closeDriver(ITestResult result ) {
+		Report.afterMethod(driver, result);
+		driver.quit();
+		System.out.println("--------Browser Closed--------");
+		return driver;
+	}
+	
 }
