@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>usgbc2</groupId>
-  <artifactId>usgbc2</artifactId>
+  <groupId>usgbc</groupId>
+  <artifactId>usgbc</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>usgbc2</name>
+  <name>usgbc</name>
   <url>http://maven.apache.org</url>
 
   <properties>

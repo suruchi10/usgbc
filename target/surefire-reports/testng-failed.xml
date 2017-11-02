@@ -3,6 +3,11 @@
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
+      <class name="com.usgbc.dev.regression.MembershipTest">
+        <methods>
+          <include name="testMembership"/>
+        </methods>
+      </class> <!-- com.usgbc.dev.regression.MembershipTest -->
       <class name="com.usgbc.dev.regression.UsgbcCoreTest">
         <methods>
           <include name="getDriver"/>
@@ -10,15 +15,10 @@
           <include name="testUsgbcCore"/>
         </methods>
       </class> <!-- com.usgbc.dev.regression.UsgbcCoreTest -->
-      <class name="com.usgbc.dev.regression.MembershipTest">
-        <methods>
-          <include name="getDriver"/>
-          <include name="closeDriver"/>
-        </methods>
-      </class> <!-- com.usgbc.dev.regression.MembershipTest -->
       <class name="com.usgbc.dev.regression.UsgbcStoreTest">
         <methods>
           <include name="getDriver"/>
+          <include name="testUsgbcStoreGreen2"/>
           <include name="closeDriver"/>
         </methods>
       </class> <!-- com.usgbc.dev.regression.UsgbcStoreTest -->
@@ -44,7 +44,9 @@
       <class name="com.usgbc.dev.regression.StoreTest">
         <methods>
           <include name="getDriver"/>
+          <include name="testStoreGreen"/>
           <include name="testStoreLEED"/>
+          <include name="testStoreLEEDandGreen"/>
           <include name="closeDriver"/>
         </methods>
       </class> <!-- com.usgbc.dev.regression.StoreTest -->
