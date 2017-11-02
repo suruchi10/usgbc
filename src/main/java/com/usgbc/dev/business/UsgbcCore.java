@@ -2,12 +2,9 @@ package com.usgbc.dev.business;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import com.usgbc.dev.page.UsgbcWebLocators;
 import com.usgbc.utility.BrokenLink;
 import com.usgbc.utility.CommunityRegistrationFormData;
 import com.usgbc.utility.ReusableMethods;
-
-
 
 public class UsgbcCore extends ReusableMethods{
 
