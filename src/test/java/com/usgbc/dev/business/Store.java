@@ -37,7 +37,7 @@ public class Store extends ReusableMethods{
 						 System.out.println("*****contact-payment-receipt******");
 						 Contact_Form("Sheet1" , 3);
 						 Thread.sleep(3000);
-						 signInForm("signin",3);
+						 signInForm("signin",9);
 						 contactPaymentReceipt();
 				 		
 					}else {
@@ -87,6 +87,29 @@ public class Store extends ReusableMethods{
 			     	
 			     }
 			}
+	
+	public void StoreModuleLEEDandGreen() throws Exception {
+		
+		getGreenAppleLapelPins().click();
+		Thread.sleep(2000);
+		getAddToCartGreen().click();
+		Assert.assertEquals(driver.getCurrentUrl(),"https://test-dynamic-usgbc.pantheonsite.io/cart");
+		Assert.assertTrue(getStatusMessage().getAttribute("innerHTML").contains("Green Apple Lapel Pins"));
+		getContinueShopping().click();
+		Assert.assertEquals(driver.getCurrentUrl(),"https://test-dynamic-usgbc.pantheonsite.io/store");
+		getLEEDReferenceGuide().click();
+		Thread.sleep(2000);
+		getAddToCartLEED().click();
+		Assert.assertTrue(getStatusMessage().getAttribute("innerHTML").contains("LEED Reference Guide for Homes Design and Construction (e-document)"));
+		getCheckOutButton().click();
+		String StoreContact_url = driver.getCurrentUrl();
+		 Assert.assertEquals(StoreContact_url, "https://test-dynamic-usgbc.pantheonsite.io/store/contact");	
+		 System.out.println("*****contact-payment-receipt*****");
+		 Contact_Form("Sheet1" , 3);
+		 Thread.sleep(3000);
+		 signInForm("signin",3);
+		 contactPaymentReceipt();
+		}
 	
 	
 	
@@ -147,8 +170,8 @@ public class Store extends ReusableMethods{
 			Assert.assertTrue(getStatusMessage().getAttribute("innerHTML").contains("LEED Reference Guide for Homes Design and Construction (e-document)"));
 			//numberOfRowsAndColumnInTable();
 			getInputBox().clear();
+			Thread.sleep(2000);
 			getInputBox().sendKeys("2");
-			//pending coz of cant find unique xpath
 			getUpdateCart().click();
 			Assert.assertTrue( getStatusMessageBlock().getAttribute("innerHTML").contains("Your cart has been updated."));
 			numberOfRowsAndColumnInTable();	
@@ -179,9 +202,7 @@ public class Store extends ReusableMethods{
 			Thread.sleep(2000);
 			getConfirmCart().click();
 			Assert.assertEquals(driver.getCurrentUrl(),"https://test-dynamic-usgbc.pantheonsite.io/cart");
-			Assert.assertTrue(getUcCartEmpty().isDisplayed());
-			
-			
+			Assert.assertTrue(getUcCartEmpty().isDisplayed());	
 		}
 	}
 }

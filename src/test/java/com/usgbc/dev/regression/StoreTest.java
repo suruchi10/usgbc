@@ -52,19 +52,41 @@ public class StoreTest extends Base {
 				throw e1;
 			 }
 	}
+	
+	@Test	
+	public void testStoreLEEDandGreen() throws Exception {
+		
+		 String url ="https://test-dynamic-usgbc.pantheonsite.io/store";
+		 driver.get(url);
+		 System.out.println("Store Module LEED And Green");
+		 System.out.println("Broken Link for /store ");
+		 BrokenLink.BrokenLinkCheck(url);
+	     Store store = PageFactory.initElements(driver, Store.class);    
+		    try {
+		    	test= extent.startTest("Store Module LEED And Green");
+		    	test.log(LogStatus.INFO, "Test Started");
+		    	store.StoreModuleLEEDandGreen();
+		    	System.out.println("Store Module LEED And Green test Finished");
+			}catch (Throwable t) {
+				System.out.println(t.getLocalizedMessage());
+				Error e1 = new Error(t.getMessage());
+				e1.setStackTrace(t.getStackTrace());
+				throw e1;
+			 }
+	}
 
 	@Test	
 	public void testShoppingCartLink() throws Exception {
 		
 		 String url ="https://test-dynamic-usgbc.pantheonsite.io/";
 		 driver.get(url);
-		 System.out.println("Shopping Cart link");
+		 System.out.println("Shopping Cart link with 3 Products");
 	     Store store = PageFactory.initElements(driver, Store.class);    
 		    try {
-		    	test= extent.startTest("Shopping Cart link");
+		    	test= extent.startTest("Shopping Cart link with 3 Products");
 		    	test.log(LogStatus.INFO, "Test Started");
 		    	store.VerifyingShoppingCartLink();
-		    	System.out.println("Shopping Cart Link Test Finished ");
+		    	System.out.println("Shopping Cart Link with 3 Products Test Finished ");
 			}catch (Throwable t) {
 				System.out.println(t.getLocalizedMessage());
 				Error e1 = new Error(t.getMessage());
@@ -78,13 +100,13 @@ public class StoreTest extends Base {
 		
 		 String url ="https://test-dynamic-usgbc.pantheonsite.io/";
 		 driver.get(url);
-		 System.out.println("Shopping Cart link");
+		 System.out.println("Shopping Cart link with the use of update cart button ");
 	     Store store = PageFactory.initElements(driver, Store.class);    
 		    try {
-		    	test= extent.startTest("Shopping Cart link");
+		    	test= extent.startTest("Shopping Cart link with the use of update cart button");
 		    	test.log(LogStatus.INFO, "Test Started");
 		    	store.VerifyingShoppingCartLink2();
-		    	System.out.println("Shopping Cart Link Test Finished ");
+		    	System.out.println("Shopping Cart Link with the use of update cart button Test Finished ");
 			}catch (Throwable t) {
 				System.out.println(t.getLocalizedMessage());
 				Error e1 = new Error(t.getMessage());
@@ -98,13 +120,13 @@ public class StoreTest extends Base {
 		
 		 String url ="https://test-dynamic-usgbc.pantheonsite.io/";
 		 driver.get(url);
-		 System.out.println("Shopping Cart link");
+		 System.out.println("Shopping Cart link with the use of empty cart buttton");
 	     Store store = PageFactory.initElements(driver, Store.class);    
 		    try {
-		    	test= extent.startTest("Shopping Cart link ");
+		    	test= extent.startTest("Shopping Cart link with the use of empty cart buttton ");
 		    	test.log(LogStatus.INFO, "Test Started");
 		    	store.VerifyingShoppingCartLink3();
-		    	System.out.println("Shopping Cart Link Test Finished ");
+		    	System.out.println("Shopping Cart Link with the use of empty cart buttton Test Finished ");
 			}catch (Throwable t) {
 				System.out.println(t.getLocalizedMessage());
 				Error e1 = new Error(t.getMessage());

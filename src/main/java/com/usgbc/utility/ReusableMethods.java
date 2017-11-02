@@ -28,7 +28,7 @@ public class ReusableMethods extends UsgbcWebLocators{
 		
 	}
 	
-public void Contact_Form_membership(String sheetName, int rowNum) throws InterruptedException {
+    public void Contact_Form_membership(String sheetName, int rowNum) throws InterruptedException {
 		
 		String Attention= reader.getCellData(sheetName, "Attention",rowNum); 
 		String Company= reader.getCellData(sheetName, "Company", rowNum);
@@ -39,7 +39,7 @@ public void Contact_Form_membership(String sheetName, int rowNum) throws Interru
 		contact_membership(Attention,Company,Country,Street_Address,Street_Address_line2,City);
 		
 	}
-	public void signInForm(String sheetName, int rowNum) throws InterruptedException {
+	public  void signInForm(String sheetName, int rowNum) throws InterruptedException {
 		
 		
 		String Eemail= reader.getCellData(sheetName, "email",rowNum); 
@@ -76,6 +76,24 @@ public void Contact_Form_membership(String sheetName, int rowNum) throws Interru
 		payment_usgbc( name_on_card , card_number, month, year, security_code, billing_country, billing_street_address, billing_street_address2, billing_city, billing_pin_code, billing_state);
 					
 	}
+    
+	public void paymentFormMembership(String sheetName, int rowNum) throws InterruptedException {
+			
+			String name_on_card= reader.getCellData(sheetName, "name_on_card",rowNum); 
+			String card_number= reader.getCellData(sheetName, "card number", rowNum);
+			String month= reader.getCellData(sheetName, "month", rowNum);
+			String year= reader.getCellData(sheetName, "year", rowNum);
+			String security_code= reader.getCellData(sheetName, "security_code", rowNum);
+			String billing_country= reader.getCellData(sheetName, "country", rowNum);
+			String billing_street_address= reader.getCellData(sheetName, "street_address", rowNum);
+			String billing_street_address2= reader.getCellData(sheetName, "street_address2", rowNum);
+			String billing_city= reader.getCellData(sheetName, "city", rowNum);
+			String billing_pin_code= reader.getCellData(sheetName, "pincode", rowNum);
+			String billing_state= reader.getCellData(sheetName, "state", rowNum);
+			payment_usgbc_Membership( name_on_card , card_number, month, year, security_code, billing_country, billing_street_address, billing_street_address2);
+						
+		}
+  
   
   
 	public void receiptdownload() throws Exception {
@@ -90,6 +108,9 @@ public void Contact_Form_membership(String sheetName, int rowNum) throws Interru
 		        }else if( getstatusMessageUsgbcPayment().getAttribute("innerHTML").contains("To prevent misorders, the same item may not be purchased twice within 24 hours. Questions? Call (800 number)")) {
 		        	Assert.assertTrue(true);
 		        	System.out.println("To prevent misorders, the same item may not be purchased twice within 24 hours. Questions? Call (800 number)"); 
+		 		}else if (getstatusMessageUsgbcPayment().getAttribute("innerHTML").contains(("The address you entered is invalid: The region Har is not defined for country IN"))) {
+		 			Assert.assertTrue(true);
+		        	System.out.println("The address you entered is invalid: The region Har is not defined for country IN"); 
 		 		}
 		 }else if (reciept_url.equals("https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment")) {
 			  Assert.assertTrue(true);

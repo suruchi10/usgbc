@@ -56,7 +56,7 @@ public class UsgbcCore extends ReusableMethods{
 		Assert.assertEquals(signin_url,"https://test-dynamic-usgbc.pantheonsite.io/signin" );
 		System.out.println("Broken Link for /signin ");
 		BrokenLink.BrokenLinkCheck(signin_url);
-		signInForm("signin",3);	
+		signInForm("signin",9);	
 		Thread.sleep(3000);
 	    String Signin_url = driver.getCurrentUrl();
 			   if (Signin_url.equalsIgnoreCase("https://test-dynamic-usgbc.pantheonsite.io/signin")) {
@@ -67,19 +67,20 @@ public class UsgbcCore extends ReusableMethods{
 				   String signup_url = driver.getCurrentUrl();
 				   System.out.println("Broken Link for /signup ");
 				   BrokenLink.BrokenLinkCheck(signup_url);
-				   signUpForm("signup",  3);
+				   signUpForm("signup", 9);
 				   Thread.sleep(3000);
-				   String notauthorized_url = driver.getCurrentUrl();
-				   Assert.assertEquals(notauthorized_url, "https://test-dynamic-usgbc.pantheonsite.io/notauthorized");
+				   //String notauthorized_url = driver.getCurrentUrl();
+				   String usgbcPayment_url = driver.getCurrentUrl();
+				   Assert.assertEquals(usgbcPayment_url, "https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment");
 				   System.out.println("User registered and created sucessfully");
-				   System.out.println("Broken Link for /notauthorized ");
-				   BrokenLink.BrokenLinkCheck(notauthorized_url);
+				   System.out.println("Broken Link for /usgbc/payment ");
+				   BrokenLink.BrokenLinkCheck(usgbcPayment_url);
 				   receiptdownload();  
 				   
 			   }else {
-			   Assert.assertEquals(Signin_url, "https://test-dynamic-usgbc.pantheonsite.io/notauthorized");   
+			   Assert.assertEquals(Signin_url, "https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment");   
 			   System.out.println("User is registered already ");
-			   System.out.println("Broken Link for /notauthorized ");
+			   System.out.println("Broken Link for /usgbc/payment  ");
 			   BrokenLink.BrokenLinkCheck(Signin_url);
 			   receiptdownload();
 			   }		

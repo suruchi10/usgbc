@@ -49,6 +49,7 @@ public void MembershipModule() throws Exception {
 				   if(membershipContatct_url.equalsIgnoreCase("https://test-dynamic-usgbc.pantheonsite.io/membership/contact")) {
 					   Assert.assertTrue(true);
 					   System.out.println("User registration is successful");
+					   System.out.println("*****contact-membership-payment-receipt*****");
 					   Contact_Form_membership("Sheet1" , 3);
 					   membership();
 					   Assert.assertEquals( driver.getCurrentUrl(),"https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment");
@@ -59,10 +60,12 @@ public void MembershipModule() throws Exception {
 			   }else {
 				   Assert.assertEquals(Signin_url, "https://test-dynamic-usgbc.pantheonsite.io/membership/contact");
 				   Assert.assertTrue(getContactinfo().getText().contains("You are signed in as"));
-				   System.out.println("Signin successful"); 
+				   System.out.println("Signin successful");
+				   System.out.println("*****contact-membership-payment-receipt*****");
 				   Contact_Form_membership("Sheet1" , 3);
 				   membership();
 				   Assert.assertEquals( driver.getCurrentUrl(),"https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment");
+				   numberOfRowsAndColumnInTable();
 				   receiptdownload();
 			   }
 		 }else

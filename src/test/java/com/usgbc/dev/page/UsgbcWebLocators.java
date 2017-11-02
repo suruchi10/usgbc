@@ -168,9 +168,22 @@ public class UsgbcWebLocators extends Base{
     	}
     	
    /* web element locator for signin page */
-   @FindBy(id="edit-existinguser-usernamae")WebElement Eusername;
-   @FindBy(id="edit-existinguser-password")WebElement Epassword;
-   @FindBy(id="edit-submit")WebElement signin_continue;
+   @FindBy(id="edit-existinguser-usernamae")
+static WebElement Eusername;
+   public static WebElement getEusername() {
+			return Eusername;
+			}
+   @FindBy(id="edit-existinguser-password")
+static WebElement Epassword;
+   public static WebElement getEpassword() {
+			return Epassword ;
+			}
+   @FindBy(id="edit-submit")
+static WebElement signin_continue;
+   public static WebElement getSigninContinue() {
+		return signin_continue ;
+		}
+   
    public By  register = By.linkText("Register Here.");
   	public WebElement getRegister() {
   			return driver.findElement(register);
@@ -181,14 +194,11 @@ public class UsgbcWebLocators extends Base{
 			}
     	
    public void signin_usgbc(String Euname , String Epass) throws InterruptedException {
-		
-	    //Thread.sleep(3000);
+
 	    Eusername.click();
 	    Eusername.sendKeys(Euname);
 		Epassword.sendKeys(Epass);
 		signin_continue.click();
-		//Thread.sleep(3000);
-		  
 	}	
    
    /* web element locator for payment page */
@@ -215,8 +225,6 @@ public class UsgbcWebLocators extends Base{
 		
 	   try {
 		   Thread.sleep(3000);
-		  // billing_country.sendKeys(billing_coun);
-		   Thread.sleep(5000);
 		   name_on_card.sendKeys(n_o_c);
 		   card_number.sendKeys(c_n); 
 		   month.sendKeys(mon);
@@ -234,6 +242,32 @@ public class UsgbcWebLocators extends Base{
 		   billing_pin_code.sendKeys(billing_pin_cod);
 		   billing_state.sendKeys(billing_stat);
 		   Thread.sleep(3000);
+		   submit_payment.click();
+		   //Thread.sleep(3000);
+	     } catch (Exception e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	   }
+   }
+   
+   public void payment_usgbc_Membership(String n_o_c , String c_n, String mon, String yea,String s_code,
+		   String billing_coun,String billing_street_add,String billing_street_add2 )  {
+		
+	   try {
+		   Thread.sleep(3000);
+		   name_on_card.sendKeys(n_o_c);
+		   card_number.sendKeys(c_n); 
+		   month.sendKeys(mon);
+		   year.sendKeys(yea);
+		   security_code.sendKeys(s_code);
+		   Thread.sleep(5000);
+		   Select select = new Select(billing_country);
+	 	   select.selectByVisibleText(billing_coun);
+	 	   Thread.sleep(3000);
+		   billing_street_address.click();
+		   billing_street_address.sendKeys(billing_street_add);
+		   billing_street_address2.sendKeys(billing_street_add2);
+		   
 		   submit_payment.click();
 		   //Thread.sleep(3000);
 	     } catch (Exception e) {
@@ -379,7 +413,7 @@ public class UsgbcWebLocators extends Base{
 	 	public WebElement getContactContinue() {
    			return Contact_Continue;
    			}
-	 	
+	 	//html/body/div[1]/div/div/div/div[2]/div
 	 	@FindBy(xpath="html/body/div[1]/div/div/div/div[2]/div" )WebElement status_message_usgbc_payment;
 	 	public WebElement getstatusMessageUsgbcPayment() {
    			return status_message_usgbc_payment;
@@ -392,7 +426,6 @@ public class UsgbcWebLocators extends Base{
 			Thread.sleep(2000);
     		Contact_attention_to.sendKeys(attention);
     		Contact_Company.sendKeys(company);
-    		//shipping_country.click();	
     		Select select = new Select(shipping_country);
 	 	    select.selectByVisibleText(country);
 	 	    Thread.sleep(3000);
@@ -404,7 +437,7 @@ public class UsgbcWebLocators extends Base{
     	}
 	 	
 	 	
-	 	/*Cart*/ 
+	 	/*/cart */ 
 	 	
 	 	 @FindBy(linkText="Shopping cart")WebElement ShoppingCart;
 		   	public WebElement getShoppingCart() {
@@ -454,41 +487,6 @@ public class UsgbcWebLocators extends Base{
 				return  CancelCart;
 		   		}
 			
-		 	
-		   	/* Membership/contact  web locator */ 
-		   	
-		    @FindBy(id="edit-attention-to")WebElement Contact_attention_to_membership ;						
-			@FindBy(id="edit-company")WebElement Contact_Company_membership;
-		   	@FindBy(xpath=".//*[@name='address[country_code]']")WebElement country_membership;
-		 	@FindBy(xpath=".//*[@name='address[address_line1]']" )WebElement address_membership;
-		 	@FindBy(xpath=".//*[@name='address[address_line2]']" )WebElement address_line2_membership;
-			@FindBy(xpath=".//*[@name='address[locality]']" )WebElement Contact_City_membership;
-		 	@FindBy(xpath=".//*[@id='edit-terms']" )WebElement terms_membership;
-		 	@FindBy(xpath=".//*[@id='edit-submit']" )WebElement Contact_Continue_membership;
-		 	public WebElement getContactContinueMembership() {
-	   			return Contact_Continue_membership;
-	   			}
-		 	
-		 	
-		 	public void contact_membership(String attention,String company,String country,String s_address,String s_address_line2 ,String city) throws InterruptedException {
-	    		
-		 		Thread.sleep(3000);
-		 		((JavascriptExecutor)driver).executeScript("scroll(0,400)");
-				Thread.sleep(2000);
-	    		Contact_attention_to_membership.sendKeys(attention);
-	    		Contact_Company_membership.sendKeys(company);
-	    		//shipping_country.click();	
-	    		Select select = new Select(country_membership);
-		 	    select.selectByVisibleText(country);
-		 	    Thread.sleep(3000);
-	    		address_membership.sendKeys(s_address);
-	    		address_line2_membership.sendKeys(s_address_line2);
-	    		Contact_City_membership.sendKeys(city);
-	    		terms_membership.click();
-	    		Contact_Continue_membership.click();	
-	    	}
-			
-			
 	 	
 	 	/*Membership module*/
 	 	
@@ -527,6 +525,47 @@ public class UsgbcWebLocators extends Base{
 	 	public WebElement getRevenueScale() {
    			return revenue_scale;
    			}
+	 	@FindBy(xpath="	html/body/div[1]/div/div/div/div[2]/div" )WebElement Membership_Payment_ErrorMessage;
+	 	public WebElement getMembership_Payment_ErrorMessage() {
+   			return Membership_Payment_ErrorMessage;
+   			}
+	 	
+	 
+	 	
+	   	/* Membership/contact  web locator */ 
+	   	
+	    @FindBy(id="edit-attention-to")WebElement Contact_attention_to_membership ;						
+		@FindBy(id="edit-company")WebElement Contact_Company_membership;
+	   	@FindBy(xpath=".//*[@name='address[country_code]']")WebElement country_membership;
+	 	@FindBy(xpath=".//*[@name='address[address_line1]']" )WebElement address_membership;
+	 	@FindBy(xpath=".//*[@name='address[address_line2]']" )WebElement address_line2_membership;
+		@FindBy(xpath=".//*[@name='address[locality]']" )WebElement Contact_City_membership;
+	 	@FindBy(xpath=".//*[@id='edit-terms']" )WebElement terms_membership;
+	 	@FindBy(xpath=".//*[@id='edit-submit']" )WebElement Contact_Continue_membership;
+	 	public WebElement getContactContinueMembership() {
+   			return Contact_Continue_membership;
+   			}
+	 	
+	 	
+	 	public void contact_membership(String attention,String company,String country,String s_address,String s_address_line2 ,String city) throws InterruptedException {
+    		
+	 		Thread.sleep(3000);
+	 		((JavascriptExecutor)driver).executeScript("scroll(0,400)");
+			Thread.sleep(2000);
+    		Contact_attention_to_membership.sendKeys(attention);
+    		Contact_Company_membership.sendKeys(company);
+    		//shipping_country.click();	
+    		Select select = new Select(country_membership);
+	 	    select.selectByVisibleText(country);
+	 	    Thread.sleep(3000);
+    		address_membership.sendKeys(s_address);
+    		address_line2_membership.sendKeys(s_address_line2);
+    		Contact_City_membership.sendKeys(city);
+    		terms_membership.click();
+    		Contact_Continue_membership.click();	
+    	}
+		
+		
 	 	
 	 	
 }

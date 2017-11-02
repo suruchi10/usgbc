@@ -45,7 +45,7 @@ public class LoggedUserTest extends Base{
 		    	test= extent.startTest("Logged User Test case 2");
 		    	test.log(LogStatus.INFO, "Test Started");
 		    	loggedUser.loggedUserVerification2();
-		    	System.out.println("Logged User Test case 2Finished ");
+		    	System.out.println("Logged User Test case 2 Finished ");
 			} catch (Throwable t) {
 				System.out.println(t.getLocalizedMessage());
 				Error e1 = new Error(t.getMessage());
