@@ -164,7 +164,6 @@ public class ReusableMethods extends UsgbcWebLocators{
 		  List<WebElement> rows_table = driver.findElements(By.tagName("tr"));
 		    //To calculate no of rows In table.
 		    int rows_count = rows_table.size();
-
 		    //Loop will execute till the last row of table.
 		    for (int row=1; row<rows_count; row++){
 		    //To locate columns(cells) of that specific row.
@@ -172,7 +171,6 @@ public class ReusableMethods extends UsgbcWebLocators{
 		    //To calculate no of columns(cells) In that specific row.
 		    int columns_count = Columns_row.size();
 		    System.out.println("Number of cells In Row "+row+" are "+columns_count);
-
 		    //Loop will execute till the last cell of that specific row.
 		    for (int column=0; column<columns_count; column++){
 		    //To retrieve text from that specific cell.
