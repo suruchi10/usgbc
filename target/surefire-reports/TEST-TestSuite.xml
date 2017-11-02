@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="19" failures="3" name="TestSuite" time="1,378.055" errors="0" skipped="0">
+<testsuite tests="20" failures="3" name="TestSuite" time="1,338.205" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\Groupten\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf808146630335845593.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\Groupten\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf6070488425915416500.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\Java\jdk1.8.0_131\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\DevDesktop\tools;C:\ProgramData\ComposerSetup\bin;C:\xampp\php;C:\Program Files\PuTTY\;C:\Program Files\Apache\maven\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\DevDesktop\php7_0;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Users\Groupten\AppData\Local\Microsoft\WindowsApps;C:\bin;C:\Users\Groupten\AppData\Roaming\Composer\vendor\bin;C:\Users\Groupten\AppData\Local\GitHubDesktop\bin;C:\Program Files (x86)\Drush\cwRsync\bin;C:\ProgramData\Drush\;C:\Program Files\phantomjs-2.1.1-windows\bin;C:\Program Files (x86)\Drush\GnuWin32\bin;C:\Program Files (x86)\Drush\Php;C:\Users\Groupten\AppData\Roaming\npm;;C:\Users\Groupten\Desktop\eclipse\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,47 +61,25 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.usgbc.dev.regression.CommunityRegistrationTest" name="testCommunityRegistration" time="129.423"/>
-  <testcase classname="com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest" name="testCommunityRegistrationCountryField" time="0.001"/>
-  <testcase classname="com.usgbc.dev.regression.UsgbcCoreTest" name="testUsgbcCore" time="100.526">
-    <failure message="expected [https://test-dynamic-usgbc.pantheonsite.io/notauthorized] but found [https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment]" type="java.lang.Error">java.lang.Error: expected [https://test-dynamic-usgbc.pantheonsite.io/notauthorized] but found [https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:178)
-	at org.testng.Assert.assertEquals(Assert.java:188)
-	at com.usgbc.dev.business.UsgbcCore.UsgbcCoreForm(UsgbcCore.java:80)
-	at com.usgbc.dev.regression.UsgbcCoreTest.testUsgbcCore(UsgbcCoreTest.java:26)
-</failure>
-    <system-out>--------Browser Closed--------
-Report file Created
---------FireFox Browser Launched-------- 
-Usgbc Core Module
-Broken Link for / 
-Total links are 42
-Broken Link for /signin 
-Total links are 19
-expected [https://test-dynamic-usgbc.pantheonsite.io/notauthorized] but found [https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment]
-</system-out>
-  </testcase>
-  <testcase classname="com.usgbc.dev.regression.LoggedUserTest" name="testLoggedUser" time="11.77"/>
-  <testcase classname="com.usgbc.dev.regression.LoggedUserTest" name="testLoggedUser2" time="38.077">
+  <testcase classname="com.usgbc.dev.regression.CommunityRegistrationTest" name="testCommunityRegistration" time="198.576"/>
+  <testcase classname="com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest" name="testCommunityRegistrationCountryField" time="0.004"/>
+  <testcase classname="com.usgbc.dev.regression.UsgbcCoreTest" name="testUsgbcCore" time="85.338">
     <failure message="Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Community Registration&quot;}
-Command duration or timeout: 17 milliseconds
+Command duration or timeout: 19 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 0da966e9-dfff-4d99-834f-e542de884e3a
+Session ID: 4afc5cc3-fffb-47ff-bde9-d89711e59ed1
 *** Element info: {Using=link text, value=Community Registration}" type="java.lang.Error">java.lang.Error: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Community Registration&quot;}
-Command duration or timeout: 17 milliseconds
+Command duration or timeout: 19 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 0da966e9-dfff-4d99-834f-e542de884e3a
+Session ID: 4afc5cc3-fffb-47ff-bde9-d89711e59ed1
 *** Element info: {Using=link text, value=Community Registration}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -114,7 +92,64 @@ Session ID: 0da966e9-dfff-4d99-834f-e542de884e3a
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.usgbc.dev.page.UsgbcWebLocators.getCommunityRegistration(UsgbcWebLocators.java:261)
+	at com.usgbc.dev.page.UsgbcWebLocators.getCommunityRegistration(UsgbcWebLocators.java:295)
+	at com.usgbc.dev.business.UsgbcCore.receiptdownload(UsgbcCore.java:24)
+	at com.usgbc.dev.business.UsgbcCore.UsgbcCoreForm(UsgbcCore.java:85)
+	at com.usgbc.dev.regression.UsgbcCoreTest.testUsgbcCore(UsgbcCoreTest.java:26)
+</failure>
+    <system-out>--------Browser Closed--------
+Report file Created
+--------FireFox Browser Launched-------- 
+Usgbc Core Module
+Broken Link for / 
+Total links are 42
+Broken Link for /signin 
+Total links are 19
+User is registered already 
+Broken Link for /usgbc/payment  
+Total links are 0
+Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Community Registration&quot;}
+Command duration or timeout: 19 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 4afc5cc3-fffb-47ff-bde9-d89711e59ed1
+*** Element info: {Using=link text, value=Community Registration}
+</system-out>
+  </testcase>
+  <testcase classname="com.usgbc.dev.regression.LoggedUserTest" name="testLoggedUser" time="8.611"/>
+  <testcase classname="com.usgbc.dev.regression.LoggedUserTest" name="testLoggedUser2" time="20.248">
+    <failure message="Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Community Registration&quot;}
+Command duration or timeout: 30 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: cd3e1f51-6413-4d4a-9fe9-c9e69070b67c
+*** Element info: {Using=link text, value=Community Registration}" type="java.lang.Error">java.lang.Error: Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Community Registration&quot;}
+Command duration or timeout: 30 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: cd3e1f51-6413-4d4a-9fe9-c9e69070b67c
+*** Element info: {Using=link text, value=Community Registration}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.usgbc.dev.page.UsgbcWebLocators.getCommunityRegistration(UsgbcWebLocators.java:295)
 	at com.usgbc.dev.business.LoggedUser.loggedUserVerification2(LoggedUser.java:39)
 	at com.usgbc.dev.regression.LoggedUserTest.testLoggedUser2(LoggedUserTest.java:47)
 </failure>
@@ -123,45 +158,45 @@ Report file Created
 --------FireFox Browser Launched-------- 
 Logged User  Test case 2
 Unable to locate element: {&quot;method&quot;:&quot;link text&quot;,&quot;selector&quot;:&quot;Community Registration&quot;}
-Command duration or timeout: 17 milliseconds
+Command duration or timeout: 30 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 0da966e9-dfff-4d99-834f-e542de884e3a
+Session ID: cd3e1f51-6413-4d4a-9fe9-c9e69070b67c
 *** Element info: {Using=link text, value=Community Registration}
 </system-out>
   </testcase>
-  <testcase classname="com.usgbc.dev.regression.ErrorMessageCommRegTest" name="testErrorMessagesCommReg" time="25.839"/>
-  <testcase classname="com.usgbc.dev.regression.ErrorMessageCommRegTest" name="testErrorMessagesCommRegCondition2" time="30.979"/>
-  <testcase classname="com.usgbc.dev.regression.ErrorMessageCommRegTest" name="testErrorMessagesCommRegCondition3" time="32.042"/>
-  <testcase classname="com.usgbc.dev.regression.UsgbcStoreTest" name="testUsgbcStore" time="11.774"/>
-  <testcase classname="com.usgbc.dev.regression.UsgbcStoreTest" name="testUsgbcStoreGreen" time="199.922"/>
-  <testcase classname="com.usgbc.dev.regression.UsgbcStoreTest" name="testUsgbcStoreGreen2" time="168.164"/>
-  <testcase classname="com.usgbc.dev.regression.UsgbcStoreTest" name="testUsgbcStoreLEED" time="139.712"/>
-  <testcase classname="com.usgbc.dev.regression.UsgbcStoreTest" name="testUsgbcStoreLEED2" time="141.495"/>
-  <testcase classname="com.usgbc.dev.regression.StoreTest" name="testShoppingCartLink" time="30.994"/>
-  <testcase classname="com.usgbc.dev.regression.StoreTest" name="testShoppingCartLink2" time="22.82"/>
-  <testcase classname="com.usgbc.dev.regression.StoreTest" name="testShoppingCartLink3" time="27.589"/>
-  <testcase classname="com.usgbc.dev.regression.StoreTest" name="testStoreGreen" time="132.243"/>
-  <testcase classname="com.usgbc.dev.regression.StoreTest" name="testStoreLEED" time="47.443">
+  <testcase classname="com.usgbc.dev.regression.ErrorMessageCommRegTest" name="testErrorMessagesCommReg" time="11.608"/>
+  <testcase classname="com.usgbc.dev.regression.ErrorMessageCommRegTest" name="testErrorMessagesCommRegCondition2" time="14.457"/>
+  <testcase classname="com.usgbc.dev.regression.ErrorMessageCommRegTest" name="testErrorMessagesCommRegCondition3" time="16.149"/>
+  <testcase classname="com.usgbc.dev.regression.UsgbcStoreTest" name="testUsgbcStore" time="8.601"/>
+  <testcase classname="com.usgbc.dev.regression.UsgbcStoreTest" name="testUsgbcStoreGreen" time="143.845"/>
+  <testcase classname="com.usgbc.dev.regression.UsgbcStoreTest" name="testUsgbcStoreGreen2" time="137.622"/>
+  <testcase classname="com.usgbc.dev.regression.UsgbcStoreTest" name="testUsgbcStoreLEED" time="127.695"/>
+  <testcase classname="com.usgbc.dev.regression.UsgbcStoreTest" name="testUsgbcStoreLEED2" time="129.006"/>
+  <testcase classname="com.usgbc.dev.regression.StoreTest" name="testShoppingCartLink" time="26.898"/>
+  <testcase classname="com.usgbc.dev.regression.StoreTest" name="testShoppingCartLink2" time="19.093"/>
+  <testcase classname="com.usgbc.dev.regression.StoreTest" name="testShoppingCartLink3" time="21.838"/>
+  <testcase classname="com.usgbc.dev.regression.StoreTest" name="testStoreGreen" time="124.465"/>
+  <testcase classname="com.usgbc.dev.regression.StoreTest" name="testStoreLEED" time="49.911">
     <failure message="Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;edit-attention-to&quot;}
-Command duration or timeout: 18 milliseconds
+Command duration or timeout: 26 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 547570ce-d677-4e3b-b0de-7b4419ff23b2
+Session ID: 3f73bb29-e75f-4754-9c49-332e21fd6aee
 *** Element info: {Using=id, value=edit-attention-to}" type="java.lang.Error">java.lang.Error: Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;edit-attention-to&quot;}
-Command duration or timeout: 18 milliseconds
+Command duration or timeout: 26 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 547570ce-d677-4e3b-b0de-7b4419ff23b2
+Session ID: 3f73bb29-e75f-4754-9c49-332e21fd6aee
 *** Element info: {Using=id, value=edit-attention-to}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -177,7 +212,7 @@ Session ID: 547570ce-d677-4e3b-b0de-7b4419ff23b2
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 	at com.sun.proxy.$Proxy5.sendKeys(Unknown Source)
-	at com.usgbc.dev.page.UsgbcWebLocators.contact_store(UsgbcWebLocators.java:393)
+	at com.usgbc.dev.page.UsgbcWebLocators.contact_store(UsgbcWebLocators.java:427)
 	at com.usgbc.utility.ReusableMethods.Contact_Form(ReusableMethods.java:27)
 	at com.usgbc.dev.business.Store.StoreModuleLEED(Store.java:73)
 	at com.usgbc.dev.regression.StoreTest.testStoreLEED(StoreTest.java:46)
@@ -191,15 +226,16 @@ Total links are 21
 LEED Reference Guide for Homes Design and Construction (e-document) : Product added to your shopping cart. 
 *****contact-payment-receipt*****
 Unable to locate element: {&quot;method&quot;:&quot;id&quot;,&quot;selector&quot;:&quot;edit-attention-to&quot;}
-Command duration or timeout: 18 milliseconds
+Command duration or timeout: 26 milliseconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
 System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 547570ce-d677-4e3b-b0de-7b4419ff23b2
+Session ID: 3f73bb29-e75f-4754-9c49-332e21fd6aee
 *** Element info: {Using=id, value=edit-attention-to}
 </system-out>
   </testcase>
-  <testcase classname="com.usgbc.dev.regression.MembershipTest" name="testMembership" time="87.242"/>
+  <testcase classname="com.usgbc.dev.regression.StoreTest" name="testStoreLEEDandGreen" time="120.394"/>
+  <testcase classname="com.usgbc.dev.regression.MembershipTest" name="testMembership" time="73.846"/>
 </testsuite>
