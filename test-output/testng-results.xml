@@ -1,32 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="84156" started-at="2017-11-02T02:31:04Z" finished-at="2017-11-02T02:32:28Z">
+  <suite name="Default suite" duration-ms="47" started-at="2017-11-03T10:22:30Z" finished-at="2017-11-03T10:22:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="84156" started-at="2017-11-02T02:31:04Z" finished-at="2017-11-02T02:32:28Z">
-      <class name="com.usgbc.dev.regression.MembershipTest">
-        <test-method status="PASS" signature="getDriver()[pri:0, instance:com.usgbc.dev.regression.MembershipTest@6a4f787b]" name="getDriver" is-config="true" duration-ms="7375" started-at="2017-11-02T08:01:04Z" finished-at="2017-11-02T08:01:11Z">
+    <test name="Default test" duration-ms="47" started-at="2017-11-03T10:22:30Z" finished-at="2017-11-03T10:22:30Z">
+      <class name="com.usgbc.test.regression.CommunityRegistrationTest">
+        <test-method status="FAIL" signature="getDriver(java.lang.String, java.lang.String, int)[pri:0, instance:com.usgbc.test.regression.CommunityRegistrationTest@6eebc39e]" name="getDriver" is-config="true" duration-ms="0" started-at="2017-11-03T15:52:30Z" finished-at="2017-11-03T15:52:30Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'sheetName' is required by @Configuration on method getDriver but has not been marked @Optional or defined
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-542427679\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'sheetName' is required by @Configuration on method getDriver but has not been marked @Optional or defined
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-542427679\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:154)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:84)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:197)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:585)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="PASS" signature="testMembership()[pri:0, instance:com.usgbc.dev.regression.MembershipTest@6a4f787b]" name="testMembership" duration-ms="74935" started-at="2017-11-02T08:01:11Z" finished-at="2017-11-02T08:02:26Z">
+        <test-method status="SKIP" signature="testCommunityRegistration()[pri:0, instance:com.usgbc.test.regression.CommunityRegistrationTest@6eebc39e]" name="testCommunityRegistration" duration-ms="16" started-at="2017-11-03T15:52:30Z" finished-at="2017-11-03T15:52:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testMembership -->
-        <test-method status="PASS" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.dev.regression.MembershipTest@6a4f787b]" name="closeDriver" is-config="true" duration-ms="1798" started-at="2017-11-02T08:02:26Z" finished-at="2017-11-02T08:02:28Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testMembership status=SUCCESS method=MembershipTest.testMembership()[pri:0, instance:com.usgbc.dev.regression.MembershipTest@6a4f787b] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- testCommunityRegistration -->
+        <test-method status="SKIP" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.test.regression.CommunityRegistrationTest@6eebc39e]" name="closeDriver" is-config="true" duration-ms="0" started-at="2017-11-03T15:52:30Z" finished-at="2017-11-03T15:52:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-      </class> <!-- com.usgbc.dev.regression.MembershipTest -->
+      </class> <!-- com.usgbc.test.regression.CommunityRegistrationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

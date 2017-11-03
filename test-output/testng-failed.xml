@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.usgbc.dev.regression.LoggedUserTest">
+      <class name="com.usgbc.test.regression.CommunityRegistrationTest">
         <methods>
-          <include name="testLoggedUser2"/>
-          <include name="getDriver"/>
-          <include name="closeDriver"/>
+          <include name="testCommunityRegistration"/>
         </methods>
-      </class> <!-- com.usgbc.dev.regression.LoggedUserTest -->
+      </class> <!-- com.usgbc.test.regression.CommunityRegistrationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

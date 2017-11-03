@@ -4,38 +4,38 @@
   <test name="ChromeTest">
   <parameter name="browser" value="Chrome" />
     <classes>
-      <class name="com.usgbc.dev.regression.CommunityRegistrationTest"/>
-      <class name="com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest"/> 
-      <class name="com.usgbc.dev.regression.UsgbcCoreTest"/>
-      <class name="com.usgbc.dev.regression.LoggedUserTest"/>
-      <class name="com.usgbc.dev.regression.ErrorMessageCommRegTest"/>
-      <class name="com.usgbc.dev.regression.UsgbcStoreTest"/>
-      <class name="com.usgbc.dev.regression.StoreTest"/>
+      <class name="org.usgbc.regression.CommunityRegistrationTest"/>
+      <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest"/> 
+      <class name="org.usgbc.regression.UsgbcCoreTest"/>
+      <class name="org.usgbc.regression.LoggedUserTest"/>
+      <class name="org.usgbc.regression.ErrorMessageCommRegTest"/>
+      <class name="org.usgbc.regression.UsgbcStoreTest"/>
+      <class name="org.usgbc.regression.StoreTest"/>
        
     </classes>
     </test>
     <test name="FirefoxTest">
   <parameter name="browser" value="Firefox" />
     <classes>
-       <class name="com.usgbc.dev.regression.CommunityRegistrationTest"/>
-       <class name="com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest"/> 
-       <class name="com.usgbc.dev.regression.UsgbcCoreTest"/>
-       <class name="com.usgbc.dev.regression.LoggedUserTest"/>
-       <class name="com.usgbc.dev.regression.ErrorMessageCommRegTest"/>
-       <class name="com.usgbc.dev.regression.UsgbcStoreTest"/>
-       <class name="com.usgbc.dev.regression.StoreTest"/>
+       <class name="org.usgbc.regression.CommunityRegistrationTest"/>
+       <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest"/> 
+       <class name="org.usgbc.regression.UsgbcCoreTest"/>
+       <class name="org.usgbc.regression.LoggedUserTest"/>
+       <class name="org.usgbc.regression.ErrorMessageCommRegTest"/>
+       <class name="org.usgbc.regression.UsgbcStoreTest"/>
+       <class name="org.usgbc.regression.StoreTest"/>
    </classes>
    </test>
    <test name="EdgeTest">
 	<parameter name="browser" value="Edge" />
 	<classes>
-	  <class name="com.usgbc.dev.regression.CommunityRegistrationTest"/>
-	  <class name="com.usgbc.dev.regression.CommunityRegistrationCountryFieldTest"/> 
-      <class name="com.usgbc.dev.regression.UsgbcCoreTest"/>
-      <class name="com.usgbc.dev.regression.LoggedUserTest"/>
-      <class name="com.usgbc.dev.regression.ErrorMessageCommRegTest"/>
-      <class name="com.usgbc.dev.regression.UsgbcStoreTest"/> 
-      <class name="com.usgbc.dev.regression.StoreTest"/>
+	  <class name="org.usgbc.regression.CommunityRegistrationTest"/>
+	  <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest"/> 
+      <class name="org.usgbc.regression.UsgbcCoreTest"/>
+      <class name="org.usgbc.regression.LoggedUserTest"/>
+      <class name="org.usgbc.regression.ErrorMessageCommRegTest"/>
+      <class name="org.usgbc.regression.UsgbcStoreTest"/> 
+      <class name="org.usgbc.regression.StoreTest"/>
 	</classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
