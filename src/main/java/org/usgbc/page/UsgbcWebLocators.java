@@ -146,6 +146,7 @@ public class UsgbcWebLocators extends Base{
     }
   /* web element locator for signup page */
     
+    
     @FindBy(id="edit-first-name")WebElement firstname;
     @FindBy(id="edit-last-name")WebElement lastname;
     @FindBy(id="edit-email")WebElement email;
@@ -167,38 +168,36 @@ public class UsgbcWebLocators extends Base{
     	}
     	
    /* web element locator for signin page */
-   @FindBy(id="edit-existinguser-usernamae")
-static WebElement Eusername;
-   public static WebElement getEusername() {
-			return Eusername;
-			}
-   @FindBy(id="edit-existinguser-password")
-static WebElement Epassword;
-   public static WebElement getEpassword() {
-			return Epassword ;
-			}
-   @FindBy(id="edit-submit")
-static WebElement signin_continue;
-   public static WebElement getSigninContinue() {
-		return signin_continue ;
-		}
-   
-   public By  register = By.linkText("Register Here.");
-  	public WebElement getRegister() {
-  			return driver.findElement(register);
-  			}
-  	@FindBy(xpath="html/body/div[1]/div/div/div/div/div/h2")WebElement status_message_signup;
-  	public WebElement getstatusMessageSignup() {
-			return status_message_signup;
-			}
     	
-   public void signin_usgbc(String Euname , String Epass) throws InterruptedException {
-
-	    Eusername.click();
-	    Eusername.sendKeys(Euname);
-		Epassword.sendKeys(Epass);
-		signin_continue.click();
-	}	
+	   @FindBy(id="edit-existinguser-usernamae") static WebElement Eusername;
+	   public static WebElement getEusername() {
+				return Eusername;
+				}
+	   @FindBy(id="edit-existinguser-password") static WebElement Epassword;
+	   public static WebElement getEpassword() {
+				return Epassword ;
+				}
+	   @FindBy(id="edit-submit") static WebElement signin_continue;
+	   public static WebElement getSigninContinue() {
+			return signin_continue ;
+			}
+	   
+	   public By  register = By.linkText("Register Here.");
+	  	public WebElement getRegister() {
+	  			return driver.findElement(register);
+	  			}
+	  	@FindBy(xpath="html/body/div[1]/div/div/div/div/div/h2")WebElement status_message_signup;
+	  	public WebElement getstatusMessageSignup() {
+				return status_message_signup;
+				}
+	    	
+	   public void signin_usgbc(String Euname , String Epass) throws InterruptedException {
+	
+		    Eusername.click();
+		    Eusername.sendKeys(Euname);
+			Epassword.sendKeys(Epass);
+			signin_continue.click();
+		}	
    
    /* web element locator for payment page */
    

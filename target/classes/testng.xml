@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-
-<parameter name="sheetName" value="URL"/>
-<parameter name="colName" value="baseUrl"/>
-<parameter name="rowNum" value="2"/>
- 
-  <test name="Test">
+<suite name="Suite" parallel="tests">
+  
+  <test name="FirefoxTest-test"  >
+  <!-- <parameter name="browser" value="Firefox" /> -->
+  <parameter name="sheetName" value="URL"/>
+  <parameter name="colName" value="baseUrl"/>
+  <parameter name="rowNum" value="2"/>
     <classes>
       <class name="org.usgbc.regression.CommunityRegistrationTest"/>
       <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest"/>
@@ -18,4 +18,24 @@
       <class name="org.usgbc.regression.MembershipTest"/>
     </classes>
   </test> <!-- Test -->
+  
+	<test name="FirefoxTest-dev" >
+	  <!-- <parameter name="browser" value="Firefox" /> -->
+	  <parameter name="sheetName" value="URL"/>
+	  <parameter name="colName" value="baseUrl"/>
+	  <parameter name="rowNum" value="3"/>
+	    <classes>
+	      <class name="org.usgbc.regression.CommunityRegistrationTest"/>
+	      <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest"/>
+	      <class name="org.usgbc.regression.UsgbcCoreTest"/>
+	      <class name="org.usgbc.regression.LoggedUserTest"/>
+	      <class name="org.usgbc.regression.ErrorMessageCommRegTest"/>
+	      <class name="org.usgbc.regression.UsgbcStoreTest"/>
+	      <class name="org.usgbc.regression.StoreTest"/>
+	      <class name="org.usgbc.regression.MembershipTest"/>
+	    </classes>
+	  </test>  
+ 
+ 
+  
 </suite> <!-- Suite -->

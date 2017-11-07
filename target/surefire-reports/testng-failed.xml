@@ -1,60 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]" parallel="tests">
   <parameter name="colName" value="baseUrl"/>
   <parameter name="sheetName" value="URL"/>
-  <parameter name="rowNum" value="2"/>
-  <test name="Test(failed)">
+  <parameter name="rowNum" value="3"/>
+  <test name="FirefoxTest-dev(failed)" parallel="tests">
+    <parameter name="colName" value="baseUrl"/>
+    <parameter name="sheetName" value="URL"/>
+    <parameter name="rowNum" value="3"/>
     <classes>
-      <class name="com.usgbc.test.regression.CommunityRegistrationTest">
-        <methods>
-          <include name="getDriver"/>
-          <include name="closeDriver"/>
-          <include name="testCommunityRegistration"/>
-        </methods>
-      </class> <!-- com.usgbc.test.regression.CommunityRegistrationTest -->
-      <class name="com.usgbc.test.regression.MembershipTest">
+      <class name="org.usgbc.regression.MembershipTest">
         <methods>
           <include name="testMembership"/>
         </methods>
-      </class> <!-- com.usgbc.test.regression.MembershipTest -->
-      <class name="com.usgbc.test.regression.UsgbcCoreTest">
+      </class> <!-- org.usgbc.regression.MembershipTest -->
+      <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest">
         <methods>
-          <include name="testUsgbcCore"/>
+          <include name="closeDriver"/>
+          <include name="getDriver"/>
+          <include name="testCommunityRegistrationCountryField"/>
         </methods>
-      </class> <!-- com.usgbc.test.regression.UsgbcCoreTest -->
-      <class name="com.usgbc.test.regression.ErrorMessageCommRegTest">
+      </class> <!-- org.usgbc.regression.CommunityRegistrationCountryFieldTest -->
+      <class name="org.usgbc.regression.ErrorMessageCommRegTest">
         <methods>
-          <include name="testErrorMessagesCommRegCondition2"/>
           <include name="testErrorMessagesCommReg"/>
           <include name="testErrorMessagesCommRegCondition3"/>
+          <include name="testErrorMessagesCommRegCondition2"/>
         </methods>
-      </class> <!-- com.usgbc.test.regression.ErrorMessageCommRegTest -->
-      <class name="com.usgbc.test.regression.LoggedUserTest">
+      </class> <!-- org.usgbc.regression.ErrorMessageCommRegTest -->
+      <class name="org.usgbc.regression.StoreTest">
+        <methods>
+          <include name="testShoppingCartLink2"/>
+          <include name="testShoppingCartLink3"/>
+          <include name="testShoppingCartLink"/>
+          <include name="testStoreGreen"/>
+          <include name="testStoreLEEDandGreen"/>
+          <include name="testStoreLEED"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.StoreTest -->
+      <class name="org.usgbc.regression.LoggedUserTest">
         <methods>
           <include name="testLoggedUser2"/>
           <include name="testLoggedUser"/>
+          <include name="closeDriver"/>
+          <include name="getDriver"/>
         </methods>
-      </class> <!-- com.usgbc.test.regression.LoggedUserTest -->
-      <class name="com.usgbc.test.regression.StoreTest">
+      </class> <!-- org.usgbc.regression.LoggedUserTest -->
+      <class name="org.usgbc.regression.CommunityRegistrationTest">
         <methods>
-          <include name="testShoppingCartLink"/>
-          <include name="testStoreGreen"/>
-          <include name="testStoreLEED"/>
-          <include name="testShoppingCartLink2"/>
-          <include name="testStoreLEEDandGreen"/>
-          <include name="testShoppingCartLink3"/>
+          <include name="testCommunityRegistration"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="getDriver"/>
+          <include name="getDriver"/>
         </methods>
-      </class> <!-- com.usgbc.test.regression.StoreTest -->
-      <class name="com.usgbc.test.regression.UsgbcStoreTest">
+      </class> <!-- org.usgbc.regression.CommunityRegistrationTest -->
+      <class name="org.usgbc.regression.UsgbcCoreTest">
         <methods>
-          <include name="testUsgbcStoreLEED2"/>
+          <include name="testUsgbcCore"/>
+          <include name="closeDriver"/>
+          <include name="getDriver"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.UsgbcCoreTest -->
+      <class name="org.usgbc.regression.UsgbcStoreTest">
+        <methods>
+          <include name="testUsgbcStore"/>
+          <include name="testUsgbcStoreGreen"/>
           <include name="testUsgbcStoreLEED"/>
           <include name="testUsgbcStoreGreen2"/>
-          <include name="testUsgbcStoreGreen"/>
-          <include name="testUsgbcStore"/>
+          <include name="testUsgbcStoreLEED2"/>
         </methods>
-      </class> <!-- com.usgbc.test.regression.UsgbcStoreTest -->
+      </class> <!-- org.usgbc.regression.UsgbcStoreTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- FirefoxTest-dev(failed) -->
+  <test name="FirefoxTest-test(failed)" parallel="tests">
+    <parameter name="colName" value="baseUrl"/>
+    <parameter name="sheetName" value="URL"/>
+    <parameter name="rowNum" value="2"/>
+    <classes>
+      <class name="org.usgbc.regression.MembershipTest">
+        <methods>
+          <include name="testMembership"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.MembershipTest -->
+      <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest">
+        <methods>
+          <include name="closeDriver"/>
+          <include name="getDriver"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.CommunityRegistrationCountryFieldTest -->
+      <class name="org.usgbc.regression.ErrorMessageCommRegTest">
+        <methods>
+          <include name="testErrorMessagesCommReg"/>
+          <include name="testErrorMessagesCommRegCondition3"/>
+          <include name="testErrorMessagesCommRegCondition2"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.ErrorMessageCommRegTest -->
+      <class name="org.usgbc.regression.StoreTest">
+        <methods>
+          <include name="testShoppingCartLink2"/>
+          <include name="testShoppingCartLink3"/>
+          <include name="testShoppingCartLink"/>
+          <include name="testStoreGreen"/>
+          <include name="testStoreLEEDandGreen"/>
+          <include name="testStoreLEED"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.StoreTest -->
+      <class name="org.usgbc.regression.LoggedUserTest">
+        <methods>
+          <include name="testLoggedUser2"/>
+          <include name="testLoggedUser"/>
+          <include name="closeDriver"/>
+          <include name="getDriver"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.LoggedUserTest -->
+      <class name="org.usgbc.regression.CommunityRegistrationTest">
+        <methods>
+          <include name="testCommunityRegistration"/>
+          <include name="closeDriver"/>
+          <include name="closeDriver"/>
+          <include name="getDriver"/>
+          <include name="getDriver"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.CommunityRegistrationTest -->
+      <class name="org.usgbc.regression.UsgbcCoreTest">
+        <methods>
+          <include name="testUsgbcCore"/>
+          <include name="closeDriver"/>
+          <include name="getDriver"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.UsgbcCoreTest -->
+      <class name="org.usgbc.regression.UsgbcStoreTest">
+        <methods>
+          <include name="testUsgbcStore"/>
+          <include name="testUsgbcStoreGreen"/>
+          <include name="testUsgbcStoreLEED"/>
+          <include name="testUsgbcStoreGreen2"/>
+          <include name="testUsgbcStoreLEED2"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.UsgbcStoreTest -->
+    </classes>
+  </test> <!-- FirefoxTest-test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

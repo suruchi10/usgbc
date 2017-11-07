@@ -2,22 +2,22 @@
 <testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="47" started-at="2017-11-03T10:22:30Z" finished-at="2017-11-03T10:22:30Z">
+  <suite name="Default suite" duration-ms="33" started-at="2017-11-06T04:45:25Z" finished-at="2017-11-06T04:45:25Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="47" started-at="2017-11-03T10:22:30Z" finished-at="2017-11-03T10:22:30Z">
-      <class name="com.usgbc.test.regression.CommunityRegistrationTest">
-        <test-method status="FAIL" signature="getDriver(java.lang.String, java.lang.String, int)[pri:0, instance:com.usgbc.test.regression.CommunityRegistrationTest@6eebc39e]" name="getDriver" is-config="true" duration-ms="0" started-at="2017-11-03T15:52:30Z" finished-at="2017-11-03T15:52:30Z">
+    <test name="Default test" duration-ms="33" started-at="2017-11-06T04:45:25Z" finished-at="2017-11-06T04:45:25Z">
+      <class name="org.usgbc.regression.UsgbcCoreTest">
+        <test-method status="FAIL" signature="getDriver(java.lang.String, java.lang.String, int)[pri:0, instance:org.usgbc.regression.UsgbcCoreTest@239963d8]" name="getDriver" is-config="true" duration-ms="0" started-at="2017-11-06T10:15:25Z" finished-at="2017-11-06T10:15:25Z">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'sheetName' is required by @Configuration on method getDriver but has not been marked @Optional or defined
-in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-542427679\testng-customsuite.xml]]>
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-492231849\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'sheetName' is required by @Configuration on method getDriver but has not been marked @Optional or defined
-in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-542427679\testng-customsuite.xml
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-492231849\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParameters(Parameters.java:154)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:361)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:84)
@@ -47,15 +47,15 @@ in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-542427679\testng-customsu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getDriver -->
-        <test-method status="SKIP" signature="testCommunityRegistration()[pri:0, instance:com.usgbc.test.regression.CommunityRegistrationTest@6eebc39e]" name="testCommunityRegistration" duration-ms="16" started-at="2017-11-03T15:52:30Z" finished-at="2017-11-03T15:52:30Z">
+        <test-method status="SKIP" signature="testUsgbcCore()[pri:0, instance:org.usgbc.regression.UsgbcCoreTest@239963d8]" name="testUsgbcCore" duration-ms="2" started-at="2017-11-06T10:15:25Z" finished-at="2017-11-06T10:15:25Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCommunityRegistration -->
-        <test-method status="SKIP" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:com.usgbc.test.regression.CommunityRegistrationTest@6eebc39e]" name="closeDriver" is-config="true" duration-ms="0" started-at="2017-11-03T15:52:30Z" finished-at="2017-11-03T15:52:30Z">
+        </test-method> <!-- testUsgbcCore -->
+        <test-method status="SKIP" signature="closeDriver(org.testng.ITestResult)[pri:0, instance:org.usgbc.regression.UsgbcCoreTest@239963d8]" name="closeDriver" is-config="true" duration-ms="0" started-at="2017-11-06T10:15:25Z" finished-at="2017-11-06T10:15:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-      </class> <!-- com.usgbc.test.regression.CommunityRegistrationTest -->
+      </class> <!-- org.usgbc.regression.UsgbcCoreTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -37,9 +37,7 @@ public class UsgbcCore extends ReusableMethods{
 				  System.out.println("You have very recently placed an order for this item. Please review your order history to confirm your previous order  ");
 			  }else {
 				  System.out.println("Error in payment form submission. ");
-			  }
-			  
-			
+			  }		
 	}
 	
 	public void UsgbcCoreForm() throws Exception {
