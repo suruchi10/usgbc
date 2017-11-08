@@ -23,21 +23,21 @@ public class Base extends Report{
 
 	public static WebDriver driver ;
 	public static XlsReader reader;
-	public static String baseUrl;
+	public String baseUrl;
 	public static Properties prop ;
 	
 	@BeforeMethod
-	@Parameters({"browserName","environment"})
-	public WebDriver  getDriver(String browser,String environment) throws Exception {
-		
+	@Parameters({"browser","environment"})
+	public WebDriver  getDriver( ) throws Exception {
+		String browser = "chrome";
 		Report.ExtentReportConfig();
-		reader= new XlsReader(System.getProperty("user.dir")+"\\TestData_usgbc.xlsx");
-		
+		reader= new XlsReader("C:\\Users\\Group10\\eclipse-workspace\\usgbc-testing\\TestData_usgbc.xlsx");
+		System.out.println(reader);	
 	    //Check if parameter passed from TestNG is 'firefox'
 		if(browser.equalsIgnoreCase("Firefox")){
 			//create firefox instance
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\Groupten\\Drivers\\geckodriver.exe");    
-			driver =new FireFoxDriver();
+			System.setProperty("webdriver.firefox.marionette", "C:\\Users\\Group10\\eclipse-workspace\\usgbc-testing\\geckodriver.exe");    
+			 driver = new FirefoxDriver();
 			driver.manage().window().maximize(); 
 			System.out.println("-----Firefox Browser Launched----- ");		    	
 		}
@@ -45,7 +45,7 @@ public class Base extends Report{
 		//Check if parameter passed as 'chrome'
 		else if(browser.equalsIgnoreCase("Chrome")){
 			//set path to chromedriver.exe
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\Groupten\\Drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\Group10\\eclipse-workspace\\usgbc-testing\\chromedriver.exe");
 			driver =new ChromeDriver();
 			// Add options to Google Chrome. The window-size is important for responsive sitess
 			driver.manage().window().maximize();
@@ -84,32 +84,43 @@ public class Base extends Report{
 		//If no browser passed throw exception
 		throw new Exception("Browser is not correct");
 		}
-		
-		
-		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		prop= new Properties();
-		  FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"/src/main/resources/Environment.properties");
-		  prop.load(file);
-		  String devurl=prop.getProperty("ENV_DEV");
-		  String testurl=prop.getProperty("ENV_TEST");
-		  String productionurl=prop.getProperty("ENV_PRODUCTION");
-		  
-		  if(environment.equalsIgnoreCase("dev")){
-		   driver.get(devurl);
-		   
-		  }
-		  else if(environment.equalsIgnoreCase("test")){
-		   driver.get(testurl);
-		   
-		  }
-		  else if(environment.equalsIgnoreCase("production")){
-		   driver.get(productionurl);
 
-		  }
 		return driver;
 	}
 		
+		public String callingUrls(String environment) throws Exception {
+		  prop= new Properties();
+		  FileInputStream file = new FileInputStream(System.getProperty("user.dir")+"/src/main/resources/Environment.properties");
+		  prop.load(file);
+		  String devurl=prop.getProperty("ENV_DEV");
+		  
+		  String testurl=prop.getProperty("ENV_TEST");
+		  
+		  String productionurl=prop.getProperty("ENV_PRODUCTION");
+		  
+		  if(environment.equalsIgnoreCase("dev")){
+			  
+			  System.out.println(devurl);
+			  baseUrl = devurl; 
+			  ;
+		   
+		  }
+		  
+		  else if(environment.equalsIgnoreCase("test")){
+			  System.out.println(testurl);
+			  baseUrl = testurl; 
+		
+		   
+		  }
+		  
+		  else if(environment.equalsIgnoreCase("production")){
+		   driver.get(productionurl);
+		   
+		  }
+		  return baseUrl;
+}
+	
 		
 
 	@AfterMethod

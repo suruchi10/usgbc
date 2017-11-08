@@ -22,7 +22,7 @@ public class CommunityRegistration extends ReusableMethods{
 		super(driver);		
 	}
 	
-	public void CommunityRegistartionModuleForNonExistingUser() throws Exception {
+	public void CommunityRegistartionModuleForNonExistingUser(String baseUrl) throws Exception {
 		
 		getcommunityRegistration().click();
 		Thread.sleep(2000);
@@ -56,7 +56,7 @@ public class CommunityRegistration extends ReusableMethods{
 		   }
 	}	
 	
-	public void CommunityRegistartionModuleForNonExistingUserToGetRegistered() throws Exception {
+	public void CommunityRegistartionModuleForNonExistingUserToGetRegistered(String baseUrl) throws Exception {
 			
 			getcommunityRegistration().click();
 			Thread.sleep(2000);
