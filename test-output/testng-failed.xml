@@ -1,13 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="environment" value="test"/>
+  <parameter name="browserName" value="firefox"/>
+  <test name="FirefoxTest(failed)">
+    <parameter name="environment" value="test"/>
+    <parameter name="browserName" value="firefox"/>
     <classes>
+      <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest">
+        <methods>
+          <include name="testCommunityRegistrationCountryField"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.CommunityRegistrationCountryFieldTest -->
+      <class name="org.usgbc.regression.LoggedUserTest">
+        <methods>
+          <include name="testLoggedUser2"/>
+          <include name="testLoggedUser"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.LoggedUserTest -->
+      <class name="org.usgbc.regression.CommunityRegistrationTest">
+        <methods>
+          <include name="testCommunityRegistrationForNonExistingUserToGetRegistered"/>
+          <include name="testCommunityRegistrationForExistingUser"/>
+          <include name="testCommunityRegistrationForNonExistingUser"/>
+          <include name="getDriver"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.CommunityRegistrationTest -->
       <class name="org.usgbc.regression.UsgbcCoreTest">
         <methods>
-          <include name="testUsgbcCore"/>
+          <include name="testUsgbcCoreForNonExistingUser"/>
+          <include name="testUsgbcCoreForExistingUser"/>
+          <include name="testUsgbcCoreForNonExistingUserToGetRegistered"/>
         </methods>
       </class> <!-- org.usgbc.regression.UsgbcCoreTest -->
+      <class name="org.usgbc.regression.ErrorMessageCommRegTest">
+        <methods>
+          <include name="testErrorMessagesCommReg"/>
+          <include name="testErrorMessagesCommRegCondition3"/>
+          <include name="testErrorMessagesCommRegCondition2"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.ErrorMessageCommRegTest -->
+      <class name="org.usgbc.regression.StoreTest">
+        <methods>
+          <include name="testShoppingCartLink2"/>
+          <include name="testShoppingCartLink3"/>
+          <include name="testShoppingCartLink"/>
+          <include name="testStoreGreen"/>
+          <include name="testStoreLEEDandGreen"/>
+          <include name="testStoreLEED"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.StoreTest -->
+      <class name="org.usgbc.regression.UsgbcStoreTest">
+        <methods>
+          <include name="testUsgbcStore"/>
+          <include name="testUsgbcStoreGreen"/>
+          <include name="testUsgbcStoreLEED"/>
+          <include name="testUsgbcStoreGreen2"/>
+          <include name="testUsgbcStoreLEED2"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.UsgbcStoreTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

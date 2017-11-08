@@ -14,10 +14,9 @@ public class LoggedUserTest extends Base{
 	@Test
 	public void testLoggedUser() throws Exception {
 		
-		String url ="https://test-dynamic-usgbc.pantheonsite.io/community/registration";
-	    driver.get(url);
+	    driver.get(baseUrl+"/community/registration");
 	    System.out.println("Logged User  Test");
-	    BrokenLink.verifyLinkActive(url);	    
+	    BrokenLink.verifyLinkActive(baseUrl+"/community/registration");	    
 	    LoggedUser loggedUser = PageFactory.initElements(driver, LoggedUser.class);    
 		    try {
 		    	test= extent.startTest("Logged User Test");
@@ -35,11 +34,10 @@ public class LoggedUserTest extends Base{
 	}
 	@Test
 	public void testLoggedUser2() throws Exception {
-		
-		String url ="https://test-dynamic-usgbc.pantheonsite.io";
-	    driver.get(url);
+	
+	    driver.get(baseUrl);
 	    System.out.println("Logged User  Test case 2");
-	    BrokenLink.verifyLinkActive(url);	    
+	    BrokenLink.verifyLinkActive(baseUrl);	    
 	    LoggedUser loggedUser = PageFactory.initElements(driver, LoggedUser.class);    
 		    try {
 		    	test= extent.startTest("Logged User Test case 2");

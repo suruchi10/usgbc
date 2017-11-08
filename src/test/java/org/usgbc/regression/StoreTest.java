@@ -12,12 +12,11 @@ public class StoreTest extends Base {
 
 	@Test	
 	public void testStoreGreen() throws Exception {
-		
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/store";
-		 driver.get(url);
+	
+		 driver.get(baseUrl +"/store");
 		 System.out.println("Store Module Green Apple Lapel Pins");
 		 System.out.println("Broken Link for /store ");
-		 BrokenLink.BrokenLinkCheck(url);
+		 BrokenLink.BrokenLinkCheck(baseUrl +"/store");
 	     Store store = PageFactory.initElements(driver, Store.class);    
 		    try {
 		    	test= extent.startTest("Store Module Green Apple Lapel Pins  ");
@@ -34,12 +33,11 @@ public class StoreTest extends Base {
 	
 	@Test	
 	public void testStoreLEED() throws Exception {
-		
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/store";
-		 driver.get(url);
+	
+		 driver.get(baseUrl +"/store");
 		 System.out.println("Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
 		 System.out.println("Broken Link for /store ");
-		 BrokenLink.BrokenLinkCheck(url);
+		 BrokenLink.BrokenLinkCheck(baseUrl +"/store");
 	     Store store = PageFactory.initElements(driver, Store.class);    
 		    try {
 		    	test= extent.startTest("Store Module LEED Reference Guide for Homes Design and Construction (e-document)");

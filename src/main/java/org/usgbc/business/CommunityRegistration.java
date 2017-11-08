@@ -22,56 +22,106 @@ public class CommunityRegistration extends ReusableMethods{
 		super(driver);		
 	}
 	
-	
-	public void CommunityRegistartionModule() throws Exception {
+	public void CommunityRegistartionModuleForNonExistingUser() throws Exception {
 		
 		getcommunityRegistration().click();
-		//Thread.sleep(3000);
+		Thread.sleep(2000);
 		String communityRegistration_url = driver.getCurrentUrl();
 		Assert.assertEquals(communityRegistration_url, baseUrl+"/community/registration");
-		System.out.println("Broken Link for community/registration ");
+		
+		System.out.println("Broken Link for :"+ driver.getTitle());
 		//BrokenLink.BrokenLinkCheck(communityRegistration_url);
 		CommunityRegistrationFormData.CommmunityRegistrationForm();
 	    String signin_url = driver.getCurrentUrl();
 		if (signin_url.equalsIgnoreCase(baseUrl+"/signin") && driver.getTitle().contains("Sign-in")){
 			   Assert.assertTrue(true);
-			   System.out.println("Test Passed,session created and  order id generated ");
-			   System.out.println("Broken Link for /signin ");
+			   System.out.println("Test Passed,Community Registration Form filled correctly");
+			   System.out.println("Broken Link for :" + driver.getTitle());
 			   BrokenLink.BrokenLinkCheck(signin_url);
-			   signInForm("signin",3);
-			   //Thread.sleep(3000);
+			   signInForm("signin",10); //signin 10 => (amayra@gmail.com,amayra)
 			   String Signin_url = driver.getCurrentUrl();
-				   if (Signin_url.equalsIgnoreCase(baseUrl+"/signin")) {
-					   Assert.assertTrue(true);
-					   System.out.println("This user does not exist in the system. ");
-					   getRegister().click();
-					   Thread.sleep(3000);
-					   String signup_url = driver.getCurrentUrl();
-					   System.out.println("Broken Link for /signup ");
-					   BrokenLink.BrokenLinkCheck(signup_url);
-					   signUpForm("signup",  3);
-					   Thread.sleep(3000);
-					   String payment_url = driver.getCurrentUrl();
-					   Assert.assertEquals(payment_url, baseUrl+"/usgbc/payment");
-					   System.out.println("User registered and created sucessfully");
-					   System.out.println("Broken Link for /usgbc/payment ");
-					   BrokenLink.BrokenLinkCheck(payment_url);
-					   receiptdownload();  
-					   
-				   }else {
-				   Assert.assertEquals(Signin_url, baseUrl+"/usgbc/payment");   
-				   System.out.println("User is registered already ");
-				   System.out.println("Broken Link for /usgbc/payment ");
-				   BrokenLink.BrokenLinkCheck(Signin_url);
-				   receiptdownload();
-				   }
-			   
-		   }else {
+			   //System.out.println(getStatusMessageBlock().getText());
+			   if (Signin_url.equalsIgnoreCase(baseUrl+"/signin") && getStatusMessageBlock().getText().contains("This user does not exist in the system.")) {
+				   Assert.assertTrue(true);
+				   System.out.println(getStatusMessageBlock().getText());
+			   }else {
+				   Assert.assertFalse(false);
+			   }
+		}else {
+		       signin_url.equalsIgnoreCase(baseUrl+"/community/registration");
+			   Assert.assertTrue(true);
+			   driver.getTitle().contains("Community Form");
+			   Assert.assertTrue(true);
+			   System.out.println(" Test Failed, Form field left empty");   
+		   }
+	}	
+	
+	public void CommunityRegistartionModuleForNonExistingUserToGetRegistered() throws Exception {
+			
+			getcommunityRegistration().click();
+			Thread.sleep(2000);
+			String communityRegistration_url = driver.getCurrentUrl();
+			Assert.assertEquals(communityRegistration_url, baseUrl+"/community/registration");
+			System.out.println("Broken Link for  : "+ driver.getTitle());
+			//BrokenLink.BrokenLinkCheck(communityRegistration_url);
+			CommunityRegistrationFormData.CommmunityRegistrationForm();
+		    String signin_url = driver.getCurrentUrl();
+			if (signin_url.equalsIgnoreCase(baseUrl+"/signin") && driver.getTitle().contains("Sign-in")){
+				   Assert.assertTrue(true);
+				   System.out.println("Test Passed,Community Registration Form filled correctly ");
+				   System.out.println("Broken Link for  :"+ driver.getTitle());
+				  // BrokenLink.BrokenLinkCheck(signin_url);
+				   getRegister().click();
+				   Thread.sleep(3000);
+				   String signup_url = driver.getCurrentUrl();
+				   System.out.println("Broken Link for  :"+ driver.getTitle());
+				   //BrokenLink.BrokenLinkCheck(signup_url);
+				   signUpForm();//  modified with faker class
+				   Thread.sleep(3000); 
+				   String payment_url = driver.getCurrentUrl();
+				   Assert.assertEquals(payment_url, baseUrl+"/usgbc/payment");
+				   System.out.println("User registered and created sucessfully");
+				   System.out.println("Broken Link for  :"+ driver.getTitle());
+				  // BrokenLink.BrokenLinkCheck(payment_url);
+				   paymentReceiptdownload();  
+				  
+			}else {
 			       signin_url.equalsIgnoreCase(baseUrl+"/community/registration");
 				   Assert.assertTrue(true);
-				   System.out.println(" Test Failed, Form field left empty");   
+				   driver.getTitle().contains("Community Form");
+				   Assert.assertTrue(true);
+				   System.out.println(" Test Failed,Community Registration Form Not Filled properly");   
 			   }
-	     }	
+		}	
+	
+	public void CommunityRegistartionModuleForExistingUser() throws Exception {
+		
+		getcommunityRegistration().click();
+		Thread.sleep(2000);
+		String communityRegistration_url = driver.getCurrentUrl();
+		Assert.assertEquals(communityRegistration_url, baseUrl+"/community/registration");
+		System.out.println("Broken Link for  :"+ driver.getTitle());
+		BrokenLink.BrokenLinkCheck(communityRegistration_url);
+		CommunityRegistrationFormData.CommmunityRegistrationForm();
+	    String signin_url = driver.getCurrentUrl();
+		if (signin_url.equalsIgnoreCase(baseUrl+"/signin") && driver.getTitle().contains("Sign-in")){
+			   Assert.assertTrue(true);
+			   System.out.println("Test Passed,Community Registration Form filled correctly ");
+			   System.out.println("Broken Link for :"+ driver.getTitle());
+			   BrokenLink.BrokenLinkCheck(signin_url);
+			   signInForm("signin",3); //signin 3 => (abi@gmail.com,abi)
+			   String payment_url = driver.getCurrentUrl();
+			   Assert.assertEquals(payment_url, baseUrl+"/usgbc/payment");
+			   System.out.println("User is registered already ");
+			   System.out.println("Broken Link for  :"+ driver.getTitle());
+			   BrokenLink.BrokenLinkCheck(payment_url);
+			   paymentReceiptdownload();  
+		}else {
+		       signin_url.equalsIgnoreCase(baseUrl+"/community/registration");
+			   Assert.assertTrue(true);
+			   driver.getTitle().contains("Community Form");
+			   Assert.assertTrue(true);
+			   System.out.println(" Test Failed,Community Registration Form Not Filled properly");   
+		   }
+	}		
 }
-
-

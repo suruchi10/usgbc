@@ -13,9 +13,8 @@ public class MembershipTest extends Base{
 	
 	@Test	
 	public void testMembership() throws Exception {
-		
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/membership/contact";
-		 driver.get(url);
+	
+		 driver.get(baseUrl+"/membership/contact");
 		 System.out.println("Membership Module ");
 		 System.out.println("Broken Link for /membership/contact");
 		 //BrokenLink.BrokenLinkCheck(url);

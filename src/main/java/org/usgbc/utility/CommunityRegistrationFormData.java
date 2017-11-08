@@ -10,7 +10,7 @@ import org.usgbc.page.UsgbcWebLocators;
 
 public class CommunityRegistrationFormData extends UsgbcWebLocators {
 	
-	public CommunityRegistrationFormData(WebDriver driver) {
+    public CommunityRegistrationFormData(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
@@ -18,7 +18,6 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 	public static void CommmunityRegistrationForm() throws InterruptedException {
 		
 		//for selecting community name
-	
 		Select community = new Select(getCommunity_Name());
 		community.selectByIndex(2);
 		
@@ -27,6 +26,7 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 		country.selectByIndex(104);
 		Thread.sleep(5000);
 	
+		//Java script code for scrolling the window
 		((JavascriptExecutor)driver).executeScript("scroll(0,400)");
 		Thread.sleep(2000);
 		
@@ -46,9 +46,8 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 		Select state= new Select(getState());
 		state.selectByIndex(8);
 		
-		
 		//for full time student  radio button
-	    List<WebElement>radioButton =driver.findElements(By.name("is_student")); 
+		List<WebElement>radioButton =driver.findElements(By.name("is_student"));
 	    boolean bValue = false;
 	    bValue = radioButton.get(0).isSelected();
 	    if(bValue = true){
@@ -64,7 +63,7 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 		}
 	
 		//for emerging professional radio button
-	    List<WebElement>radioButton2 =driver.findElements(By.name("is_emerging_prof")); 
+		List<WebElement>radioButton2 =driver.findElements(By.name("is_emerging_prof")); 
 	    boolean bValue2 = false;
 	    bValue2 = radioButton2.get(0).isSelected();
 	    if(bValue2 = true){ 
@@ -86,7 +85,6 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 	    
 	    Thread.sleep(5000);
 	    getContinue().click();
-	    
 	    Thread.sleep(5000);
 	   
 	}

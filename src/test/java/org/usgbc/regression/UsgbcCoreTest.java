@@ -13,24 +13,66 @@ public class UsgbcCoreTest extends Base {
 	
 
 	@Test	
-	public void testUsgbcCore() throws Exception {
+	public void testUsgbcCoreForNonExistingUser() throws Exception {
 		
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/";
-		 driver.get(url);
-		 System.out.println("Usgbc Core Module");
-		 System.out.println("Broken Link for / ");
-	     BrokenLink.BrokenLinkCheck(url);
+		 driver.get(baseUrl);
+		 System.out.println("Usgbc Core Module for Non Existing User");
+		 System.out.println("Broken Link for :"+driver.getTitle());
+	     BrokenLink.BrokenLinkCheck(baseUrl);
 	     UsgbcCore usgbcCore = PageFactory.initElements(driver, UsgbcCore.class);    
 		    try {
-		    	test= extent.startTest("Usgbc Core Module");
+		    	test= extent.startTest("Usgbc Core Module for Non Existing User");
 		    	test.log(LogStatus.INFO, "Test Started");
-		    	usgbcCore.UsgbcCoreForm();
-		    	System.out.println("Usgbc Core Module Test Finished ");
+		    	usgbcCore.UsgbcCoreForNonExistingUser();
+		    	System.out.println("Usgbc Core Module for Non Existing User Test Finished ");
 			}catch (Throwable t) {
 				System.out.println(t.getLocalizedMessage());
 				Error e1 = new Error(t.getMessage());
 				e1.setStackTrace(t.getStackTrace());
 				throw e1;
-			 }	
+			}	
+	}
+	
+	
+	@Test	
+	public void testUsgbcCoreForNonExistingUserToGetRegistered() throws Exception {
+		
+		 driver.get(baseUrl);
+		 System.out.println("Usgbc Core Module for Non Existing User To Get Registered");
+		 System.out.println("Broken Link for :"+driver.getTitle());
+	    // BrokenLink.BrokenLinkCheck(baseUrl);
+	     UsgbcCore usgbcCore = PageFactory.initElements(driver, UsgbcCore.class);    
+		    try {
+		    	test= extent.startTest("Usgbc Core Module for Non Existing User To Get Registered");
+		    	test.log(LogStatus.INFO, "Test Started");
+		    	usgbcCore.UsgbcCoreForNonExistingUserToGetRegistered();
+		    	System.out.println("Usgbc Core Module User for Non Existing User To Get Registered Test Finished ");
+			}catch (Throwable t) {
+				System.out.println(t.getLocalizedMessage());
+				Error e1 = new Error(t.getMessage());
+				e1.setStackTrace(t.getStackTrace());
+				throw e1;
+			}	
+	}
+	
+	@Test	
+	public void testUsgbcCoreForExistingUser() throws Exception {
+		
+		 driver.get(baseUrl);
+		 System.out.println("Usgbc Core Module for Existing User");
+		 System.out.println("Broken Link for :"+driver.getTitle());
+	     //BrokenLink.BrokenLinkCheck(baseUrl);
+	     UsgbcCore usgbcCore = PageFactory.initElements(driver, UsgbcCore.class);    
+		    try {
+		    	test= extent.startTest("Usgbc Core Module for Existing User ");
+		    	test.log(LogStatus.INFO, "Test Started");
+		    	usgbcCore.UsgbcCoreForExistingUser();
+		    	System.out.println("Usgbc Core Module User for Existing User Test Finished ");
+			}catch (Throwable t) {
+				System.out.println(t.getLocalizedMessage());
+				Error e1 = new Error(t.getMessage());
+				e1.setStackTrace(t.getStackTrace());
+				throw e1;
+			}	
 	}
 }

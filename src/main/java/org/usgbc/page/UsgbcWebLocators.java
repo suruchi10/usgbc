@@ -70,7 +70,7 @@ public class UsgbcWebLocators extends Base{
     	return driver.findElement(State);
     }
     
-    public static By Is_student = By.name ("is_student");
+    public static By Is_student = By.xpath (".//*[@id='edit-is-student']");
     public static WebElement getIs_student() {
     	return driver.findElement(Is_student);
     }
@@ -100,6 +100,11 @@ public class UsgbcWebLocators extends Base{
     	return driver.findElement(Graduation);
     }
   
+    public static By Emerging_Professional = By.xpath(".//*[@id='edit-is-emerging-prof']");
+    public static WebElement getEmerging_Professional() {
+    	return driver.findElement(Emerging_Professional);
+    }
+    
     public static By Emerging_Professional_no = By.id ("edit-is-emerging-prof-n");
     public static WebElement getEmerging_Professional_no() {
     	return driver.findElement(Emerging_Professional_no);
@@ -144,8 +149,8 @@ public class UsgbcWebLocators extends Base{
     public static WebElement getCancel() {
     	return driver.findElement(Cancel);
     }
-  /* web element locator for signup page */
     
+  /* web element locator for signup page */
     
     @FindBy(id="edit-first-name")WebElement firstname;
     @FindBy(id="edit-last-name")WebElement lastname;
@@ -283,7 +288,7 @@ public class UsgbcWebLocators extends Base{
 		
 	  	/*web element locator for UsgbcCore */
 	  	
-	  	 public By UsgbcCore = By.linkText("USGBC Core");
+	  	public By UsgbcCore = By.linkText("USGBC Core");
 	   	public WebElement getUsgbcCore() {
 	   			return driver.findElement(UsgbcCore);
 	   			}
@@ -314,7 +319,6 @@ public class UsgbcWebLocators extends Base{
 	   	
 	    /*Error message web locator for communtiy registration */ 
 	   	            
-	   	
 	    @FindBy(id=".//*[@id='edit-address']/div[3]/div[2]")WebElement error_address_line1 ;
 	    public WebElement getError_address_line1() {
    			return error_address_line1 ;
@@ -412,11 +416,13 @@ public class UsgbcWebLocators extends Base{
    			return Contact_Continue;
    			}
 	 	//html/body/div[1]/div/div/div/div[2]/div
-	 	@FindBy(xpath="html/body/div[1]/div/div/div/div[2]/div" )WebElement status_message_usgbc_payment;
+		//html/body/div[1]/div/div/div/div/div	
+	 	//html/body/div[1]/div/div/div/div
+	 	@FindBy(xpath="html/body/div[1]/div/div/div/div[2]/div")WebElement status_message_usgbc_payment;
 	 	public WebElement getstatusMessageUsgbcPayment() {
    			return status_message_usgbc_payment;
    			}
-	 	
+	  	
 	 	public void contact_store(String attention,String company,String country,String s_address,String s_address_line2 ,String city) throws InterruptedException {
     		
 	 		Thread.sleep(3000);

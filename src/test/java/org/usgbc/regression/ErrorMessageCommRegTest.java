@@ -13,8 +13,7 @@ public class ErrorMessageCommRegTest extends Base {
 	@Test	
 	public void testErrorMessagesCommReg() throws Exception {
 		
-		String url ="https://test-dynamic-usgbc.pantheonsite.io/community/registration";
-		driver.get(url);
+		driver.get(baseUrl+"/community/registration");
 		System.out.println("Communtiy Registration Error Message Validation Test");
 	    ErrorMessageCommReg errorMessageCommReg = PageFactory.initElements(driver, ErrorMessageCommReg.class);    
 	    try {
@@ -36,8 +35,7 @@ public class ErrorMessageCommRegTest extends Base {
 	@Test	
 	public void testErrorMessagesCommRegCondition2() throws Exception {
 		
-		String url ="https://test-dynamic-usgbc.pantheonsite.io/community/registration";
-		driver.get(url);
+		driver.get(baseUrl+"/community/registration");
 		System.out.println("Communtiy Registration Error Message Validation Condition 2 Test");
 	    ErrorMessageCommReg errorMessageCommReg2 = PageFactory.initElements(driver, ErrorMessageCommReg.class);    
 	    try {
@@ -57,8 +55,7 @@ public class ErrorMessageCommRegTest extends Base {
 	@Test	
 	public void testErrorMessagesCommRegCondition3() throws Exception {
 		
-		String url ="https://test-dynamic-usgbc.pantheonsite.io/community/registration";
-		driver.get(url);
+		driver.get(baseUrl+"/community/registration");
 		System.out.println("Communtiy Registration Error Message Validation Condition 3 Test");
 	    ErrorMessageCommReg errorMessageCommReg3= PageFactory.initElements(driver, ErrorMessageCommReg.class);    
 	    try {

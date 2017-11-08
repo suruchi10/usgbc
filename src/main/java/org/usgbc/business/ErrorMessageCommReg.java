@@ -92,9 +92,7 @@ public class ErrorMessageCommReg extends UsgbcWebLocators {
 	                		//equalsIgnoreCase(CommunityRegistrationErrorMsg[i]));
 	            
 	            i++;
-	        } 
-		
-	     
+	        }    
 	}   
 	
 	public void CommunityRegistrationErrorMessageCondition3 () throws InterruptedException
@@ -149,11 +147,6 @@ public class ErrorMessageCommReg extends UsgbcWebLocators {
 	                Assert.assertTrue(ErrorMsg.getText().contains(CommunityRegistrationErrorMsg[i]));
 	                		//equalsIgnoreCase(CommunityRegistrationErrorMsg[i]));
 	            i++;
-	        } 
-		
-	   
+	        }    
 	}   
-		
-
-
 }

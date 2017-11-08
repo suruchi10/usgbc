@@ -1,12 +1,15 @@
 package org.usgbc.utility;
 
 import java.util.List;
-
+import java.util.Random;
+import java.util.UUID;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.usgbc.page.UsgbcWebLocators;
+
+import com.github.javafaker.Faker;
 
 
 public class ReusableMethods extends UsgbcWebLocators{
@@ -40,9 +43,10 @@ public class ReusableMethods extends UsgbcWebLocators{
 		contact_membership(Attention,Company,Country,Street_Address,Street_Address_line2,City);
 		
 	}
+    
+  
 	public  void signInForm(String sheetName, int rowNum) throws InterruptedException {
-		
-		
+	
 		String Eemail= reader.getCellData(sheetName, "email",rowNum); 
 		String Epass= reader.getCellData(sheetName, "password", rowNum);
 		Thread.sleep(3000);
@@ -50,13 +54,34 @@ public class ReusableMethods extends UsgbcWebLocators{
 	
 	}
 	
-	public void signUpForm(String sheetName, int rowNum) throws InterruptedException {
+   
+	public void signUpForm(String sheetName , int rowNum) throws InterruptedException {
+			
+			
+			String fname=reader.getCellData(sheetName, "firstname",rowNum);
+			String lname=reader.getCellData(sheetName, "lastname",rowNum);
+			String email=reader.getCellData(sheetName, "email",rowNum);
+			String pass= reader.getCellData(sheetName, "password",rowNum);
+			String cpass=reader.getCellData(sheetName, "cpassword",rowNum); 
+			signup_usgbc(fname,lname,email,pass,cpass);
+			
+		}
+	private static String randomEmail() {
+        Random randomGenerator = new Random();  
+		int randomInt = randomGenerator.nextInt(1000);  
+		return "username"+ randomInt +"@gmail.com";
+    }
+	    
+	public void signUpForm() throws InterruptedException {
 		
-		String fname= reader.getCellData(sheetName, "firstname",rowNum); 
-		String lname= reader.getCellData(sheetName, "lastname", rowNum);
-		String email= reader.getCellData(sheetName, "email", rowNum);
-		String pass= reader.getCellData(sheetName, "password", rowNum);
-		String cpass= reader.getCellData(sheetName, "cpassword", rowNum);
+		Faker faker = new Faker();
+		String fname=faker.name().firstName();	
+		//System.out.println(fname);
+		String lname=faker.name().lastName();
+		//System.out.println(lname);
+		String email=randomEmail();
+		String pass="initpass";
+		String cpass="initpass"; 
 		signup_usgbc(fname,lname,email,pass,cpass);
 		
 	}
@@ -94,69 +119,65 @@ public class ReusableMethods extends UsgbcWebLocators{
 			payment_usgbc_Membership( name_on_card , card_number, month, year, security_code, billing_country, billing_street_address, billing_street_address2);
 						
 		}
-  
-  
-  
-	public void receiptdownload() throws Exception {
+ 
+	public void paymentReceiptdownload() throws Exception {
 		
 		 paymentForm("payment", 2);
-		 Thread.sleep(3000);  
+		 Thread.sleep(8000);  
 		 String reciept_url = driver.getCurrentUrl();
-		 if(reciept_url.equalsIgnoreCase("https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment") &&  getstatusMessageUsgbcPayment().isDisplayed()){ 
+		 if(reciept_url.equalsIgnoreCase(baseUrl+"/usgbc/payment") && getstatusMessageUsgbcPayment().isDisplayed()){ 
 			  if(getstatusMessageUsgbcPayment().getAttribute("innerHTML").contains("User not found")) {
 				  	Assert.assertTrue(true);
-				  	System.out.println("User not Found");  
+				  	System.out.println(getstatusMessageUsgbcPayment().getAttribute("innerHTML"));  
 		        }else if( getstatusMessageUsgbcPayment().getAttribute("innerHTML").contains("To prevent misorders, the same item may not be purchased twice within 24 hours. Questions? Call (800 number)")) {
 		        	Assert.assertTrue(true);
-		        	System.out.println("To prevent misorders, the same item may not be purchased twice within 24 hours. Questions? Call (800 number)"); 
+		        	System.out.println(getstatusMessageUsgbcPayment().getAttribute("innerHTML"));
 		 		}else if (getstatusMessageUsgbcPayment().getAttribute("innerHTML").contains(("The address you entered is invalid: The region Har is not defined for country IN"))) {
 		 			Assert.assertTrue(true);
-		        	System.out.println("The address you entered is invalid: The region Har is not defined for country IN"); 
-		 		}
-		 }else if (reciept_url.equals("https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment")) {
+		 			System.out.println(getstatusMessageUsgbcPayment().getAttribute("innerHTML")); 
+		 		} 	
+	     }else if(reciept_url.equalsIgnoreCase(baseUrl+"/payment/reciept")){  
 			  Assert.assertTrue(true);
-			  System.out.println("Error in payment form submission. ");  	
-	     }else {  
-	          reciept_url.equals("https://test-dynamic-usgbc.pantheonsite.io/payment/reciept");
-			  Assert.assertTrue(true);
-			  System.out.println("Broken Link for /Payment/reciept ");
-			  BrokenLink.BrokenLinkCheck(reciept_url);
+			  System.out.println("Broken Link for : "+ driver.getTitle());
+			  //BrokenLink.BrokenLinkCheck(reciept_url);
 			  getprint_Receipt().click();
 	          System.out.println("Receipt downloaded ");
-		
-	     }   	
+	     }else if (reciept_url.equalsIgnoreCase(baseUrl+"/usgbc/payment")) {
+			  Assert.assertTrue(true);
+			  System.out.println("Error in payment form submission. ");
+	     }
 	}
 	
 	public void contactPaymentReceipt() throws Exception {
 			
 		String Signin_url = driver.getCurrentUrl();
-		   if (Signin_url.equalsIgnoreCase("https://test-dynamic-usgbc.pantheonsite.io/signin")) {
+		   if (Signin_url.equalsIgnoreCase(baseUrl+"/signin")) {
 			   Assert.assertTrue(true);
 			   System.out.println("This user does not exist in the system. ");
 			   getRegister().click();
 			   Thread.sleep(3000);
 			   String signup_url = driver.getCurrentUrl();
-			   System.out.println("Broken Link for /signup ");
+			   System.out.println("Broken Link for : "+ driver.getTitle());
 			   BrokenLink.BrokenLinkCheck(signup_url);
 			   signUpForm("signup",  3);
 			   Thread.sleep(3000);
 			   String payment_url = driver.getCurrentUrl();
-				   if(payment_url.equalsIgnoreCase("https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment")) {
+				   if(payment_url.equalsIgnoreCase(baseUrl+"/usgbc/payment")) {
 					   Assert.assertTrue(true); 
 					   System.out.println("User registered and created sucessfully");
-					   System.out.println("Broken Link for /usgbc/payment ");
+					   System.out.println("Broken Link for : "+ driver.getTitle());
 					   BrokenLink.BrokenLinkCheck(payment_url);
-					   receiptdownload();
+					   paymentReceiptdownload();
 				   }else {
 					  Assert.assertTrue(getstatusMessageSignup().getAttribute("innerHTML").contains("This user already exist in the system. Please sign in."));
 					  System.out.println("Error in signup form submission"); 
 				   }   
 		   }else {
-		   Assert.assertEquals(Signin_url, "https://test-dynamic-usgbc.pantheonsite.io/usgbc/payment");   
+		   Assert.assertEquals(Signin_url, baseUrl+"/usgbc/payment");   
 		   System.out.println("User is registered already ");
-		   System.out.println("Broken Link for /usgbc/payment ");
+		   System.out.println("Broken Link for : "+ driver.getTitle());
 		   BrokenLink.BrokenLinkCheck(Signin_url);
-		   receiptdownload();
+		   paymentReceiptdownload();
 		   }   
 	}
 	
@@ -182,6 +203,7 @@ public class ReusableMethods extends UsgbcWebLocators{
       }
 	}
 	
+	//
 	public void StatusMessage() {
 		if(getStatusMessageBlock().isDisplayed()) {
 			System.out.println("---" +  getStatusMessageBlock().getText()+"---");

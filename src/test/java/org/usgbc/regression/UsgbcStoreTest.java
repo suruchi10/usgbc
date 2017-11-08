@@ -15,11 +15,10 @@ public class UsgbcStoreTest extends Base {
 	@Test	
 	public void testUsgbcStore() throws Exception {
 		
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/";
-		 driver.get(url);
+		 driver.get(baseUrl);
 		 System.out.println("Usgbc Store Module");
 		 System.out.println("Broken Link for store/contact ");
-	     //BrokenLink.BrokenLinkCheck(url);
+	     BrokenLink.BrokenLinkCheck(baseUrl);
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
 		    try {
 		    	test= extent.startTest("Usgbc Store Module");
@@ -38,11 +37,10 @@ public class UsgbcStoreTest extends Base {
 	@Test	
 	public void testUsgbcStoreGreen() throws Exception {
 	
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/";
-		 driver.get(url);
+		 driver.get(baseUrl);
 		 System.out.println("Usgbc Store Module Green Apple Lapel Pins");
 		 System.out.println("Broken Link for / ");
-	     BrokenLink.BrokenLinkCheck(url);
+	     BrokenLink.BrokenLinkCheck(baseUrl);
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
 		    try {
 		    	test= extent.startTest("Usgbc Store Module Green Apple Lapel Pins");
@@ -61,11 +59,10 @@ public class UsgbcStoreTest extends Base {
 	@Test	
 	public void testUsgbcStoreGreen2() throws Exception {
 	
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/";
-		 driver.get(url);
+		 driver.get(baseUrl);
 		 System.out.println("Usgbc Store Module Green Apple Lapel Pins scenario 2");
 		 System.out.println("Broken Link for / ");
-	     BrokenLink.BrokenLinkCheck(url);
+	     BrokenLink.BrokenLinkCheck(baseUrl);
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
 		    try {
 		    	test= extent.startTest("Usgbc Store Module Green Apple Lapel Pins scenario 2");
