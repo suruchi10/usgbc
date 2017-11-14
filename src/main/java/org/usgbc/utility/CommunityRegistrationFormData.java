@@ -110,6 +110,11 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 	
 			//for city
 	     	getCity().sendKeys("gurgaon");
+	     	
+	     	getEmail().click();
+	     	Thread.sleep(5000);
+		    getContinue().click();
+		    Thread.sleep(5000);
 	
 	}
 
