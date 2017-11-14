@@ -37,7 +37,7 @@ public class Base extends Report{
 	    //Check if parameter passed from TestNG is 'firefox'
 		if(browser.equalsIgnoreCase("Firefox")){
 			//create firefox instance
-			System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+"/geckodriver.exe");    
+			//System.setProperty("webdriver.firefox.marionette", System.getProperty("user.dir")+"/geckodriver.exe");    
 			driver = new FirefoxDriver();
 			System.out.println("-----Firefox Browser Launched----- ");		    	
 		}
