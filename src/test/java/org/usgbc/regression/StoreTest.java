@@ -13,10 +13,6 @@ public class StoreTest extends Base {
 	@Test	
 	public void testStoreGreen() throws Exception {
 	
-		 driver.get(baseUrl +"/store");
-		 System.out.println("Store Module Green Apple Lapel Pins");
-		 System.out.println("Broken Link for /store ");
-		 BrokenLink.BrokenLinkCheck(baseUrl +"/store");
 	     Store store = PageFactory.initElements(driver, Store.class);    
 		    try {
 		    	test= extent.startTest("Store Module Green Apple Lapel Pins  ");
@@ -34,10 +30,6 @@ public class StoreTest extends Base {
 	@Test	
 	public void testStoreLEED() throws Exception {
 	
-		 driver.get(baseUrl +"/store");
-		 System.out.println("Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
-		 System.out.println("Broken Link for /store ");
-		 BrokenLink.BrokenLinkCheck(baseUrl +"/store");
 	     Store store = PageFactory.initElements(driver, Store.class);    
 		    try {
 		    	test= extent.startTest("Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
@@ -55,11 +47,6 @@ public class StoreTest extends Base {
 	@Test	
 	public void testStoreLEEDandGreen() throws Exception {
 		
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/store";
-		 driver.get(url);
-		 System.out.println("Store Module LEED And Green");
-		 System.out.println("Broken Link for /store ");
-		 BrokenLink.BrokenLinkCheck(url);
 	     Store store = PageFactory.initElements(driver, Store.class);    
 		    try {
 		    	test= extent.startTest("Store Module LEED And Green");
@@ -77,9 +64,6 @@ public class StoreTest extends Base {
 	@Test	
 	public void testShoppingCartLink() throws Exception {
 		
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/";
-		 driver.get(url);
-		 System.out.println("Shopping Cart link with 3 Products");
 	     Store store = PageFactory.initElements(driver, Store.class);    
 		    try {
 		    	test= extent.startTest("Shopping Cart link with 3 Products");
@@ -97,9 +81,6 @@ public class StoreTest extends Base {
 	@Test	
 	public void testShoppingCartLink2() throws Exception {
 		
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/";
-		 driver.get(url);
-		 System.out.println("Shopping Cart link with the use of update cart button ");
 	     Store store = PageFactory.initElements(driver, Store.class);    
 		    try {
 		    	test= extent.startTest("Shopping Cart link with the use of update cart button");
@@ -117,9 +98,6 @@ public class StoreTest extends Base {
 	@Test	
 	public void testShoppingCartLink3() throws Exception {
 		
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/";
-		 driver.get(url);
-		 System.out.println("Shopping Cart link with the use of empty cart buttton");
 	     Store store = PageFactory.initElements(driver, Store.class);    
 		    try {
 		    	test= extent.startTest("Shopping Cart link with the use of empty cart buttton ");
@@ -133,4 +111,6 @@ public class StoreTest extends Base {
 				throw e1;
 			 }
 	}
+	
+
 }

@@ -13,8 +13,7 @@ public class LoggedUserTest extends Base{
 	
 	@Test
 	public void testLoggedUser() throws Exception {
-		
-	    driver.get(baseUrl+"/community/registration");
+	
 	    System.out.println("Logged User  Test");
 	    BrokenLink.verifyLinkActive(baseUrl+"/community/registration");	    
 	    LoggedUser loggedUser = PageFactory.initElements(driver, LoggedUser.class);    
@@ -29,13 +28,11 @@ public class LoggedUserTest extends Base{
 				e1.setStackTrace(t.getStackTrace());
 				throw e1;
 			 }
-		    
-	
 	}
+	
 	@Test
 	public void testLoggedUser2() throws Exception {
 	
-	    driver.get(baseUrl);
 	    System.out.println("Logged User  Test case 2");
 	    BrokenLink.verifyLinkActive(baseUrl);	    
 	    LoggedUser loggedUser = PageFactory.initElements(driver, LoggedUser.class);    
@@ -50,8 +47,6 @@ public class LoggedUserTest extends Base{
 				e1.setStackTrace(t.getStackTrace());
 				throw e1;
 			 }
-		    
-	
 	}
 
 }

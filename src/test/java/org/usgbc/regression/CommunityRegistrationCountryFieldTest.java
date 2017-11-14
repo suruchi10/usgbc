@@ -12,7 +12,7 @@ public class CommunityRegistrationCountryFieldTest extends Base{
 	public void testCommunityRegistrationCountryField() throws Exception {
 	
 		System.out.println("Communtiy Registration Module for country Field Validation");
-		//System.out.println("Broken Link for communtiy/registration ");
+		//System.out.println("Broken Link for  :" + driver.getTitle()");
 		   
 	    try {
 	    	test= extent.startTest("Communtiy Registration Module for country Field Validation");

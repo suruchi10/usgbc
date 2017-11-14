@@ -13,12 +13,13 @@ public class MembershipTest extends Base{
 	
 	@Test	
 	public void testMembership() throws Exception {
-	
-		 driver.get(baseUrl+"/membership/contact");
-		 System.out.println("Membership Module ");
-		 System.out.println("Broken Link for /membership/contact");
-		 //BrokenLink.BrokenLinkCheck(url);
-	     Membership membership = PageFactory.initElements(driver, Membership.class);    
+		
+		Thread.sleep(3000);
+		driver.get(baseUrl+"/membership/contact");
+		System.out.println("Membership Module ");
+		System.out.println("Broken Link for :" + driver.getTitle());
+		BrokenLink.BrokenLinkCheck(baseUrl+"/membership/contact");
+	    Membership membership = PageFactory.initElements(driver, Membership.class);  
 		    try {
 		    	test= extent.startTest("Membership Module");
 		    	test.log(LogStatus.INFO, "Test Started");

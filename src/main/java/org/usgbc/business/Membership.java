@@ -3,6 +3,7 @@ package org.usgbc.business;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.usgbc.utility.BrokenLink;
 import org.usgbc.utility.ReusableMethods;
 
 public class Membership extends ReusableMethods {
@@ -11,22 +12,6 @@ public class Membership extends ReusableMethods {
 			super(driver);
 			// TODO Auto-generated constructor stub
 		}
-	
-	public void membership() throws Exception {
-		 getOrganistionName().sendKeys("Group10");
-		 getwebsite().sendKeys("www.test.com");
-		 Select select = new Select(getIndustryCategory());
-		    select.selectByVisibleText("Educational Institutions");
-		    Thread.sleep(3000);
-		 Select select2 = new Select(getIndustrySubCategory());
-		    select2.selectByVisibleText("Commissioning Providers");
-		    Thread.sleep(3000);
-		 Select select3 = new Select(getRevenueScale());
-		    select3.selectByVisibleText("Less than $250,000");
-		    Thread.sleep(3000);
-		    getContactContinueMembership().click();
-		 
-	}
 	
 	public void MembershipModule() throws Exception {
 		
@@ -43,7 +28,7 @@ public class Membership extends ReusableMethods {
 					   Assert.assertTrue( getUserNotExist().getText().contains("This user does not exist in the system")); 
 					   System.out.println("This user does not exist in the system.");
 					   getRegister().click();
-					   signUpForm("signup",7);
+					   signUpForm();
 					   Thread.sleep(3000);
 					   String membershipContatct_url = driver.getCurrentUrl();
 					   if(membershipContatct_url.equalsIgnoreCase(baseUrl+"/membership/contact")) {

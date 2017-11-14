@@ -14,7 +14,10 @@ public class LoggedUser extends ReusableMethods {
 	}
 	 
 	public  void loggedUserVerification() throws InterruptedException {
-	    Thread.sleep(4000);
+		
+	    Thread.sleep(3000);
+	    getcommunityRegistration().click();
+		Thread.sleep(3000);
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
         js.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath(".//*[@id='main-menu']/li[4]/a")));
 	        try {
@@ -31,6 +34,7 @@ public class LoggedUser extends ReusableMethods {
 
 	
 	public  void loggedUserVerification2() throws InterruptedException {
+		
 	    Thread.sleep(4000);
 	    getUsgbcCore().click();
 	    Thread.sleep(3000);

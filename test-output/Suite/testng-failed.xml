@@ -1,17 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test name="FirefoxTest(failed)">
     <parameter name="environment" value="test"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
+      <class name="org.usgbc.regression.MembershipTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="testMembership"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.MembershipTest -->
+      <class name="org.usgbc.regression.UsgbcStoreTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testUsgbcStore"/>
+          <include name="testUsgbcStoreGreen"/>
+          <include name="setup"/>
+          <include name="testUsgbcStoreLEED"/>
+          <include name="testUsgbcStoreGreen2"/>
+          <include name="testUsgbcStoreLEED2"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.UsgbcStoreTest -->
+      <class name="org.usgbc.regression.UsgbcCoreTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testUsgbcCoreForNonExistingUser"/>
+          <include name="setup"/>
+          <include name="testUsgbcCoreForExistingUser"/>
+          <include name="testUsgbcCoreForNonExistingUserToGetRegistered"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.UsgbcCoreTest -->
+      <class name="org.usgbc.regression.LoggedUserTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testLoggedUser2"/>
+          <include name="setup"/>
+          <include name="testLoggedUser"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.LoggedUserTest -->
       <class name="org.usgbc.regression.CommunityRegistrationTest">
         <methods>
-          <include name="testCommunityRegistrationForNonExistingUserToGetRegistered" invocation-numbers="0"/>
-          <include name="environmentUrls" invocation-numbers="0"/>
-          <include name="closeDriver"/>
-          <include name="getDriver"/>
+          <include name="tearDown"/>
+          <include name="testCommunityRegistrationForNonExistingUserToGetRegistered"/>
+          <include name="setup"/>
+          <include name="testCommunityRegistrationForExistingUser"/>
         </methods>
       </class> <!-- org.usgbc.regression.CommunityRegistrationTest -->
+      <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="testCommunityRegistrationCountryField"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.CommunityRegistrationCountryFieldTest -->
+      <class name="org.usgbc.regression.ErrorMessageCommRegTest">
+        <methods>
+          <include name="testErrorMessagesCommReg"/>
+          <include name="tearDown"/>
+          <include name="testErrorMessagesCommRegCondition3"/>
+          <include name="testErrorMessagesCommRegCondition2"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.ErrorMessageCommRegTest -->
+      <class name="org.usgbc.regression.StoreTest">
+        <methods>
+          <include name="testShoppingCartLink2"/>
+          <include name="tearDown"/>
+          <include name="testShoppingCartLink3"/>
+          <include name="setup"/>
+          <include name="testShoppingCartLink"/>
+          <include name="testStoreGreen"/>
+          <include name="testStoreLEEDandGreen"/>
+          <include name="testStoreLEED"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.StoreTest -->
     </classes>
   </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

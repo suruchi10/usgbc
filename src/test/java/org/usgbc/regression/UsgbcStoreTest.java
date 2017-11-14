@@ -15,10 +15,6 @@ public class UsgbcStoreTest extends Base {
 	@Test	
 	public void testUsgbcStore() throws Exception {
 		
-		 driver.get(baseUrl);
-		 System.out.println("Usgbc Store Module");
-		 System.out.println("Broken Link for store/contact ");
-	     BrokenLink.BrokenLinkCheck(baseUrl);
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
 		    try {
 		    	test= extent.startTest("Usgbc Store Module");
@@ -36,11 +32,7 @@ public class UsgbcStoreTest extends Base {
 	//Green with user  test25@testuser.com, usgbc store link and  receipt download 
 	@Test	
 	public void testUsgbcStoreGreen() throws Exception {
-	
-		 driver.get(baseUrl);
-		 System.out.println("Usgbc Store Module Green Apple Lapel Pins");
-		 System.out.println("Broken Link for / ");
-	     BrokenLink.BrokenLinkCheck(baseUrl);
+
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
 		    try {
 		    	test= extent.startTest("Usgbc Store Module Green Apple Lapel Pins");
@@ -59,10 +51,6 @@ public class UsgbcStoreTest extends Base {
 	@Test	
 	public void testUsgbcStoreGreen2() throws Exception {
 	
-		 driver.get(baseUrl);
-		 System.out.println("Usgbc Store Module Green Apple Lapel Pins scenario 2");
-		 System.out.println("Broken Link for / ");
-	     BrokenLink.BrokenLinkCheck(baseUrl);
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
 		    try {
 		    	test= extent.startTest("Usgbc Store Module Green Apple Lapel Pins scenario 2");
@@ -82,11 +70,6 @@ public class UsgbcStoreTest extends Base {
 	@Test	
 	public void testUsgbcStoreLEED() throws Exception {
 		
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/";
-		 driver.get(url);
-		 System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
-		 System.out.println("Broken Link for / ");
-	     BrokenLink.BrokenLinkCheck(url);
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
 		    try {
 		    	test= extent.startTest("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
@@ -105,11 +88,6 @@ public class UsgbcStoreTest extends Base {
 	@Test	
 	public void testUsgbcStoreLEED2() throws Exception {
 		
-		 String url ="https://test-dynamic-usgbc.pantheonsite.io/";
-		 driver.get(url);
-		 System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document) scenario 2");
-		 System.out.println("Broken Link for / ");
-	     BrokenLink.BrokenLinkCheck(url);
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
 		    try {
 		    	test= extent.startTest("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document) scenario 2");

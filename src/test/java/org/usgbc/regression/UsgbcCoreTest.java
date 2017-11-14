@@ -14,8 +14,7 @@ public class UsgbcCoreTest extends Base {
 
 	@Test	
 	public void testUsgbcCoreForNonExistingUser() throws Exception {
-		
-		 driver.get(baseUrl);
+	
 		 System.out.println("Usgbc Core Module for Non Existing User");
 		 System.out.println("Broken Link for :"+driver.getTitle());
 	     BrokenLink.BrokenLinkCheck(baseUrl);
@@ -37,7 +36,6 @@ public class UsgbcCoreTest extends Base {
 	@Test	
 	public void testUsgbcCoreForNonExistingUserToGetRegistered() throws Exception {
 		
-		 driver.get(baseUrl);
 		 System.out.println("Usgbc Core Module for Non Existing User To Get Registered");
 		 System.out.println("Broken Link for :"+driver.getTitle());
 	    // BrokenLink.BrokenLinkCheck(baseUrl);
@@ -57,8 +55,7 @@ public class UsgbcCoreTest extends Base {
 	
 	@Test	
 	public void testUsgbcCoreForExistingUser() throws Exception {
-		
-		 driver.get(baseUrl);
+
 		 System.out.println("Usgbc Core Module for Existing User");
 		 System.out.println("Broken Link for :"+driver.getTitle());
 	     //BrokenLink.BrokenLinkCheck(baseUrl);

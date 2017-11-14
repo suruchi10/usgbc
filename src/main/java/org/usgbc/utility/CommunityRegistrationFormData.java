@@ -52,11 +52,11 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 	    bValue = radioButton.get(0).isSelected();
 	    if(bValue = true){
 	    	radioButton.get(1).click();
-	    	getSchool().clear();
+	    	//getSchool().clear();
 			getSchool().sendKeys("Carmel");
-		    getStudent_ID().clear();
+		   // getStudent_ID().clear();
 			getStudent_ID().sendKeys("12");
-			getGraduation().clear();
+			//getGraduation().clear();
 			getGraduation().sendKeys("2020-05-21");		
 		 }else {
 			radioButton.get(0).click();	
@@ -68,7 +68,7 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 	    bValue2 = radioButton2.get(0).isSelected();
 	    if(bValue2 = true){ 
 	    	radioButton2.get(1).click();
-	    	getBirthday().clear();
+	    	//getBirthday().clear();
 	    	getBirthday().sendKeys("1992-03-10");
 		 }else {
 			 radioButton.get(0).click();
@@ -87,6 +87,30 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 	    getContinue().click();
 	    Thread.sleep(5000);
 	   
+	}
+	
+	public static void CommmunityRegistrationFormForCostValidation() throws InterruptedException {
+			
+			//for selecting community name
+			Select community = new Select(getCommunity_Name());
+			community.selectByIndex(2);
+			
+			//for selecting country
+			Select country = new Select(getCountry());
+			country.selectByVisibleText("Togo");
+			Thread.sleep(5000);
+		
+			//Java script code for scrolling the window
+			((JavascriptExecutor)driver).executeScript("scroll(0,400)");
+			Thread.sleep(2000);
+			
+			// for street address
+			getStreet_Address().sendKeys("green street");
+			getStreet_Address2().sendKeys("red wood");
+	
+			//for city
+	     	getCity().sendKeys("gurgaon");
+	
 	}
 
 }

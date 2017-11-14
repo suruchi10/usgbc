@@ -2,6 +2,7 @@ package org.usgbc.business;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.usgbc.utility.BrokenLink;
 import org.usgbc.utility.ReusableMethods;
 
 public class UsgbcStore extends ReusableMethods {
@@ -15,6 +16,9 @@ public class UsgbcStore extends ReusableMethods {
 	/*----------------------------------------*/
 	public void UsgbcStoreModule() throws Exception {
 		
+		System.out.println("Usgbc Store Module");
+		System.out.println("Broken Link for store/contact ");
+	    BrokenLink.BrokenLinkCheck(baseUrl);
 		getUsgbcStore().click();
 		Thread.sleep(3000);
 		String storeContact_url =driver.getCurrentUrl();
@@ -33,7 +37,10 @@ public class UsgbcStore extends ReusableMethods {
 	  /*----------------------------------------*/
 	
      public void UsgbcStoreModuleGreen() throws Exception {
-		
+    	 
+    	System.out.println("Usgbc Store Module Green Apple Lapel Pins");
+		System.out.println("Broken Link for / ");
+	    BrokenLink.BrokenLinkCheck(baseUrl);
     	getAddToCartGreen().click();
 		Thread.sleep(3000);
 		String cart_url =driver.getCurrentUrl();
@@ -58,7 +65,10 @@ public class UsgbcStore extends ReusableMethods {
      /*----------------------------------------*/
      
      public void UsgbcStoreModuleGreen2() throws Exception {
- 		
+    	 
+    	System.out.println("Usgbc Store Module Green Apple Lapel Pins scenario 2");
+		System.out.println("Broken Link for / ");
+	    BrokenLink.BrokenLinkCheck(baseUrl);
      	getAddToCartGreen().click();
  		Thread.sleep(3000);
  		String cart_url =driver.getCurrentUrl();
@@ -84,8 +94,13 @@ public class UsgbcStore extends ReusableMethods {
      
      /*----------------------------------------*/
      public void UsgbcStoreModuleLEED() throws Exception {
- 		
-    	 getAddToCartLEED().click();
+    	 
+    	String url ="https://test-dynamic-usgbc.pantheonsite.io/";
+		driver.get(url);
+		System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
+		System.out.println("Broken Link for / ");
+	    BrokenLink.BrokenLinkCheck(url); 	
+    	getAddToCartLEED().click();
  		Thread.sleep(3000);
  		String cart_url =driver.getCurrentUrl();
  		Thread.sleep(3000);
@@ -111,7 +126,10 @@ public class UsgbcStore extends ReusableMethods {
       /*----------------------------------------*/
      
       public void UsgbcStoreModuleLEED2() throws Exception {
-  		
+    	
+ 		System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
+ 		System.out.println("Broken Link for / ");
+ 	    BrokenLink.BrokenLinkCheck(baseUrl);
     	getAddToCartLEED().click();
   		Thread.sleep(3000);
   		String cart_url =driver.getCurrentUrl();

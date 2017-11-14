@@ -11,28 +11,18 @@ import org.usgbc.utility.BrokenLink;
 
 public class CommunityRegistrationTest extends Base {
 	
-	
-	public String newBaseUrl = "";
-	@Parameters({"environment"})
 	@Test
-	public void environmentUrls (String environment) throws Exception {
-		String urls = "";
-		System.out.println("hi Gaurav it is working"+environment);
-		urls = callingUrls(environment);
-		System.out.println("hi Gaurav it is working"+urls);
-		testCommunityRegistrationForNonExistingUser(urls);
+	public void testCommunityRegistrationForNonExistingUser() throws Exception {
 		
-	}
-	public void testCommunityRegistrationForNonExistingUser(String baseUrl) throws Exception {
-		driver.get(baseUrl);
 		System.out.println("Communtiy Registration Module for non existing user");
 		System.out.println("Broken Link for :" + driver.getTitle());
-		//BrokenLink.BrokenLinkCheck(baseUrl);
+		BrokenLink.BrokenLinkCheck(baseUrl);
+		
 	    CommunityRegistration communityRegistration = PageFactory.initElements(driver, CommunityRegistration.class);    
 	    try {
 	    	test= extent.startTest("Communtiy Registration Module for non existing user");
 	    	test.log(LogStatus.INFO, "Test Started");
-	    	communityRegistration.CommunityRegistartionModuleForNonExistingUser(baseUrl);
+	    	communityRegistration.CommunityRegistartionModuleForNonExistingUser();
 	    	System.out.println("Communtiy Registration Module for non existing user Test Finished");
 		} catch (Throwable t) {
 			System.out.println(t.getLocalizedMessage());
@@ -40,21 +30,20 @@ public class CommunityRegistrationTest extends Base {
 			e1.setStackTrace(t.getStackTrace());
 			throw e1;
 		 }
-	
 	}
-	@Parameters({"environment"})
-	@Test
-	public void testCommunityRegistrationForNonExistingUserToGetRegistered(String environment) throws Exception {
+	
+	@Test(invocationCount=2)
+	public void testCommunityRegistrationForNonExistingUserToGetRegistered() throws Exception {
 		
-		driver.get(baseUrl);
 		System.out.println("Communtiy Registration Module for non existing user To Get Registered");
 		System.out.println("Broken Link for :"+ driver.getTitle());
-		//BrokenLink.BrokenLinkCheck(baseUrl);
+		BrokenLink.BrokenLinkCheck(baseUrl);
+		
 	    CommunityRegistration communityRegistration = PageFactory.initElements(driver, CommunityRegistration.class);    
 	    try {
 	    	test= extent.startTest("Communtiy Registration Module for non existing user To Get Registered");
 	    	test.log(LogStatus.INFO, "Test Started");
-	    	communityRegistration.CommunityRegistartionModuleForNonExistingUserToGetRegistered(baseUrl);
+	    	communityRegistration.CommunityRegistartionModuleForNonExistingUserToGetRegistered();
 	    	System.out.println("Communtiy Registration Module for non existing user To Get Registered Test Finished");
 		} catch (Throwable t) {
 			System.out.println(t.getLocalizedMessage());
@@ -65,19 +54,39 @@ public class CommunityRegistrationTest extends Base {
 	
 	}
 	
-	
+	@Test
 	public void testCommunityRegistrationForExistingUser() throws Exception {
 		
-		driver.get(baseUrl);
 		System.out.println("Communtiy Registration Module for existing user");
 		System.out.println("Broken Link for :"+ driver.getTitle());
 		BrokenLink.BrokenLinkCheck(baseUrl);
+
 	    CommunityRegistration communityRegistration = PageFactory.initElements(driver, CommunityRegistration.class);    
 	    try {
 	    	test= extent.startTest("Communtiy Registration Module for existing user");
 	    	test.log(LogStatus.INFO, "Test Started");
 	    	communityRegistration.CommunityRegistartionModuleForExistingUser();
 	    	System.out.println("Communtiy Registration Module for existing user Test Finished");
+		} catch (Throwable t) {
+			System.out.println(t.getLocalizedMessage());
+			Error e1 = new Error(t.getMessage());
+			e1.setStackTrace(t.getStackTrace());
+			throw e1;
+		 }
+	}
+	
+	
+	@Test
+	public void testCommunityRegistrationForCostValidation() throws Exception {
+		
+		System.out.println("Communtiy Registration Module for cost validation");
+	
+	    CommunityRegistration communityRegistration = PageFactory.initElements(driver, CommunityRegistration.class);    
+	    try {
+	    	test= extent.startTest("Communtiy Registration Module for cost validation");
+	    	test.log(LogStatus.INFO, "Test Started");
+	    	communityRegistration.CommunityRegistartionModuleForExistingUser();
+	    	System.out.println("Communtiy Registration Module for cost validation Test Finished");
 		} catch (Throwable t) {
 			System.out.println(t.getLocalizedMessage());
 			Error e1 = new Error(t.getMessage());

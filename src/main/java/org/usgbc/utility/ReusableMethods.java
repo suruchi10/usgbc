@@ -6,6 +6,7 @@ import java.util.UUID;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.usgbc.page.UsgbcWebLocators;
 
@@ -57,15 +58,14 @@ public class ReusableMethods extends UsgbcWebLocators{
    
 	public void signUpForm(String sheetName , int rowNum) throws InterruptedException {
 			
-			
 			String fname=reader.getCellData(sheetName, "firstname",rowNum);
 			String lname=reader.getCellData(sheetName, "lastname",rowNum);
 			String email=reader.getCellData(sheetName, "email",rowNum);
 			String pass= reader.getCellData(sheetName, "password",rowNum);
 			String cpass=reader.getCellData(sheetName, "cpassword",rowNum); 
-			signup_usgbc(fname,lname,email,pass,cpass);
-			
+			signup_usgbc(fname,lname,email,pass,cpass);	
 		}
+	
 	private static String randomEmail() {
         Random randomGenerator = new Random();  
 		int randomInt = randomGenerator.nextInt(1000);  
@@ -119,13 +119,30 @@ public class ReusableMethods extends UsgbcWebLocators{
 			payment_usgbc_Membership( name_on_card , card_number, month, year, security_code, billing_country, billing_street_address, billing_street_address2);
 						
 		}
+	
+	public void membership() throws Exception {
+		 getOrganistionName().sendKeys("Group10");
+		 getwebsite().sendKeys("www.test.com");
+		 Select select = new Select(getIndustryCategory());
+		    select.selectByVisibleText("Educational Institutions");
+		    Thread.sleep(3000);
+		 Select select2 = new Select(getIndustrySubCategory());
+		    select2.selectByVisibleText("Commissioning Providers");
+		    Thread.sleep(3000);
+		 Select select3 = new Select(getRevenueScale());
+		    select3.selectByVisibleText("Less than $250,000");
+		    Thread.sleep(3000);
+		    getContactContinueMembership().click();
+		 
+	}
  
+	//
 	public void paymentReceiptdownload() throws Exception {
 		
 		 paymentForm("payment", 2);
 		 Thread.sleep(8000);  
 		 String reciept_url = driver.getCurrentUrl();
-		 if(reciept_url.equalsIgnoreCase(baseUrl+"/usgbc/payment") && getstatusMessageUsgbcPayment().isDisplayed()){ 
+		 if( getstatusMessageUsgbcPayment().isDisplayed() && reciept_url.equalsIgnoreCase(baseUrl+"/usgbc/payment")){ 
 			  if(getstatusMessageUsgbcPayment().getAttribute("innerHTML").contains("User not found")) {
 				  	Assert.assertTrue(true);
 				  	System.out.println(getstatusMessageUsgbcPayment().getAttribute("innerHTML"));  
@@ -135,11 +152,12 @@ public class ReusableMethods extends UsgbcWebLocators{
 		 		}else if (getstatusMessageUsgbcPayment().getAttribute("innerHTML").contains(("The address you entered is invalid: The region Har is not defined for country IN"))) {
 		 			Assert.assertTrue(true);
 		 			System.out.println(getstatusMessageUsgbcPayment().getAttribute("innerHTML")); 
-		 		} 	
+		 		}
+		
 	     }else if(reciept_url.equalsIgnoreCase(baseUrl+"/payment/reciept")){  
 			  Assert.assertTrue(true);
 			  System.out.println("Broken Link for : "+ driver.getTitle());
-			  //BrokenLink.BrokenLinkCheck(reciept_url);
+			  BrokenLink.BrokenLinkCheck(reciept_url);
 			  getprint_Receipt().click();
 	          System.out.println("Receipt downloaded ");
 	     }else if (reciept_url.equalsIgnoreCase(baseUrl+"/usgbc/payment")) {

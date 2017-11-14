@@ -125,6 +125,12 @@ public class UsgbcWebLocators extends Base{
     	return driver.findElement(Terms);
     }
     
+    
+    @FindBy(xpath=".//*[@id='edit-how-did-you-hear-1']") static WebElement Email;
+	   public static WebElement getEmail() {
+				return Email;
+				}
+    
     public static By website = By.id ("edit-how-did-you-hear-2");
     public static  WebElement getWebsite() {
     	return driver.findElement(website);

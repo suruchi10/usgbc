@@ -27,10 +27,11 @@ public class ErrorMessageCommReg extends UsgbcWebLocators {
                 "Please mention how did you hear about the product.",
                 "Please agree to our terms.",
                };
+		 getcommunityRegistration().click();
+		 Thread.sleep(3000);
 		 getContinue().click();
 		 Thread.sleep(3000);
 		 JavascriptExecutor js = ((JavascriptExecutor) driver);
-		 //Thread.sleep(3000);
 	     js.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath(".//*[@id='edit-address']/div[3]/div[1]/label")));
 	     Thread.sleep(3000);
 	     List<WebElement> ErrorMsgSize =  driver.findElements(By.className("input-error-desc"));
@@ -48,9 +49,6 @@ public class ErrorMessageCommReg extends UsgbcWebLocators {
 	            
 	            i++;
 	        } 
-		
-	    
-		 
 	}
 	
 	public void CommunityRegistrationErrorMessageCondition2 () throws InterruptedException
@@ -69,6 +67,8 @@ public class ErrorMessageCommReg extends UsgbcWebLocators {
                }; 
 		
 		Thread.sleep(3000);
+		getcommunityRegistration().click();
+		Thread.sleep(3000);
 		List<WebElement>radioButton =driver.findElements(By.name("is_student")); 
 	    boolean bValue = false;
 	    bValue = radioButton.get(0).isSelected();
@@ -78,6 +78,7 @@ public class ErrorMessageCommReg extends UsgbcWebLocators {
 	    Thread.sleep(3000);
 	    getContinue().click();
 		Thread.sleep(3000);
+		
 		 List<WebElement> ErrorMsgSize =  driver.findElements(By.className("input-error-desc"));
 	        System.out.println("***** "+ErrorMsgSize.size());
 	        int i = 0;
@@ -109,7 +110,9 @@ public class ErrorMessageCommReg extends UsgbcWebLocators {
                 "Please enter your birthday.",
 	 			"Please describe briefly how did you hear about us.",
 	 			"Please agree to our terms."};
-			
+		
+		getcommunityRegistration().click();
+		Thread.sleep(3000);
 		Thread.sleep(3000);
 		List<WebElement>radioButton =driver.findElements(By.name("is_student")); 
 	    boolean bValue = false;

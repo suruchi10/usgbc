@@ -1,13 +1,7 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 29, Failures: 1, Errors: 0, Skipped: 28, Time elapsed: 1.718 sec <<< FAILURE!
-getDriver(org.usgbc.utility.Base)  Time elapsed: 1.482 sec  <<< FAILURE!
-java.lang.NoClassDefFoundError: org/openqa/selenium/firefox/FirefoxDriver
-	at org.usgbc.utility.Base.getDriver(Base.java:42)
-Caused by: java.lang.ClassNotFoundException: org.openqa.selenium.firefox.FirefoxDriver
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
-	... 32 more
+Tests run: 57, Failures: 1, Errors: 0, Skipped: 55, Time elapsed: 75.263 sec <<< FAILURE! - in TestSuite
+tearDown(org.usgbc.regression.MembershipTest)  Time elapsed: 55.903 sec  <<< FAILURE!
+java.lang.IllegalArgumentException: wrong number of arguments
+
