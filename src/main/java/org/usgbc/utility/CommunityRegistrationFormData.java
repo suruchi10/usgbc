@@ -115,6 +115,7 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 	     	Thread.sleep(5000);
 		    getContinue().click();
 		    Thread.sleep(5000);
+		    //test
 	
 	}
 
