@@ -85,7 +85,7 @@ public class CommunityRegistrationTest extends Base {
 	    try {
 	    	test= extent.startTest("Communtiy Registration Module for cost validation");
 	    	test.log(LogStatus.INFO, "Test Started");
-	    	communityRegistration.CommunityRegistartionModuleForExistingUser();
+	    	communityRegistration.CommunityRegistartionModuleForCostValidation();
 	    	System.out.println("Communtiy Registration Module for cost validation Test Finished");
 		} catch (Throwable t) {
 			System.out.println(t.getLocalizedMessage());

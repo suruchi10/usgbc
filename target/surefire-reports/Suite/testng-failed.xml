@@ -7,34 +7,35 @@
     <parameter name="environment" value="test"/>
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="org.usgbc.regression.StoreTest">
+      <class name="org.usgbc.regression.MembershipTest">
         <methods>
-          <include name="testShoppingCartLink2"/>
-          <include name="testShoppingCartLink3"/>
-          <include name="testShoppingCartLink"/>
-          <include name="testStoreGreen"/>
-          <include name="testStoreLEEDandGreen"/>
-          <include name="testStoreLEED"/>
+          <include name="testMembership"/>
         </methods>
-      </class> <!-- org.usgbc.regression.StoreTest -->
+      </class> <!-- org.usgbc.regression.MembershipTest -->
       <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest">
         <methods>
           <include name="testCommunityRegistrationCountryField"/>
         </methods>
       </class> <!-- org.usgbc.regression.CommunityRegistrationCountryFieldTest -->
+      <class name="org.usgbc.regression.UsgbcStoreTest">
+        <methods>
+          <include name="testUsgbcStore"/>
+          <include name="testUsgbcStoreGreen"/>
+          <include name="testUsgbcStoreLEED"/>
+          <include name="testUsgbcStoreGreen2"/>
+          <include name="testUsgbcStoreLEED2"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.UsgbcStoreTest -->
       <class name="org.usgbc.regression.CommunityRegistrationTest">
         <methods>
+          <include name="tearDown"/>
           <include name="testCommunityRegistrationForNonExistingUserToGetRegistered"/>
+          <include name="setup"/>
+          <include name="testCommunityRegistrationForCostValidation"/>
           <include name="testCommunityRegistrationForExistingUser"/>
           <include name="testCommunityRegistrationForNonExistingUser"/>
         </methods>
       </class> <!-- org.usgbc.regression.CommunityRegistrationTest -->
-      <class name="org.usgbc.regression.MembershipTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- org.usgbc.regression.MembershipTest -->
       <class name="org.usgbc.regression.LoggedUserTest">
         <methods>
           <include name="testLoggedUser2"/>
@@ -55,15 +56,16 @@
           <include name="testErrorMessagesCommRegCondition2"/>
         </methods>
       </class> <!-- org.usgbc.regression.ErrorMessageCommRegTest -->
-      <class name="org.usgbc.regression.UsgbcStoreTest">
+      <class name="org.usgbc.regression.StoreTest">
         <methods>
-          <include name="testUsgbcStore"/>
-          <include name="testUsgbcStoreGreen"/>
-          <include name="testUsgbcStoreLEED"/>
-          <include name="testUsgbcStoreGreen2"/>
-          <include name="testUsgbcStoreLEED2"/>
+          <include name="testShoppingCartLink2"/>
+          <include name="testShoppingCartLink3"/>
+          <include name="testShoppingCartLink"/>
+          <include name="testStoreGreen"/>
+          <include name="testStoreLEEDandGreen"/>
+          <include name="testStoreLEED"/>
         </methods>
-      </class> <!-- org.usgbc.regression.UsgbcStoreTest -->
+      </class> <!-- org.usgbc.regression.StoreTest -->
     </classes>
   </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

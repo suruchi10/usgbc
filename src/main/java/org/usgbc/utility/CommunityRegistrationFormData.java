@@ -74,7 +74,7 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 			 radioButton.get(0).click();
 		 }
 	    
-	    // for checkboxes
+	    // for how did you hear me checkboxes
 	    getOther().click();
 	    getDescribe().sendKeys("Whatsapp");
 	    
@@ -111,12 +111,17 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 			//for city
 	     	getCity().sendKeys("gurgaon");
 	     	
+	     	// for how did you hear me checkboxes
 	     	getEmail().click();
+	     	
+	     	// for selecting terms
+		    boolean terms =getTerms().isSelected();
+		    if (terms == false)
+		    	getTerms().click();
+		    
 	     	Thread.sleep(5000);
 		    getContinue().click();
 		    Thread.sleep(5000);
-		    //test
-	
 	}
 
 }

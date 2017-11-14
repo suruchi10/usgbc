@@ -1,7 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 57, Failures: 1, Errors: 0, Skipped: 55, Time elapsed: 75.263 sec <<< FAILURE! - in TestSuite
-tearDown(org.usgbc.regression.MembershipTest)  Time elapsed: 55.903 sec  <<< FAILURE!
-java.lang.IllegalArgumentException: wrong number of arguments
+Tests run: 77, Failures: 2, Errors: 0, Skipped: 75, Time elapsed: 29.682 sec <<< FAILURE! - in TestSuite
+testCommunityRegistrationForCostValidation(org.usgbc.regression.CommunityRegistrationTest)  Time elapsed: 15.074 sec  <<< FAILURE!
+java.lang.Error: 
+Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: dc23633b-bded-4df1-a246-68ec6fe6fd75
+	at org.usgbc.regression.CommunityRegistrationTest.testCommunityRegistrationForCostValidation(CommunityRegistrationTest.java:88)
+
+tearDown(org.usgbc.regression.CommunityRegistrationTest)  Time elapsed: 16.098 sec  <<< FAILURE!
+org.openqa.selenium.remote.UnreachableBrowserException: 
+Error communicating with the remote browser. It may have died.
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: driver.version: FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: dc23633b-bded-4df1-a246-68ec6fe6fd75
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
+Caused by: java.net.ConnectException: Connection refused: connect
 

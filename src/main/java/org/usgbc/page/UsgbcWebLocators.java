@@ -147,6 +147,11 @@ public class UsgbcWebLocators extends Base{
     	return driver.findElement(Describe);
     }
     
+	@FindBy(xpath=".//*[@class='community-total']")WebElement total;
+  	public WebElement getTotalText() {
+			return total;
+			}
+  	
     public static By Continue = By.id ("edit-submit");
     public static WebElement getContinue() {
     	return driver.findElement(Continue);
