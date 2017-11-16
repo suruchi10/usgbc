@@ -1,25 +1,97 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 77, Failures: 2, Errors: 0, Skipped: 75, Time elapsed: 29.682 sec <<< FAILURE! - in TestSuite
-testCommunityRegistrationForCostValidation(org.usgbc.regression.CommunityRegistrationTest)  Time elapsed: 15.074 sec  <<< FAILURE!
-java.lang.Error: 
-Error communicating with the remote browser. It may have died.
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: driver.version: RemoteWebDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: dc23633b-bded-4df1-a246-68ec6fe6fd75
-	at org.usgbc.regression.CommunityRegistrationTest.testCommunityRegistrationForCostValidation(CommunityRegistrationTest.java:88)
+Tests run: 79, Failures: 1, Errors: 0, Skipped: 77, Time elapsed: 84.251 sec <<< FAILURE! - in TestSuite
+setup(org.usgbc.regression.CommunityRegistrationPriceValidationTest)  Time elapsed: 72.949 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Failed to connect to binary FirefoxBinary(C:\Program Files\Mozilla Firefox\firefox.exe) on port 7055; process output follows: 
+eURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","installDate":1466736750000,"updateDate":1466736750000,"applyBackgroundUpdates":1,"skinnable":true,"size":22012,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"47.0.1","maxVersion":"47.0.1"}],"targetPlatforms":[],"seen":true}
+1510808920529	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1510808920531	DeferredSave.extensions.json	DEBUG	Save changes
+1510808920531	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1510808920531	addons.xpi-utils	DEBUG	Updating add-on states
+1510808920533	addons.xpi-utils	DEBUG	Writing add-ons list
+1510808920538	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1510808920539	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.0
+1510808920539	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1510808920540	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.2
+1510808920541	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1510808920542	addons.xpi	DEBUG	Calling bootstrap method startup on loop@mozilla.org version 1.3.2
+1510808920567	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1510808920568	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1510808920568	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1510808920568	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1510808920568	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1510808920569	addons.manager	DEBUG	Starting provider: GMPProvider
+1510808920578	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1510808920578	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1510808920579	addons.manager	DEBUG	Starting provider: PluginProvider
+1510808920579	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1510808920579	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1510808920579	addons.manager	DEBUG	Completed startup sequence
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+1510808921907	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1510808921907	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1510808921907	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1510808921909	DeferredSave.extensions.json	DEBUG	Starting write
+1510808922193	addons.repository	DEBUG	No addons.json found.
+1510808922193	DeferredSave.addons.json	DEBUG	Save changes
+1510808922200	DeferredSave.addons.json	DEBUG	Starting timer
+1510808922230	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1510808922230	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1510808922231	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1510808922235	DeferredSave.extensions.json	DEBUG	Write succeeded
+1510808922235	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 17
+1510808922262	DeferredSave.addons.json	DEBUG	Starting write
+1510808922340	DeferredSave.addons.json	DEBUG	Write succeeded
+JavaScript error: chrome://fxdriver/content/server.js, line 61: uncaught exception: [object Object]
+JavaScript error: chrome://fxdriver/content/server.js, line 61: NS_ERROR_XPC_CI_RETURNED_FAILURE: Component returned failure code: 0x80570015 (NS_ERROR_XPC_CI_RETURNED_FAILURE) [nsIJSCID.createInstance]
 
-tearDown(org.usgbc.regression.CommunityRegistrationTest)  Time elapsed: 16.098 sec  <<< FAILURE!
-org.openqa.selenium.remote.UnreachableBrowserException: 
-Error communicating with the remote browser. It may have died.
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: driver.version: FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: dc23633b-bded-4df1-a246-68ec6fe6fd75
-Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
-Caused by: java.net.ConnectException: Connection refused: connect
+Caused by: org.openqa.selenium.firefox.NotConnectedException: 
+Unable to connect to host 127.0.0.1 on port 7055 after 45000 ms. Firefox console output:
+eURL":null,"contributors":["Mozilla Contributors"]},"visible":true,"active":true,"userDisabled":false,"appDisabled":false,"descriptor":"C:\\Program Files\\Mozilla Firefox\\browser\\extensions\\{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi","installDate":1466736750000,"updateDate":1466736750000,"applyBackgroundUpdates":1,"skinnable":true,"size":22012,"sourceURI":null,"releaseNotesURI":null,"softDisabled":false,"foreignInstall":false,"hasBinaryComponents":false,"strictCompatibility":true,"locales":[],"targetApplications":[{"id":"{ec8030f7-c20a-464f-9b0e-13a3a9e97384}","minVersion":"47.0.1","maxVersion":"47.0.1"}],"targetPlatforms":[],"seen":true}
+1510808920529	addons.xpi	DEBUG	getModTime: Recursive scan of {972ce4c6-7e08-4474-a285-3208198ce6fd}
+1510808920531	DeferredSave.extensions.json	DEBUG	Save changes
+1510808920531	addons.xpi	DEBUG	Updating database with changes to installed add-ons
+1510808920531	addons.xpi-utils	DEBUG	Updating add-on states
+1510808920533	addons.xpi-utils	DEBUG	Writing add-ons list
+1510808920538	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\e10srollout@mozilla.org.xpi
+1510808920539	addons.xpi	DEBUG	Calling bootstrap method startup on e10srollout@mozilla.org version 1.0
+1510808920539	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\firefox@getpocket.com.xpi
+1510808920540	addons.xpi	DEBUG	Calling bootstrap method startup on firefox@getpocket.com version 1.0.2
+1510808920541	addons.xpi	DEBUG	Registering manifest for C:\Program Files\Mozilla Firefox\browser\features\loop@mozilla.org.xpi
+1510808920542	addons.xpi	DEBUG	Calling bootstrap method startup on loop@mozilla.org version 1.3.2
+1510808920567	addons.manager	DEBUG	Registering shutdown blocker for XPIProvider
+1510808920568	addons.manager	DEBUG	Provider finished startup: XPIProvider
+1510808920568	addons.manager	DEBUG	Starting provider: LightweightThemeManager
+1510808920568	addons.manager	DEBUG	Registering shutdown blocker for LightweightThemeManager
+1510808920568	addons.manager	DEBUG	Provider finished startup: LightweightThemeManager
+1510808920569	addons.manager	DEBUG	Starting provider: GMPProvider
+1510808920578	addons.manager	DEBUG	Registering shutdown blocker for GMPProvider
+1510808920578	addons.manager	DEBUG	Provider finished startup: GMPProvider
+1510808920579	addons.manager	DEBUG	Starting provider: PluginProvider
+1510808920579	addons.manager	DEBUG	Registering shutdown blocker for PluginProvider
+1510808920579	addons.manager	DEBUG	Provider finished startup: PluginProvider
+1510808920579	addons.manager	DEBUG	Completed startup sequence
+[GFX1]: Potential driver version mismatch ignored due to missing DLLs 0.0.0.0 and 0.0.0.0
+1510808921907	addons.manager	DEBUG	Starting provider: <unnamed-provider>
+1510808921907	addons.manager	DEBUG	Registering shutdown blocker for <unnamed-provider>
+1510808921907	addons.manager	DEBUG	Provider finished startup: <unnamed-provider>
+1510808921909	DeferredSave.extensions.json	DEBUG	Starting write
+1510808922193	addons.repository	DEBUG	No addons.json found.
+1510808922193	DeferredSave.addons.json	DEBUG	Save changes
+1510808922200	DeferredSave.addons.json	DEBUG	Starting timer
+1510808922230	addons.manager	DEBUG	Starting provider: PreviousExperimentProvider
+1510808922230	addons.manager	DEBUG	Registering shutdown blocker for PreviousExperimentProvider
+1510808922231	addons.manager	DEBUG	Provider finished startup: PreviousExperimentProvider
+1510808922235	DeferredSave.extensions.json	DEBUG	Write succeeded
+1510808922235	addons.xpi-utils	DEBUG	XPI Database saved, setting schema version preference to 17
+1510808922262	DeferredSave.addons.json	DEBUG	Starting write
+1510808922340	DeferredSave.addons.json	DEBUG	Write succeeded
+JavaScript error: chrome://fxdriver/content/server.js, line 61: uncaught exception: [object Object]
+JavaScript error: chrome://fxdriver/content/server.js, line 61: NS_ERROR_XPC_CI_RETURNED_FAILURE: Component returned failure code: 0x80570015 (NS_ERROR_XPC_CI_RETURNED_FAILURE) [nsIJSCID.createInstance]
+
 

@@ -5,20 +5,10 @@
     <parameter name="environment" value="test"/>
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="org.usgbc.regression.MembershipTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="testMembership"/>
-        </methods>
-      </class> <!-- org.usgbc.regression.MembershipTest -->
       <class name="org.usgbc.regression.UsgbcStoreTest">
         <methods>
           <include name="tearDown"/>
-          <include name="testUsgbcStore"/>
-          <include name="testUsgbcStoreGreen"/>
           <include name="setup"/>
-          <include name="testUsgbcStoreLEED"/>
           <include name="testUsgbcStoreGreen2"/>
           <include name="testUsgbcStoreLEED2"/>
         </methods>
@@ -28,7 +18,6 @@
           <include name="tearDown"/>
           <include name="testUsgbcCoreForNonExistingUser"/>
           <include name="setup"/>
-          <include name="testUsgbcCoreForExistingUser"/>
           <include name="testUsgbcCoreForNonExistingUserToGetRegistered"/>
         </methods>
       </class> <!-- org.usgbc.regression.UsgbcCoreTest -->
@@ -45,34 +34,13 @@
           <include name="tearDown"/>
           <include name="testCommunityRegistrationForNonExistingUserToGetRegistered"/>
           <include name="setup"/>
-          <include name="testCommunityRegistrationForExistingUser"/>
         </methods>
       </class> <!-- org.usgbc.regression.CommunityRegistrationTest -->
-      <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
-          <include name="testCommunityRegistrationCountryField"/>
-        </methods>
-      </class> <!-- org.usgbc.regression.CommunityRegistrationCountryFieldTest -->
-      <class name="org.usgbc.regression.ErrorMessageCommRegTest">
-        <methods>
-          <include name="testErrorMessagesCommReg"/>
-          <include name="tearDown"/>
-          <include name="testErrorMessagesCommRegCondition3"/>
-          <include name="testErrorMessagesCommRegCondition2"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- org.usgbc.regression.ErrorMessageCommRegTest -->
       <class name="org.usgbc.regression.StoreTest">
         <methods>
-          <include name="testShoppingCartLink2"/>
           <include name="tearDown"/>
-          <include name="testShoppingCartLink3"/>
           <include name="setup"/>
-          <include name="testShoppingCartLink"/>
           <include name="testStoreGreen"/>
-          <include name="testStoreLEEDandGreen"/>
           <include name="testStoreLEED"/>
         </methods>
       </class> <!-- org.usgbc.regression.StoreTest -->

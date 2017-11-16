@@ -74,26 +74,4 @@ public class CommunityRegistrationTest extends Base {
 			throw e1;
 		 }
 	}
-	
-	
-	@Test
-	public void testCommunityRegistrationForCostValidation() throws Exception {
-		
-		System.out.println("Communtiy Registration Module for cost validation");
-	
-	    CommunityRegistration communityRegistration = PageFactory.initElements(driver, CommunityRegistration.class);    
-	    try {
-	    	test= extent.startTest("Communtiy Registration Module for cost validation");
-	    	test.log(LogStatus.INFO, "Test Started");
-	    	communityRegistration.CommunityRegistartionModuleForCostValidation();
-	    	System.out.println("Communtiy Registration Module for cost validation Test Finished");
-		} catch (Throwable t) {
-			System.out.println(t.getLocalizedMessage());
-			Error e1 = new Error(t.getMessage());
-			e1.setStackTrace(t.getStackTrace());
-			throw e1;
-		 }
-	}
-	
-	
 }

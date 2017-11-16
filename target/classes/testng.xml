@@ -4,23 +4,24 @@
   <test name="FirefoxTest" >
     <parameter name="browser" value="firefox"/>
   	<parameter name="environment" value="test" />
-	<classes> 
-	  <class name="org.usgbc.regression.CommunityRegistrationTest"/>   		
+	<classes>
+	  <class name="org.usgbc.regression.CommunityRegistrationPriceValidationTest"/>
+	  <class name="org.usgbc.regression.CommunityRegistrationTest"/>
+
+	  <class name="org.usgbc.regression.ErrorMessageCommRegTest"/>
+	  <class name="org.usgbc.regression.UsgbcCoreTest"/>
+	  <class name="org.usgbc.regression.LoggedUserTest"/>
+	  <class name="org.usgbc.regression.StoreTest"/>
+	  <class name="org.usgbc.regression.UsgbcStoreTest"/>   		
       <class name="org.usgbc.regression.MembershipTest"/> 
-      <class name="org.usgbc.regression.StoreTest"/>
-      <class name="org.usgbc.regression.UsgbcStoreTest"/>
-      <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest"/>
-      <class name="org.usgbc.regression.ErrorMessageCommRegTest"/> 
-      <class name="org.usgbc.regression.UsgbcCoreTest"/>
-      <class name="org.usgbc.regression.LoggedUserTest"/>
-     
+      <!-- <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest"/> -->  
    </classes>
   </test><!-- Test parallel="classes" thread-count="3" -->
 </suite> <!-- Suite parallel="tests" verbose="1" thread-count="3" -->
 
- <!--  <class name="org.usgbc.regression.UsgbcStoreTest"/>
+ <!-- <class name="org.usgbc.regression.UsgbcStoreTest"/>
       <class name="org.usgbc.regression.MembershipTest"/> 
-        <class name="org.usgbc.regression.CommunityRegistrationTest"/>
+      <class name="org.usgbc.regression.CommunityRegistrationTest"/>
       <class name="org.usgbc.regression.CommunityRegistrationCountryFieldTest"/>
       <class name="org.usgbc.regression.ErrorMessageCommRegTest"/> 
       <class name="org.usgbc.regression.UsgbcCoreTest"/>

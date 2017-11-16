@@ -36,7 +36,7 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 
 		//for city
      	getCity().sendKeys("gurgaon");
-
+     	
        // for zip code
 		getZip_code().sendKeys("122001");
 		Thread.sleep(2000);
@@ -71,7 +71,7 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 	    	//getBirthday().clear();
 	    	getBirthday().sendKeys("1992-03-10");
 		 }else {
-			 radioButton.get(0).click();
+			 radioButton2.get(0).click();
 		 }
 	    
 	    // for how did you hear me checkboxes
@@ -88,40 +88,4 @@ public class CommunityRegistrationFormData extends UsgbcWebLocators {
 	    Thread.sleep(5000);
 	   
 	}
-	
-	public static void CommmunityRegistrationFormForCostValidation() throws InterruptedException {
-			
-			//for selecting community name
-			Select community = new Select(getCommunity_Name());
-			community.selectByIndex(2);
-			
-			//for selecting country
-			Select country = new Select(getCountry());
-			country.selectByVisibleText("Togo");
-			Thread.sleep(5000);
-		
-			//Java script code for scrolling the window
-			((JavascriptExecutor)driver).executeScript("scroll(0,400)");
-			Thread.sleep(2000);
-			
-			// for street address
-			getStreet_Address().sendKeys("green street");
-			getStreet_Address2().sendKeys("red wood");
-	
-			//for city
-	     	getCity().sendKeys("gurgaon");
-	     	
-	     	// for how did you hear me checkboxes
-	     	getEmail().click();
-	     	
-	     	// for selecting terms
-		    boolean terms =getTerms().isSelected();
-		    if (terms == false)
-		    	getTerms().click();
-		    
-	     	Thread.sleep(5000);
-		    getContinue().click();
-		    Thread.sleep(5000);
-	}
-
 }

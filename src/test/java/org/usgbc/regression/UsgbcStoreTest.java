@@ -85,7 +85,7 @@ public class UsgbcStoreTest extends Base {
 	}
 	
    // LEED with user not found , checkout button and no receipt download
-	@Test	
+	@Test(priority=0)
 	public void testUsgbcStoreLEED2() throws Exception {
 		
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
@@ -93,7 +93,7 @@ public class UsgbcStoreTest extends Base {
 		    	test= extent.startTest("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document) scenario 2");
 		    	test.log(LogStatus.INFO, "Test Started");
 		    	usgbcStore.UsgbcStoreModuleLEED2();
-		    	System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document) scenario Test Finished ");
+		    	System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document) scenario 2 Test Finished ");
 			}catch (Throwable t) {
 				System.out.println(t.getLocalizedMessage());
 				Error e1 = new Error(t.getMessage());

@@ -139,7 +139,8 @@ public class CommunityRegistration extends ReusableMethods{
 				          System.out.println("Receipt downloaded ");	
 			   		}else if (getStatusMessageBlock().getText().contains("You have very recently placed an order for this item. Please review your order history to confirm your previous order") && reciept_url.equalsIgnoreCase(baseUrl+"/usgbc/payment")) {
 						 Assert.assertTrue(true);
-						 System.out.println(getStatusMessageBlock().getText());	   
+						 System.out.println(getStatusMessageBlock().getText());	
+			   		}
 		}else {
 		       signin_url.equalsIgnoreCase(baseUrl+"/community/registration");
 			   Assert.assertTrue(true);
@@ -148,12 +149,4 @@ public class CommunityRegistration extends ReusableMethods{
 			   System.out.println(" Test Failed,Community Registration Form Not Filled properly");   
 		      }
 	    }		
-	}
-	
-	public void CommunityRegistartionModuleForCostValidation() throws Exception {
-		
-		getcommunityRegistration().click();
-		Thread.sleep(2000);
-		
-	}
 }

@@ -94,12 +94,11 @@ public class UsgbcStore extends ReusableMethods {
      
      /*----------------------------------------*/
      public void UsgbcStoreModuleLEED() throws Exception {
-    	 
-    	String url ="https://test-dynamic-usgbc.pantheonsite.io/";
-		driver.get(url);
+    	
+		driver.get(baseUrl);
 		System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
 		System.out.println("Broken Link for / ");
-	    BrokenLink.BrokenLinkCheck(url); 	
+	    BrokenLink.BrokenLinkCheck(baseUrl); 	
     	getAddToCartLEED().click();
  		Thread.sleep(3000);
  		String cart_url =driver.getCurrentUrl();
@@ -127,7 +126,7 @@ public class UsgbcStore extends ReusableMethods {
      
       public void UsgbcStoreModuleLEED2() throws Exception {
     	
- 		System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
+ 		System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document) scenario 2");
  		System.out.println("Broken Link for / ");
  	    BrokenLink.BrokenLinkCheck(baseUrl);
     	getAddToCartLEED().click();

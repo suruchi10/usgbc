@@ -147,9 +147,15 @@ public class UsgbcWebLocators extends Base{
     	return driver.findElement(Describe);
     }
     
-	@FindBy(xpath=".//*[@class='community-total']")WebElement total;
-  	public WebElement getTotalText() {
+	@FindBy(xpath=".//*[@class='community-total']")static WebElement total;
+  	public static WebElement getTotalText() {
 			return total;
+			}
+  	
+  	//payment page amount row  	
+  	@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div[2]/div/div/div/div/table/tbody/tr[2]/td")WebElement amount;
+  	public WebElement getAmount() {
+			return amount;
 			}
   	
     public static By Continue = By.id ("edit-submit");
@@ -159,6 +165,7 @@ public class UsgbcWebLocators extends Base{
     public static By Cancel = By.id ("edit-cancel");
     public static WebElement getCancel() {
     	return driver.findElement(Cancel);
+    	
     }
     
   /* web element locator for signup page */

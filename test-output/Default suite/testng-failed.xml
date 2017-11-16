@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="org.usgbc.regression.CommunityRegistrationTest">
+      <class name="org.usgbc.regression.UsgbcStoreTest">
         <methods>
-          <include name="testCommunityRegistrationForNonExistingUserToGetRegistered"/>
-          <include name="closeDriver"/>
-          <include name="getDriver"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="testUsgbcStoreLEED2"/>
         </methods>
-      </class> <!-- org.usgbc.regression.CommunityRegistrationTest -->
+      </class> <!-- org.usgbc.regression.UsgbcStoreTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
