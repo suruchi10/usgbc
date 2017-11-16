@@ -139,6 +139,6 @@ public class Base extends Report{
 	public static void tearDown(ITestResult result ) {
 		Report.afterMethod(driver, result);
       	driver.quit();
-		System.out.println("--------Browser Closed--------");
+		System.out.println("**********Browser Closed**********");
 	}
 }

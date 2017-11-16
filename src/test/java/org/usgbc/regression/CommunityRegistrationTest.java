@@ -54,7 +54,7 @@ public class CommunityRegistrationTest extends Base {
 	
 	}
 	
-	@Test
+	@Test(invocationCount=2)
 	public void testCommunityRegistrationForExistingUser() throws Exception {
 		
 		System.out.println("Communtiy Registration Module for existing user");

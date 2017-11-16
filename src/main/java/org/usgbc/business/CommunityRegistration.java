@@ -105,9 +105,9 @@ public class CommunityRegistration extends ReusableMethods{
 			   }
 		}	
 	
+	
 	public void CommunityRegistartionModuleForExistingUser() throws Exception {
 		
-	
 		getcommunityRegistration().click();
 		Thread.sleep(2000);
 		String communityRegistration_url = driver.getCurrentUrl();
@@ -131,8 +131,10 @@ public class CommunityRegistration extends ReusableMethods{
 			   paymentForm("payment", 2);
 			   Thread.sleep(8000);  
 			   String reciept_url = driver.getCurrentUrl();
-			   		if(reciept_url.equalsIgnoreCase(baseUrl+"/payment/reciept") && getStatusMessageBlock().getText().contains("unable to send")){  
+			   		if(reciept_url.equalsIgnoreCase(baseUrl+"/payment/reciept") ){  
 						  Assert.assertTrue(true);
+//						  getStatusMessageBlock().getText().contains("unable to send");
+//						  Assert.assertTrue(true);
 						  System.out.println("Broken Link for : "+ driver.getTitle());
 						  BrokenLink.BrokenLinkCheck(reciept_url);
 						  getprint_Receipt().click();
