@@ -14,6 +14,7 @@ public class ErrorMessageCommRegTest extends Base {
 	public void testErrorMessagesCommReg() throws Exception {
 		
 		System.out.println("Communtiy Registration Error Message Validation Test");
+		
 	    ErrorMessageCommReg errorMessageCommReg = PageFactory.initElements(driver, ErrorMessageCommReg.class);    
 	    try {
 	    	test= extent.startTest("Communtiy Registration Error Message Validation Test");
@@ -35,6 +36,7 @@ public class ErrorMessageCommRegTest extends Base {
 	public void testErrorMessagesCommRegCondition2() throws Exception {
 		
 		System.out.println("Communtiy Registration Error Message Validation Condition 2 Test");
+		
 	    ErrorMessageCommReg errorMessageCommReg2 = PageFactory.initElements(driver, ErrorMessageCommReg.class);    
 	    try {
 	    	test= extent.startTest("Communtiy Registration Error Message Validation Condition 2 Test");
@@ -54,6 +56,7 @@ public class ErrorMessageCommRegTest extends Base {
 	public void testErrorMessagesCommRegCondition3() throws Exception {
 		
 		System.out.println("Communtiy Registration Error Message Validation Condition 3 Test");
+		
 	    ErrorMessageCommReg errorMessageCommReg3= PageFactory.initElements(driver, ErrorMessageCommReg.class);    
 	    try {
 	    	test= extent.startTest("Communtiy Registration Error Message Validation Condition 3 Test");

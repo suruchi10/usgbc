@@ -107,34 +107,6 @@ public class Base extends Report{
 		  }	
 }
 	
-/*	public static void closeBrowser() throws Exception{
-	    if (webDriver == null) {
-	        return;
-	    }
-	    webDriver.quit();
-	    webDriver = null;
-	}*/
-	
-	
-	/*public WebDriver tearDown(ITestResult result ) {
-		Report.afterMethod(driver, result);
-		driver.close();
-		driver.quit();
-		System.out.println("--------Browser Closed--------");
-		return driver;
-	}
-	
-	public static void tearDown(ITestResult result ) {
-		Report.afterMethod(driver, result);
-		  if (driver == null) {
-		        return;
-		    }
-		    driver.quit();
-		    driver = null;
-		System.out.println("--------Browser Closed--------");
-		
-	}*/
-	
 	@AfterMethod
 	public static void tearDown(ITestResult result ) {
 		Report.afterMethod(driver, result);

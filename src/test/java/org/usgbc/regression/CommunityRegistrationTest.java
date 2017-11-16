@@ -11,7 +11,7 @@ import org.usgbc.utility.BrokenLink;
 
 public class CommunityRegistrationTest extends Base {
 	
-	@Test
+	@Test(priority=0)
 	public void testCommunityRegistrationForNonExistingUser() throws Exception {
 		
 		System.out.println("Communtiy Registration Module for non existing user");
@@ -32,7 +32,7 @@ public class CommunityRegistrationTest extends Base {
 		 }
 	}
 	
-	@Test(invocationCount=2)
+	@Test(invocationCount=2,priority=1)
 	public void testCommunityRegistrationForNonExistingUserToGetRegistered() throws Exception {
 		
 		System.out.println("Communtiy Registration Module for non existing user To Get Registered");
@@ -54,7 +54,7 @@ public class CommunityRegistrationTest extends Base {
 	
 	}
 	
-	@Test(invocationCount=2)
+	@Test(invocationCount=2,priority=2)
 	public void testCommunityRegistrationForExistingUser() throws Exception {
 		
 		System.out.println("Communtiy Registration Module for existing user");

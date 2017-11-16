@@ -12,7 +12,7 @@ import com.relevantcodes.extentreports.LogStatus;
 public class UsgbcStoreTest extends Base {
 	
 	//No items in cart
-	@Test	
+	@Test(priority=0)
 	public void testUsgbcStore() throws Exception {
 		
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
@@ -30,7 +30,7 @@ public class UsgbcStoreTest extends Base {
 	}
 	
 	//Green with user  test25@testuser.com, usgbc store link and  receipt download 
-	@Test	
+	@Test(invocationCount=2,priority=1)
 	public void testUsgbcStoreGreen() throws Exception {
 
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
@@ -48,7 +48,7 @@ public class UsgbcStoreTest extends Base {
 	}
 	
 	//Green with user not found , checkout button and no receipt download
-	@Test	
+	@Test(priority=2)	
 	public void testUsgbcStoreGreen2() throws Exception {
 	
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
@@ -67,7 +67,7 @@ public class UsgbcStoreTest extends Base {
 	}
 	
 	//LEED with user  test25@testuser.com, usgbc store link and  receipt download 
-	@Test	
+	@Test(priority=3)	
 	public void testUsgbcStoreLEED() throws Exception {
 		
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    
@@ -85,7 +85,7 @@ public class UsgbcStoreTest extends Base {
 	}
 	
    // LEED with user not found , checkout button and no receipt download
-	@Test(priority=0)
+	@Test(priority=4)
 	public void testUsgbcStoreLEED2() throws Exception {
 		
 	     UsgbcStore usgbcStore = PageFactory.initElements(driver, UsgbcStore.class);    

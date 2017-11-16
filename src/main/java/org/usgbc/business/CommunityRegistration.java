@@ -33,6 +33,7 @@ public class CommunityRegistration extends ReusableMethods{
 		BrokenLink.BrokenLinkCheck(communityRegistration_url);
 		CommunityRegistrationFormData.CommmunityRegistrationForm();
 	    String signin_url = driver.getCurrentUrl();
+	    Thread.sleep(3000);
 		if (signin_url.equalsIgnoreCase(baseUrl+"/signin") && driver.getTitle().contains("Sign-in")){
 			   Assert.assertTrue(true);
 			   System.out.println("Test Passed,Community Registration Form filled correctly");
@@ -67,6 +68,7 @@ public class CommunityRegistration extends ReusableMethods{
 			//BrokenLink.BrokenLinkCheck(communityRegistration_url);
 			CommunityRegistrationFormData.CommmunityRegistrationForm();
 		    String signin_url = driver.getCurrentUrl();
+		    Thread.sleep(3000);
 			if (signin_url.equalsIgnoreCase(baseUrl+"/signin") && driver.getTitle().contains("Sign-in")){
 				   Assert.assertTrue(true);
 				   System.out.println("Test Passed,Community Registration Form filled correctly ");
@@ -75,11 +77,13 @@ public class CommunityRegistration extends ReusableMethods{
 				   getRegister().click();
 				   Thread.sleep(3000);
 				   String signup_url = driver.getCurrentUrl();
+				   Thread.sleep(3000); 
 				   System.out.println("Broken Link for  :"+ driver.getTitle());
 				   BrokenLink.BrokenLinkCheck(signup_url);
 				   signUpForm();//  modified with faker class 
 				   Thread.sleep(3000); 
 				   String payment_url = driver.getCurrentUrl();
+				   Thread.sleep(3000); 
 				   Assert.assertEquals(payment_url, baseUrl+"/usgbc/payment");
 				   System.out.println("User registered and created sucessfully");
 				   System.out.println("*****payment-receipt******");
@@ -88,6 +92,7 @@ public class CommunityRegistration extends ReusableMethods{
 				   paymentForm("payment", 2);
 				   Thread.sleep(8000);
 				   String reciept_url = driver.getCurrentUrl();
+				   Thread.sleep(3000); 
 			   		if(reciept_url.equalsIgnoreCase(baseUrl+"/payment/reciept")){  
 						  Assert.assertTrue(true);
 						  System.out.println("Broken Link for : "+ driver.getTitle());
@@ -116,6 +121,7 @@ public class CommunityRegistration extends ReusableMethods{
 		//BrokenLink.BrokenLinkCheck(communityRegistration_url);
 		CommunityRegistrationFormData.CommmunityRegistrationForm();
 	    String signin_url = driver.getCurrentUrl();
+	    Thread.sleep(3000); 
 		if (signin_url.equalsIgnoreCase(baseUrl+"/signin") && driver.getTitle().contains("Sign-in")){
 			   Assert.assertTrue(true);
 			   System.out.println("Test Passed,Community Registration Form filled correctly ");
@@ -123,6 +129,7 @@ public class CommunityRegistration extends ReusableMethods{
 			   BrokenLink.BrokenLinkCheck(signin_url);
 			   signInForm("signin",3); //signin 3 => (abi@gmail.com,abishek) a registred user
 			   String payment_url = driver.getCurrentUrl();
+			   Thread.sleep(3000); 
 			   Assert.assertEquals(payment_url, baseUrl+"/usgbc/payment");
 			   System.out.println("User is registered already ");
 			   System.out.println("*****payment-receipt******");
@@ -131,6 +138,7 @@ public class CommunityRegistration extends ReusableMethods{
 			   paymentForm("payment", 2);
 			   Thread.sleep(8000);  
 			   String reciept_url = driver.getCurrentUrl();
+			   Thread.sleep(3000); 
 			   		if(reciept_url.equalsIgnoreCase(baseUrl+"/payment/reciept") ){  
 						  Assert.assertTrue(true);
 //						  getStatusMessageBlock().getText().contains("unable to send");

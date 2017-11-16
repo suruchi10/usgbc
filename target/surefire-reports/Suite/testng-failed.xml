@@ -9,9 +9,9 @@
     <classes>
       <class name="org.usgbc.regression.CommunityRegistrationTest">
         <methods>
+          <include name="tearDown"/>
           <include name="testCommunityRegistrationForNonExistingUserToGetRegistered"/>
-          <include name="testCommunityRegistrationForExistingUser"/>
-          <include name="testCommunityRegistrationForNonExistingUser"/>
+          <include name="setup"/>
         </methods>
       </class> <!-- org.usgbc.regression.CommunityRegistrationTest -->
       <class name="org.usgbc.regression.LoggedUserTest">
@@ -31,8 +31,6 @@
         <methods>
           <include name="tearDown"/>
           <include name="setup"/>
-          <include name="testCommunityRegistrationForCostValidationEmergingprofessionalMember75"/>
-          <include name="testCommunityRegistrationForCostValidationStudentMember50"/>
         </methods>
       </class> <!-- org.usgbc.regression.CommunityRegistrationPriceValidationTest -->
       <class name="org.usgbc.regression.MembershipTest">

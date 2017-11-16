@@ -14,8 +14,7 @@ public class Store extends ReusableMethods{
 	
 	public Store(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
-		
+		// TODO Auto-generated constructor stub	
 	}
 
 	public void StoreModuleGreen() throws Exception {
@@ -23,7 +22,7 @@ public class Store extends ReusableMethods{
 		Thread.sleep(2000);
 		driver.get(baseUrl +"/store");
 		System.out.println("Store Module Green Apple Lapel Pins");
-		System.out.println("Broken Link for /store ");
+		System.out.println("Broken Link for: "+driver.getCurrentUrl());
 		BrokenLink.BrokenLinkCheck(baseUrl +"/store");
 		getGreenAppleLapelPins().click();
 		Thread.sleep(3000);
@@ -43,7 +42,7 @@ public class Store extends ReusableMethods{
 						 System.out.println("*****contact-payment-receipt******");
 						 Contact_Form("contact" , 3);
 						 Thread.sleep(3000);
-						 signInForm("signin",9);
+						 signInForm("signin",11);//(ruchi@gmail.com, ruchi) registered user
 						 contactPaymentReceipt();
 				 		
 					}else {
@@ -63,7 +62,7 @@ public class Store extends ReusableMethods{
 		Thread.sleep(2000);
 		driver.get(baseUrl +"/store");
 		System.out.println("Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
-		System.out.println("Broken Link for /store ");
+		System.out.println("Broken Link for :"+driver.getCurrentUrl());
 		BrokenLink.BrokenLinkCheck(baseUrl +"/store");
 	    getLEEDReferenceGuide().click();
 		Thread.sleep(3000);
@@ -97,10 +96,14 @@ public class Store extends ReusableMethods{
 								}
 						getEmail().click();
 						getWebsite().click();
+						
+						getContinue().click();
 							 //Contact_Form("" , 3);
 							 //element not found exception because of contact page ui is diffrent for this store products
 						Thread.sleep(3000);
 						signInForm("signin",3);
+						Thread.sleep(3000);
+						
 						contactPaymentReceipt();	
 					}else {
 							System.out.println("Add to cart is link is not clicked");
@@ -116,7 +119,7 @@ public class Store extends ReusableMethods{
 		
 		Thread.sleep(2000);
 		driver.get(baseUrl +"/store");
-		System.out.println("Store Module Green Apple Lapel Pins");
+		System.out.println("Store Module Green Apple Lapel Pins and LEED");
 		System.out.println("Broken Link for /store ");
 		BrokenLink.BrokenLinkCheck(baseUrl +"/store");
 		getGreenAppleLapelPins().click();
@@ -132,13 +135,15 @@ public class Store extends ReusableMethods{
 		Assert.assertTrue(getStatusMessage().getAttribute("innerHTML").contains("LEED Reference Guide for Homes Design and Construction (e-document)"));
 		getCheckOutButton().click();
 		String StoreContact_url = driver.getCurrentUrl();
-		 Assert.assertEquals(StoreContact_url, baseUrl+"/store/contact");	
-		 System.out.println("*****contact-payment-receipt*****");
-		 Contact_Form("contact" , 3);
-		 Thread.sleep(3000);
-		 signInForm("signin",3);
-		 contactPaymentReceipt();
-		}
+		Assert.assertEquals(StoreContact_url, baseUrl+"/store/contact");	
+		System.out.println("*****contact-payment-receipt*****");
+		Contact_Form("contact" , 3);
+		Thread.sleep(3000);
+		signInForm("signin",3);
+		Thread.sleep(3000);
+		 
+		contactPaymentReceipt();
+	}
 	
 	
 	
@@ -176,7 +181,7 @@ public class Store extends ReusableMethods{
 			getRemove().click();			
 			StatusMessage();
 			Assert.assertTrue(getUcCartEmpty().isDisplayed());
-			System.out.println("------Cart is Empty------");
+			System.out.println("#####Cart is Empty#####");
 			
 		}
 	}
@@ -237,7 +242,9 @@ public class Store extends ReusableMethods{
 			Thread.sleep(2000);
 			getConfirmCart().click();
 			Assert.assertEquals(driver.getCurrentUrl(),baseUrl+"/cart");
-			Assert.assertTrue(getUcCartEmpty().isDisplayed());	
+			Assert.assertTrue(getUcCartEmpty().isDisplayed());
+			System.out.println("#####Cart is Empty#####");
+			
 		}
 	}
 }

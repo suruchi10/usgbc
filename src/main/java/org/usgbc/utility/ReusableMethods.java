@@ -143,13 +143,13 @@ public class ReusableMethods extends UsgbcWebLocators{
 		 Thread.sleep(8000);  
 		 String reciept_url = driver.getCurrentUrl();
 		 if( getstatusMessageUsgbcPayment().isDisplayed() && reciept_url.equalsIgnoreCase(baseUrl+"/usgbc/payment")){ 
-			  if(getstatusMessageUsgbcPayment().getAttribute("innerHTML").contains("User not found")) {
+			  if(getstatusMessageUsgbcPayment().getText().contains("User not found")) {
 				  	Assert.assertTrue(true);
 				  	System.out.println(getstatusMessageUsgbcPayment().getAttribute("innerHTML"));  
-		        }else if( getstatusMessageUsgbcPayment().getAttribute("innerHTML").contains("To prevent misorders, the same item may not be purchased twice within 24 hours. Questions? Call (800 number)")) {
+		        }else if( getstatusMessageUsgbcPayment().getText().contains("To prevent misorders, the same item may not be purchased twice within 24 hours. Questions? Call (800 number)")) {
 		        	Assert.assertTrue(true);
 		        	System.out.println(getstatusMessageUsgbcPayment().getAttribute("innerHTML"));
-		 		}else if (getstatusMessageUsgbcPayment().getAttribute("innerHTML").contains(("The address you entered is invalid: The region Har is not defined for country IN"))) {
+		 		}else if (getstatusMessageUsgbcPayment().getText().contains(("The address you entered is invalid: The region Har is not defined for country IN"))) {
 		 			Assert.assertTrue(true);
 		 			System.out.println(getstatusMessageUsgbcPayment().getAttribute("innerHTML")); 
 		 		}

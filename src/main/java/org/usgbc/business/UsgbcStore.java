@@ -17,7 +17,7 @@ public class UsgbcStore extends ReusableMethods {
 	public void UsgbcStoreModule() throws Exception {
 		
 		System.out.println("Usgbc Store Module");
-		System.out.println("Broken Link for store/contact ");
+		System.out.println("Broken Link for :"+ driver.getCurrentUrl());
 	    BrokenLink.BrokenLinkCheck(baseUrl);
 		getUsgbcStore().click();
 		Thread.sleep(3000);
@@ -34,12 +34,12 @@ public class UsgbcStore extends ReusableMethods {
 		 }
 	}
 	
-	  /*----------------------------------------*/
+    /*----------------------------------------*/
 	
      public void UsgbcStoreModuleGreen() throws Exception {
     	 
     	System.out.println("Usgbc Store Module Green Apple Lapel Pins");
-		System.out.println("Broken Link for / ");
+		System.out.println("Broken Link for : "+ driver.getCurrentUrl());
 	    BrokenLink.BrokenLinkCheck(baseUrl);
     	getAddToCartGreen().click();
 		Thread.sleep(3000);
@@ -55,19 +55,21 @@ public class UsgbcStore extends ReusableMethods {
 				 System.out.println("*****contact-payment-receipt*****");
 				 Contact_Form("contact" , 3);
 				 Thread.sleep(3000);
-				 signInForm("signin",8);
+				 signInForm("signin",8);//(test25@testuser.com test123) user provided by ekta only user can download receipt 
+				 Thread.sleep(3000);
 				 contactPaymentReceipt();	 
 			}else {
 				System.out.println("Add to cart link not clicked");
 				System.out.println("......"+ driver.getCurrentUrl() + "......" );
 			}
 	}
+     
      /*----------------------------------------*/
      
      public void UsgbcStoreModuleGreen2() throws Exception {
     	 
     	System.out.println("Usgbc Store Module Green Apple Lapel Pins scenario 2");
-		System.out.println("Broken Link for / ");
+		System.out.println("Broken Link for : "+driver.getCurrentUrl());
 	    BrokenLink.BrokenLinkCheck(baseUrl);
      	getAddToCartGreen().click();
  		Thread.sleep(3000);
@@ -83,7 +85,8 @@ public class UsgbcStore extends ReusableMethods {
  				 System.out.println("******contact-payment-receipt*****");
  				 Contact_Form("contact" , 3);
  				 Thread.sleep(3000);
- 				 signInForm("signin",9);
+ 				 signInForm("signin",11);//(ruchi@gmail.com ruchi ) registered user , user not found
+ 				 Thread.sleep(3000);
  				 contactPaymentReceipt();
  				 
  			}else {
@@ -95,9 +98,8 @@ public class UsgbcStore extends ReusableMethods {
      /*----------------------------------------*/
      public void UsgbcStoreModuleLEED() throws Exception {
     	
-		driver.get(baseUrl);
 		System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
-		System.out.println("Broken Link for / ");
+		System.out.println("Broken Link for for: "+ driver.getCurrentUrl());
 	    BrokenLink.BrokenLinkCheck(baseUrl); 	
     	getAddToCartLEED().click();
  		Thread.sleep(3000);
@@ -115,7 +117,8 @@ public class UsgbcStore extends ReusableMethods {
  				 getWebsite().click();
  				 getContinue().click();
  				 Thread.sleep(3000);
- 				 signInForm("signin",8);
+ 				 signInForm("signin",8);//(test25@testuser.com, test123), receipt download 
+ 				 Thread.sleep(3000);
  				 contactPaymentReceipt();	 
  			}else {
  				System.out.println("Add to cart link not clicked");
@@ -127,7 +130,7 @@ public class UsgbcStore extends ReusableMethods {
       public void UsgbcStoreModuleLEED2() throws Exception {
     	
  		System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document) scenario 2");
- 		System.out.println("Broken Link for / ");
+ 		System.out.println("Broken Link for : "+driver.getCurrentUrl());
  	    BrokenLink.BrokenLinkCheck(baseUrl);
     	getAddToCartLEED().click();
   		Thread.sleep(3000);
@@ -145,7 +148,8 @@ public class UsgbcStore extends ReusableMethods {
   				 getWebsite().click();
   				 getContinue().click();
   				 Thread.sleep(3000);
-  				 signInForm("signin",9);
+  				 signInForm("signin",11);//(ruchi@gmail.com ,ruchi), user not found
+  				 Thread.sleep(3000);
   				 contactPaymentReceipt();
   				 
   			}else {

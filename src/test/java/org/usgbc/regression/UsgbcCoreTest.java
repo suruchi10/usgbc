@@ -12,7 +12,7 @@ import org.usgbc.utility.BrokenLink;
 public class UsgbcCoreTest extends Base {
 	
 
-	@Test	
+	@Test(priority=0)
 	public void testUsgbcCoreForNonExistingUser() throws Exception {
 	
 		 System.out.println("Usgbc Core Module for Non Existing User");
@@ -33,12 +33,12 @@ public class UsgbcCoreTest extends Base {
 	}
 	
 	
-	@Test	
+	@Test(priority=1)	
 	public void testUsgbcCoreForNonExistingUserToGetRegistered() throws Exception {
 		
 		 System.out.println("Usgbc Core Module for Non Existing User To Get Registered");
 		 System.out.println("Broken Link for :"+driver.getTitle());
-	    // BrokenLink.BrokenLinkCheck(baseUrl);
+	     BrokenLink.BrokenLinkCheck(baseUrl);
 	     UsgbcCore usgbcCore = PageFactory.initElements(driver, UsgbcCore.class);    
 		    try {
 		    	test= extent.startTest("Usgbc Core Module for Non Existing User To Get Registered");
@@ -53,12 +53,12 @@ public class UsgbcCoreTest extends Base {
 			}	
 	}
 	
-	@Test	
+	@Test(priority=2)
 	public void testUsgbcCoreForExistingUser() throws Exception {
 
 		 System.out.println("Usgbc Core Module for Existing User");
 		 System.out.println("Broken Link for :"+driver.getTitle());
-	     //BrokenLink.BrokenLinkCheck(baseUrl);
+	     BrokenLink.BrokenLinkCheck(baseUrl);
 	     UsgbcCore usgbcCore = PageFactory.initElements(driver, UsgbcCore.class);    
 		    try {
 		    	test= extent.startTest("Usgbc Core Module for Existing User ");

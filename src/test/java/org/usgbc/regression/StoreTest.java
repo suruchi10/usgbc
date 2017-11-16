@@ -10,7 +10,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class StoreTest extends Base {
 
-	@Test	
+	@Test(priority=0)
 	public void testStoreGreen() throws Exception {
 	
 	     Store store = PageFactory.initElements(driver, Store.class);    
@@ -27,7 +27,7 @@ public class StoreTest extends Base {
 			 }
 	}
 	
-	@Test	
+	@Test(priority=1)
 	public void testStoreLEED() throws Exception {
 	
 	     Store store = PageFactory.initElements(driver, Store.class);    
@@ -44,7 +44,7 @@ public class StoreTest extends Base {
 			 }
 	}
 	
-	@Test	
+	@Test(priority=2)	
 	public void testStoreLEEDandGreen() throws Exception {
 		
 	     Store store = PageFactory.initElements(driver, Store.class);    
@@ -61,7 +61,7 @@ public class StoreTest extends Base {
 			 }
 	}
 
-	@Test	
+	@Test(priority=3)	
 	public void testShoppingCartLink() throws Exception {
 		
 	     Store store = PageFactory.initElements(driver, Store.class);    
@@ -78,7 +78,7 @@ public class StoreTest extends Base {
 			 }
 	}
 	
-	@Test	
+	@Test(priority=4)	
 	public void testShoppingCartLink2() throws Exception {
 		
 	     Store store = PageFactory.initElements(driver, Store.class);    
@@ -95,7 +95,7 @@ public class StoreTest extends Base {
 			 }
 	}
 	
-	@Test	
+	@Test(priority=5)	
 	public void testShoppingCartLink3() throws Exception {
 		
 	     Store store = PageFactory.initElements(driver, Store.class);    

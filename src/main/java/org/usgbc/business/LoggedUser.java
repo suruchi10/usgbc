@@ -40,22 +40,26 @@ public class LoggedUser extends ReusableMethods {
 	    Thread.sleep(3000);
 	    signInForm("signin",2);	
 	    Thread.sleep(3000);
-	    getCommunityRegistration().click();
-	    Thread.sleep(3000);
-		JavascriptExecutor js = ((JavascriptExecutor) driver);
-        js.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath(".//*[@id='main-menu']/li[4]/a")));
-	        try {
-	        	
-		        if(driver.findElement(By.linkText("Sign out")).isDisplayed()) {
-		        	System.out.println("user is logged in");
-		        }
-	        }
-	        catch(Exception e) {
-	        	System.out.println("user is not logged in");
-	        	
-	        }
-	   }	
-
+	    String currentUrl = driver.getCurrentUrl();
+	    //just to give a good output in console y test case is failing here
+	    System.out.println("Navigated to:"+ currentUrl);
+	    if(getCommunityRegistration().isDisplayed()) {
+	    	getCommunityRegistration().click();
+	 	    Thread.sleep(3000);
+	 		JavascriptExecutor js = ((JavascriptExecutor) driver);
+	        js.executeScript("arguments[0].scrollIntoView(true);",driver.findElement(By.xpath(".//*[@id='main-menu']/li[4]/a")));
+	 	    	try {
+	 	    		if(driver.findElement(By.linkText("Sign out")).isDisplayed()) {
+	 		        	System.out.println("user is logged in");
+	 		        }
+	 	        }
+	 	        catch(Exception e) {
+	 	        	System.out.println("user is not logged in");	
+	 	        }
+	 	}else {
+	 		System.out.println("Element is not Visible");
+	 	}
+	}
 }
 	
    

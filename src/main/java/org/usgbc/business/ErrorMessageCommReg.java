@@ -113,13 +113,14 @@ public class ErrorMessageCommReg extends UsgbcWebLocators {
 		
 		getcommunityRegistration().click();
 		Thread.sleep(3000);
-		Thread.sleep(3000);
+		
 		List<WebElement>radioButton =driver.findElements(By.name("is_student")); 
 	    boolean bValue = false;
 	    bValue = radioButton.get(0).isSelected();
 	    if(bValue = true){
 	    	radioButton.get(1).click();
 	    }
+	    
 	    getGraduation().sendKeys("2017-02-06");
 	    Thread.sleep(3000);
 	    
@@ -128,7 +129,6 @@ public class ErrorMessageCommReg extends UsgbcWebLocators {
 	    bValue2 = radioButton2.get(0).isSelected();
 	    if(bValue2 = true){ 
 	    	radioButton2.get(1).click();
-	    	getBirthday().click();
 	    	Thread.sleep(2000);
 	    }
       
