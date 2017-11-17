@@ -22,7 +22,7 @@ public class Store extends ReusableMethods{
 		Thread.sleep(2000);
 		driver.get(baseUrl +"/store");
 		System.out.println("Store Module Green Apple Lapel Pins");
-		System.out.println("Broken Link for: "+driver.getCurrentUrl());
+		System.out.println("Broken Link for: "+driver.getTitle());
 		BrokenLink.BrokenLinkCheck(baseUrl +"/store");
 		getGreenAppleLapelPins().click();
 		Thread.sleep(3000);
@@ -62,7 +62,7 @@ public class Store extends ReusableMethods{
 		Thread.sleep(2000);
 		driver.get(baseUrl +"/store");
 		System.out.println("Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
-		System.out.println("Broken Link for :"+driver.getCurrentUrl());
+		System.out.println("Broken Link for :"+driver.getTitle());
 		BrokenLink.BrokenLinkCheck(baseUrl +"/store");
 	    getLEEDReferenceGuide().click();
 		Thread.sleep(3000);
@@ -120,7 +120,7 @@ public class Store extends ReusableMethods{
 		Thread.sleep(2000);
 		driver.get(baseUrl +"/store");
 		System.out.println("Store Module Green Apple Lapel Pins and LEED");
-		System.out.println("Broken Link for /store ");
+		System.out.println("Broken Link for :"+driver.getTitle());
 		BrokenLink.BrokenLinkCheck(baseUrl +"/store");
 		getGreenAppleLapelPins().click();
 		Thread.sleep(2000);

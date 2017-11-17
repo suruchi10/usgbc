@@ -4,11 +4,11 @@
   <test name="FirefoxTest" >
     <parameter name="browser" value="firefox"/>
   	<parameter name="environment" value="test" />
-	<classes>
-	  <class name="org.usgbc.regression.CommunityRegistrationPriceValidationTest"/>
+	<classes> 
+	<class name="org.usgbc.regression.ErrorMessageCommRegTest"/>
 	  <class name="org.usgbc.regression.CommunityRegistrationTest"/>
-
-	  <class name="org.usgbc.regression.ErrorMessageCommRegTest"/>
+      <class name="org.usgbc.regression.CommunityRegistrationPriceValidationTest"/>
+	  
 	  <class name="org.usgbc.regression.UsgbcCoreTest"/>
 	  <class name="org.usgbc.regression.LoggedUserTest"/>
 	  <class name="org.usgbc.regression.StoreTest"/>

@@ -10,7 +10,7 @@ import com.relevantcodes.extentreports.LogStatus;
 
 public class ErrorMessageCommRegTest extends Base {
     	
-	@Test	
+	@Test(priority=0)	
 	public void testErrorMessagesCommReg() throws Exception {
 		
 		System.out.println("Communtiy Registration Error Message Validation Test");
@@ -32,7 +32,7 @@ public class ErrorMessageCommRegTest extends Base {
 	
 	
 	
-	@Test	
+	@Test(priority=1)	
 	public void testErrorMessagesCommRegCondition2() throws Exception {
 		
 		System.out.println("Communtiy Registration Error Message Validation Condition 2 Test");
@@ -52,7 +52,7 @@ public class ErrorMessageCommRegTest extends Base {
 	
 	}
 	
-	@Test	
+	@Test(priority=2)	
 	public void testErrorMessagesCommRegCondition3() throws Exception {
 		
 		System.out.println("Communtiy Registration Error Message Validation Condition 3 Test");

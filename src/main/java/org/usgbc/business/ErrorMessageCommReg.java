@@ -5,6 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.usgbc.page.UsgbcWebLocators;
 
@@ -121,6 +123,7 @@ public class ErrorMessageCommReg extends UsgbcWebLocators {
 	    	radioButton.get(1).click();
 	    }
 	    
+	    Thread.sleep(5000);
 	    getGraduation().sendKeys("2017-02-06");
 	    Thread.sleep(3000);
 	    

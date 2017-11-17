@@ -17,7 +17,7 @@ public class UsgbcStore extends ReusableMethods {
 	public void UsgbcStoreModule() throws Exception {
 		
 		System.out.println("Usgbc Store Module");
-		System.out.println("Broken Link for :"+ driver.getCurrentUrl());
+		System.out.println("Broken Link for :"+ driver.getTitle());
 	    BrokenLink.BrokenLinkCheck(baseUrl);
 		getUsgbcStore().click();
 		Thread.sleep(3000);
@@ -39,7 +39,7 @@ public class UsgbcStore extends ReusableMethods {
      public void UsgbcStoreModuleGreen() throws Exception {
     	 
     	System.out.println("Usgbc Store Module Green Apple Lapel Pins");
-		System.out.println("Broken Link for : "+ driver.getCurrentUrl());
+		System.out.println("Broken Link for : "+ driver.getTitle());
 	    BrokenLink.BrokenLinkCheck(baseUrl);
     	getAddToCartGreen().click();
 		Thread.sleep(3000);
@@ -69,7 +69,7 @@ public class UsgbcStore extends ReusableMethods {
      public void UsgbcStoreModuleGreen2() throws Exception {
     	 
     	System.out.println("Usgbc Store Module Green Apple Lapel Pins scenario 2");
-		System.out.println("Broken Link for : "+driver.getCurrentUrl());
+		System.out.println("Broken Link for : "+ driver.getTitle());
 	    BrokenLink.BrokenLinkCheck(baseUrl);
      	getAddToCartGreen().click();
  		Thread.sleep(3000);
@@ -99,7 +99,7 @@ public class UsgbcStore extends ReusableMethods {
      public void UsgbcStoreModuleLEED() throws Exception {
     	
 		System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document)");
-		System.out.println("Broken Link for for: "+ driver.getCurrentUrl());
+		System.out.println("Broken Link for for: "+ driver.getTitle());
 	    BrokenLink.BrokenLinkCheck(baseUrl); 	
     	getAddToCartLEED().click();
  		Thread.sleep(3000);
@@ -130,7 +130,7 @@ public class UsgbcStore extends ReusableMethods {
       public void UsgbcStoreModuleLEED2() throws Exception {
     	
  		System.out.println("Usgbc Store Module LEED Reference Guide for Homes Design and Construction (e-document) scenario 2");
- 		System.out.println("Broken Link for : "+driver.getCurrentUrl());
+ 		System.out.println("Broken Link for : "+ driver.getTitle());
  	    BrokenLink.BrokenLinkCheck(baseUrl);
     	getAddToCartLEED().click();
   		Thread.sleep(3000);
