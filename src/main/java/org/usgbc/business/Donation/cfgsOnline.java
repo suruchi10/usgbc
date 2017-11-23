@@ -22,7 +22,7 @@ public class cfgsOnline extends ReusableMethods {
 		System.out.println("Donation module for cfgs Online");
 		
 		Thread.sleep(2000);
-		driver.navigate().to(baseUrl+"/donations/center/online/haiti");
+		driver.navigate().to(baseUrl+"/donations/center/online/cfgs");
 		
 //		common.click("DonateMailNav");
 			
