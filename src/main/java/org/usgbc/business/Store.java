@@ -42,7 +42,7 @@ public class Store extends ReusableMethods{
 						 System.out.println("*****contact-payment-receipt******");
 						 Contact_Form("contact" , 3);
 						 Thread.sleep(3000);
-						 signInForm("signin",11);//(ruchi@gmail.com, ruchi) registered user
+						 signInForm("signin",11);//(ruchi@gmail.com, ruchi) registered user ,user not found
 						 contactPaymentReceipt();
 				 		
 					}else {
@@ -101,7 +101,7 @@ public class Store extends ReusableMethods{
 							 //Contact_Form("" , 3);
 							 //element not found exception because of contact page ui is diffrent for this store products
 						Thread.sleep(3000);
-						signInForm("signin",3);
+						signInForm("signin",3);//(abi@gmail.com, abhisek) registered user ,user not found
 						Thread.sleep(3000);
 						
 						contactPaymentReceipt();	
@@ -139,7 +139,7 @@ public class Store extends ReusableMethods{
 		System.out.println("*****contact-payment-receipt*****");
 		Contact_Form("contact" , 3);
 		Thread.sleep(3000);
-		signInForm("signin",3);
+		signInForm("signin",3); //(abi@gmail.com, abhisek) registered user ,user not found
 		Thread.sleep(3000);
 		 
 		contactPaymentReceipt();

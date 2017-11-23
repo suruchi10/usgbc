@@ -24,6 +24,7 @@ public class UsgbcCore extends ReusableMethods{
 		BrokenLink.BrokenLinkCheck(signin_url);
 		signInForm("signin",10); //signin 10 => (amayra@gmail.com,amayra)
 		Thread.sleep(3000);
+		Assert.assertTrue(true);
 		String Signin_url = driver.getCurrentUrl();
 		Thread.sleep(3000);
 		//System.out.println("Broken: "+Signin_url);
@@ -48,11 +49,13 @@ public class UsgbcCore extends ReusableMethods{
 		BrokenLink.BrokenLinkCheck(signin_url);
 		getRegister().click();
 		Thread.sleep(2000);
+		Assert.assertTrue(true);
 		String signup_url = driver.getCurrentUrl();
 		System.out.println("Broken Link for :"+driver.getTitle());
 		BrokenLink.BrokenLinkCheck(signup_url);
 		signUpForm();//  modified with faker class
 		Thread.sleep(3000);
+		Assert.assertTrue(true);
 		String payment_url = driver.getCurrentUrl();
 		Thread.sleep(3000);
 		//System.out.println(payment_url);
@@ -72,6 +75,7 @@ public class UsgbcCore extends ReusableMethods{
 		BrokenLink.BrokenLinkCheck(signin_url);
 		signInForm("signin",3);	//signin 3 => (abi@gmail.com,abi)
 		Thread.sleep(3000);
+		Assert.assertTrue(true);
 		String payment_url = driver.getCurrentUrl();
 		Thread.sleep(3000);
 		Assert.assertEquals(payment_url, baseUrl+"/usgbc/payment");

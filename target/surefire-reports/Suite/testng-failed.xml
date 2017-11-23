@@ -7,19 +7,31 @@
     <parameter name="environment" value="test"/>
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="org.usgbc.regression.CommunityRegistrationTest">
+      <class name="org.usgbc.regression.ErrorMessageCommRegTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="testCommunityRegistrationForNonExistingUserToGetRegistered"/>
-          <include name="setup"/>
+          <include name="testErrorMessagesCommReg"/>
+          <include name="testErrorMessagesCommRegCondition3"/>
+          <include name="testErrorMessagesCommRegCondition2"/>
         </methods>
-      </class> <!-- org.usgbc.regression.CommunityRegistrationTest -->
+      </class> <!-- org.usgbc.regression.ErrorMessageCommRegTest -->
+      <class name="org.usgbc.regression.Donation.HaitiMailTest">
+        <methods>
+          <include name="testDonateForHaitiByMail"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.Donation.HaitiMailTest -->
       <class name="org.usgbc.regression.LoggedUserTest">
         <methods>
           <include name="testLoggedUser2"/>
           <include name="testLoggedUser"/>
         </methods>
       </class> <!-- org.usgbc.regression.LoggedUserTest -->
+      <class name="org.usgbc.regression.CommunityRegistrationPriceValidationTest">
+        <methods>
+          <include name="testCommunityRegistrationForCostValidationEmergingprofessionalMember75"/>
+          <include name="testCommunityRegistrationForCostValidationStudentMember50"/>
+          <include name="testCommunityRegistrationForCostValidationDefault35"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.CommunityRegistrationPriceValidationTest -->
       <class name="org.usgbc.regression.UsgbcCoreTest">
         <methods>
           <include name="testUsgbcCoreForNonExistingUser"/>
@@ -27,26 +39,18 @@
           <include name="testUsgbcCoreForNonExistingUserToGetRegistered"/>
         </methods>
       </class> <!-- org.usgbc.regression.UsgbcCoreTest -->
-      <class name="org.usgbc.regression.CommunityRegistrationPriceValidationTest">
+      <class name="org.usgbc.regression.CommunityRegistrationTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
+          <include name="testCommunityRegistrationForNonExistingUserToGetRegistered"/>
+          <include name="testCommunityRegistrationForExistingUser"/>
+          <include name="testCommunityRegistrationForNonExistingUser"/>
         </methods>
-      </class> <!-- org.usgbc.regression.CommunityRegistrationPriceValidationTest -->
+      </class> <!-- org.usgbc.regression.CommunityRegistrationTest -->
       <class name="org.usgbc.regression.MembershipTest">
         <methods>
           <include name="testMembership"/>
         </methods>
       </class> <!-- org.usgbc.regression.MembershipTest -->
-      <class name="org.usgbc.regression.UsgbcStoreTest">
-        <methods>
-          <include name="testUsgbcStore"/>
-          <include name="testUsgbcStoreGreen"/>
-          <include name="testUsgbcStoreLEED"/>
-          <include name="testUsgbcStoreGreen2"/>
-          <include name="testUsgbcStoreLEED2"/>
-        </methods>
-      </class> <!-- org.usgbc.regression.UsgbcStoreTest -->
       <class name="org.usgbc.regression.StoreTest">
         <methods>
           <include name="testShoppingCartLink2"/>
@@ -57,13 +61,39 @@
           <include name="testStoreLEED"/>
         </methods>
       </class> <!-- org.usgbc.regression.StoreTest -->
-      <class name="org.usgbc.regression.ErrorMessageCommRegTest">
+      <class name="org.usgbc.regression.Donation.HaitiOnlineTest">
         <methods>
-          <include name="testErrorMessagesCommReg"/>
-          <include name="testErrorMessagesCommRegCondition3"/>
-          <include name="testErrorMessagesCommRegCondition2"/>
+          <include name="testDonateForHaitiByOnline"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- org.usgbc.regression.ErrorMessageCommRegTest -->
+      </class> <!-- org.usgbc.regression.Donation.HaitiOnlineTest -->
+      <class name="org.usgbc.regression.Donation.UsgbcOnlineTest">
+        <methods>
+          <include name="testDonateForUsgbcByOnline"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.Donation.UsgbcOnlineTest -->
+      <class name="org.usgbc.regression.UsgbcStoreTest">
+        <methods>
+          <include name="testUsgbcStore"/>
+          <include name="testUsgbcStoreGreen"/>
+          <include name="testUsgbcStoreLEED"/>
+          <include name="testUsgbcStoreGreen2"/>
+          <include name="testUsgbcStoreLEED2"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.UsgbcStoreTest -->
+      <class name="org.usgbc.regression.Donation.cfgsOnlineTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="testDonateForcfgsByOnline"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.Donation.cfgsOnlineTest -->
+      <class name="org.usgbc.regression.Donation.mygreenappleOnlineTest">
+        <methods>
+          <include name="testDonateFormygreenappleByOnline"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.Donation.mygreenappleOnlineTest -->
     </classes>
   </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

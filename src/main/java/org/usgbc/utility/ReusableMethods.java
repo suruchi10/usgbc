@@ -103,7 +103,7 @@ public class ReusableMethods extends UsgbcWebLocators{
 					
 	}
     
-	public void paymentFormMembership(String sheetName, int rowNum) throws InterruptedException {
+	/*public void paymentFormMembership(String sheetName, int rowNum) throws InterruptedException {
 			
 			String name_on_card= reader.getCellData(sheetName, "name_on_card",rowNum); 
 			String card_number= reader.getCellData(sheetName, "card number", rowNum);
@@ -118,7 +118,7 @@ public class ReusableMethods extends UsgbcWebLocators{
 			String billing_state= reader.getCellData(sheetName, "state", rowNum);
 			payment_usgbc_Membership( name_on_card , card_number, month, year, security_code, billing_country, billing_street_address, billing_street_address2);
 						
-		}
+		}*/
 	
 	public void membership() throws Exception {
 		 getOrganistionName().sendKeys("Group10");
@@ -225,6 +225,52 @@ public class ReusableMethods extends UsgbcWebLocators{
 		if(getStatusMessageBlock().isDisplayed()) {
 			System.out.println("---" +  getStatusMessageBlock().getText()+"---");
 		}
+	}
+
+	//Donation By mail
+	
+	public void donationByMail(String sheetName, int rowNum) throws Exception {
+		
+		String DonationAmount= reader.getCellData(sheetName, "Donation amount",rowNum); 
+		
+		String DonorName= reader.getCellData(sheetName, "Donor Name", rowNum);
+		
+		String DedicatedTo= reader.getCellData(sheetName, "Dedicated to",rowNum); 
+		
+		String Email= reader.getCellData(sheetName, "Email", rowNum);
+		
+		String Country= reader.getCellData(sheetName, "Country",rowNum); 
+		
+		String StreetAddressLine1= reader.getCellData(sheetName, "Street address line1", rowNum);
+		
+		String StreetAddressLine2= reader.getCellData(sheetName, "Street address line2", rowNum);
+		
+		String City= reader.getCellData(sheetName, "City", rowNum);
+		
+	    // String State= reader.getCellData(sheetName, "State", rowNum);
+		
+		String Zip= reader.getCellData(sheetName, "Zip code", rowNum);
+		
+		donation_By_Mail(DonationAmount,DonorName,DedicatedTo,Email,Country,StreetAddressLine1,StreetAddressLine2,City,Zip);
+		
+	}
+	
+	//Donation By Online
+	
+	public void donationByOnline(String sheetName, int rowNum) throws Exception {
+		
+		String YourContribution= reader.getCellData(sheetName, "Your contribution",rowNum); 
+		
+		String DonorName= reader.getCellData(sheetName, "Donor name", rowNum);
+		
+		String Name= reader.getCellData(sheetName, "Name",rowNum); 
+		
+		String Email= reader.getCellData(sheetName, "Email", rowNum);
+		
+		String Message= reader.getCellData(sheetName, "Message",rowNum); 
+		
+		donation_By_Online(YourContribution,DonorName,Name,Email,Message);
+		
 	}
 	
 	

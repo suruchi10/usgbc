@@ -85,7 +85,7 @@ public class UsgbcStore extends ReusableMethods {
  				 System.out.println("******contact-payment-receipt*****");
  				 Contact_Form("contact" , 3);
  				 Thread.sleep(3000);
- 				 signInForm("signin",11);//(ruchi@gmail.com ruchi ) registered user , user not found
+ 				 signInForm("signin",11);//(ruchi@gmail.com, ruchi ) registered user , user not found
  				 Thread.sleep(3000);
  				 contactPaymentReceipt();
  				 

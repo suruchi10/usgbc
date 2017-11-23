@@ -120,6 +120,7 @@ public class CommunityRegistration extends ReusableMethods{
 		System.out.println("Broken Link for  :"+ driver.getTitle());
 		//BrokenLink.BrokenLinkCheck(communityRegistration_url);
 		CommunityRegistrationFormData.CommmunityRegistrationForm();
+		Thread.sleep(5000);
 	    String signin_url = driver.getCurrentUrl();
 	    Thread.sleep(3000); 
 		if (signin_url.equalsIgnoreCase(baseUrl+"/signin") && driver.getTitle().contains("Sign-in")){

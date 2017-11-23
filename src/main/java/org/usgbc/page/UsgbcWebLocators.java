@@ -1,6 +1,8 @@
 package org.usgbc.page;
 
 
+import java.io.IOException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +13,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.usgbc.utility.Base;
+import org.usgbc.utility.Common;
 
 public class UsgbcWebLocators extends Base{
 	public static WebDriver driver;
@@ -288,7 +291,6 @@ public class UsgbcWebLocators extends Base{
 		   billing_street_address.click();
 		   billing_street_address.sendKeys(billing_street_add);
 		   billing_street_address2.sendKeys(billing_street_add2);
-		   
 		   submit_payment.click();
 		   //Thread.sleep(3000);
 	     } catch (Exception e) {
@@ -586,7 +588,94 @@ public class UsgbcWebLocators extends Base{
     		terms_membership.click();
     		Contact_Continue_membership.click();	
     	}
-		
+	 	
+	 	
+	 	/* Donation module */
+	 	
+	 	Common common =new Common();
+	 	
+	 	public void donation_By_Mail(String DonationAmount,String DonorName, String DedicatedTo,String Email,String Country,String StreetAddressLine1,String  StreetAddressLine2 ,String City,String Zip  ) throws Exception {
+	 		
+	 		
+	 		common.sendKeys("DonationAmount", DonationAmount );
+	 		Thread.sleep(2000);
+	 		common.testlog("Pass", "Entering Donation Amount ");
+	 		
+	 		common.sendKeys("DonorName", DonorName );
+	 		Thread.sleep(2000);
+	 		common.testlog("Pass", "Entering Donor Name ");
+	 		
+	 		common.sendKeys("DedicatedTo", DedicatedTo );
+	 		Thread.sleep(2000);
+	 		common.testlog("Pass", "Entering Dedicated to ");
+	 		
+	 		common.sendKeys("Email", Email );
+	 		Thread.sleep(2000);
+	 		common.testlog("Pass", "Entering email");
+	 		
+	 		common.scrolldowntoElement("Country");
+	 		common.selectdropdown("Country", Country);
+	 		Thread.sleep(2000);
+	 		
+	 		common.testlog("Pass", "Entering Country ");
+	 		common.sendKeys("StreetAddressLine1", StreetAddressLine1 );
+	 		Thread.sleep(2000);
+	 		
+	 		common.testlog("Pass", "Entering Street Address Line 1 ");
+	 		common.sendKeys("StreetAddressLine2", StreetAddressLine2 );
+	 		Thread.sleep(2000);
+	 		
+	 		common.testlog("Pass", "Entering Street Address Line 2 ");
+	 		common.sendKeys("City", City);
+	 		Thread.sleep(3000);
+	 		
+	 		common.testlog("Pass", "Entering City ");
+	 		common.sendKeys("Zip", Zip);
+	 		Thread.sleep(2000);
+	 		
+	 		common.testlog("Pass", "Entering Zip ");
+	 		common.selectdropdownrandom("State");
+	 		Thread.sleep(2000);
+	 		
+	 		common.testlog("Pass", "Entering State ");
+	 		common.submitForm("Continue");
+	 		common.testlog("Pass", "Clicking Continue ");
+	 		
+	 		//common.waitForJsToLoad();
+	 		
+	 		Thread.sleep(2000);
+	 	
+	 	}
+	 	
+	 	
+		public void donation_By_Online(String YourContribution,String DonorName, String Name,String Email,String Message) throws Exception {
+			
+			common.sendKeys("YourContribution", YourContribution );
+	 		Thread.sleep(2000);
+	 		common.testlog("Pass", "Entering Your Contribution ");
+	 		
+	 		common.sendKeys("DonorName", DonorName );
+	 		Thread.sleep(2000);
+	 		common.testlog("Pass", "Entering Donor Name ");
+	 		
+	 		common.sendKeys("Name", Name );
+	 		Thread.sleep(2000);
+	 		common.testlog("Pass", "Entering Name ");
+	 		
+	 		common.sendKeys("Email", Email );
+	 		Thread.sleep(2000);
+	 		common.testlog("Pass", "Entering Email");
+	 		
+	 		common.sendKeys("Message", Message );
+	 		Thread.sleep(2000);
+	 		common.testlog("Pass", "Entering Donation Amount ");
+	 		
+	 		common.submitForm("Continue");
+	 		common.testlog("Pass", "Clicking Continue ");
+	 		Thread.sleep(2000);
+	 		
+	 		common.waitForJsToLoad();
+		}
 		
 	 	
 	 	
