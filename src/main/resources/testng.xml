@@ -3,7 +3,7 @@
 <suite name="Suite"  >
   <test name="FirefoxTest" >
     <parameter name="browser" value="firefox"/>
-  	<parameter name="environment" value="dev" />
+  	<parameter name="environment" value="test" />
 	<classes>
 	    <class name="org.usgbc.regression.Donation.UsgbcOnlineTest"/>
 		<class name="org.usgbc.regression.Donation.HaitiOnlineTest"/>

@@ -20,6 +20,7 @@ public class UsgbcOnline extends ReusableMethods {
 		
 		//driver.navigate().to(baseUrl+"/donations/center/online/usgbc");
 		driver.get(baseUrl+"/donations/center/online/usgbc");
+		driver.navigate().to(baseUrl+"/donations/center/online/usgbc");
 		
 		common.isDisplayed("UsgbcLogo", "Donation for USGBC");
 		Thread.sleep(2000);
