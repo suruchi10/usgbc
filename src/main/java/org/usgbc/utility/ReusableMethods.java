@@ -102,24 +102,7 @@ public class ReusableMethods extends UsgbcWebLocators{
 		payment_usgbc( name_on_card , card_number, month, year, security_code, billing_country, billing_street_address, billing_street_address2, billing_city, billing_pin_code, billing_state);
 					
 	}
-    
-	/*public void paymentFormMembership(String sheetName, int rowNum) throws InterruptedException {
-			
-			String name_on_card= reader.getCellData(sheetName, "name_on_card",rowNum); 
-			String card_number= reader.getCellData(sheetName, "card number", rowNum);
-			String month= reader.getCellData(sheetName, "month", rowNum);
-			String year= reader.getCellData(sheetName, "year", rowNum);
-			String security_code= reader.getCellData(sheetName, "security_code", rowNum);
-			String billing_country= reader.getCellData(sheetName, "country", rowNum);
-			String billing_street_address= reader.getCellData(sheetName, "street_address", rowNum);
-			String billing_street_address2= reader.getCellData(sheetName, "street_address2", rowNum);
-			String billing_city= reader.getCellData(sheetName, "city", rowNum);
-			String billing_pin_code= reader.getCellData(sheetName, "pincode", rowNum);
-			String billing_state= reader.getCellData(sheetName, "state", rowNum);
-			payment_usgbc_Membership( name_on_card , card_number, month, year, security_code, billing_country, billing_street_address, billing_street_address2);
-						
-		}*/
-	
+    	
 	public void membership() throws Exception {
 		 getOrganistionName().sendKeys("Group10");
 		 getwebsite().sendKeys("www.test.com");
@@ -141,7 +124,9 @@ public class ReusableMethods extends UsgbcWebLocators{
 		 paymentForm("payment", 2);
 		 Thread.sleep(8000);  
 		 String reciept_url = driver.getCurrentUrl();
-		 if( getstatusMessageUsgbcPayment().isDisplayed() && reciept_url.equalsIgnoreCase(baseUrl+"/usgbc/payment")){ 
+		 
+		 if( reciept_url.equalsIgnoreCase(baseUrl+"/usgbc/payment")){ 
+			 Assert.assertTrue(getstatusMessageUsgbcPayment().isDisplayed());
 			  if(getstatusMessageUsgbcPayment().getAttribute("innerHTML").contains("User not found")) {
 				  	Assert.assertTrue(true);
 				  	System.out.println(getstatusMessageUsgbcPayment().getText());  
@@ -152,17 +137,15 @@ public class ReusableMethods extends UsgbcWebLocators{
 		 			Assert.assertTrue(true);
 		 			System.out.println(getstatusMessageUsgbcPayment().getText()); 
 		 		}
-		
-	     }else if(reciept_url.equalsIgnoreCase(baseUrl+"/payment/reciept")){  
+	     }else if((reciept_url.equalsIgnoreCase(baseUrl+"/payment/reciept")) || ((getStatusMessageBlock().isDisplayed()) && (reciept_url.equalsIgnoreCase(baseUrl+"/payment/reciept")))){  
 			  Assert.assertTrue(true);
 			  System.out.println("Broken Link for : "+ driver.getTitle());
 			  BrokenLink.BrokenLinkCheck(reciept_url);
 			  getprint_Receipt().click();
 	          System.out.println("Receipt downloaded ");
-	     }else if (reciept_url.equalsIgnoreCase(baseUrl+"/usgbc/payment")) {
-			  Assert.assertTrue(true);
-			  System.out.println("Error in payment form submission. ");
-	     }
+	     }else {
+	 			System.out.println("Error in payment form submission. ");
+	 		}
 	}
 	
 	public void contactPaymentReceipt() throws Exception {

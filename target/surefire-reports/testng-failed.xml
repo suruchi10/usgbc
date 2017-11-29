@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
-  <parameter name="environment" value="test"/>
+  <parameter name="environment" value="dev"/>
   <parameter name="browser" value="firefox"/>
   <test name="FirefoxTest(failed)">
-    <parameter name="environment" value="test"/>
+    <parameter name="environment" value="dev"/>
     <parameter name="browser" value="firefox"/>
     <classes>
       <class name="org.usgbc.regression.ErrorMessageCommRegTest">
@@ -68,11 +68,6 @@
           <include name="setup"/>
         </methods>
       </class> <!-- org.usgbc.regression.Donation.HaitiOnlineTest -->
-      <class name="org.usgbc.regression.Donation.UsgbcOnlineTest">
-        <methods>
-          <include name="testDonateForUsgbcByOnline"/>
-        </methods>
-      </class> <!-- org.usgbc.regression.Donation.UsgbcOnlineTest -->
       <class name="org.usgbc.regression.UsgbcStoreTest">
         <methods>
           <include name="testUsgbcStore"/>
@@ -84,11 +79,15 @@
       </class> <!-- org.usgbc.regression.UsgbcStoreTest -->
       <class name="org.usgbc.regression.Donation.cfgsOnlineTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="setup"/>
           <include name="testDonateForcfgsByOnline"/>
         </methods>
       </class> <!-- org.usgbc.regression.Donation.cfgsOnlineTest -->
+      <class name="org.usgbc.regression.Donation.UsgbcOnlineTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.Donation.UsgbcOnlineTest -->
       <class name="org.usgbc.regression.Donation.mygreenappleOnlineTest">
         <methods>
           <include name="testDonateFormygreenappleByOnline"/>

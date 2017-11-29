@@ -439,6 +439,7 @@ public class UsgbcWebLocators extends Base{
 		//html/body/div[1]/div/div/div/div/div	
 	 	//html/body/div[1]/div/div/div/div
 	 	@FindBy(xpath="html/body/div[1]/div/div/div/div[2]/div")WebElement status_message_usgbc_payment;
+	 
 	 	public WebElement getstatusMessageUsgbcPayment() {
    			return status_message_usgbc_payment;
    			}

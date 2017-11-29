@@ -22,16 +22,8 @@ public class cfgsOnline extends ReusableMethods {
 		System.out.println("Donation module for cfgs Online");
 		
 		Thread.sleep(2000);
+		driver.get(baseUrl+"/donations/center/online/cfgs");
 		driver.navigate().to(baseUrl+"/donations/center/online/cfgs");
-		
-//		common.click("DonateMailNav");
-			
-//		driver.navigate().back();
-//		driver.get(baseUrl+"/donations/center/online/cfgs");
-		
-//		common.isDisplayed("HaitiLogo", "Donation for Haiti");
-//		Thread.sleep(2000);
-// 		common.testlog("Pass", "Donation for Haiti");
 		
 		common.scrolldowntoElement("Donate_Nav");
 		Thread.sleep(2000);
