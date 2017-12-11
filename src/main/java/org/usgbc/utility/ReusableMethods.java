@@ -139,6 +139,16 @@ public class ReusableMethods extends UsgbcWebLocators{
 		 		}
 	     }else if((reciept_url.equalsIgnoreCase(baseUrl+"/payment/reciept")) || ((getStatusMessageBlock().isDisplayed()) && (reciept_url.equalsIgnoreCase(baseUrl+"/payment/reciept")))){  
 			  Assert.assertTrue(true);
+			 /* try {
+				  getStatusMessageBlock().isDisplayed();
+				  System.out.println(getStatusMessageBlock().getText());
+				  System.out.println("in the block");
+			  }
+			  catch(Exception e) {
+				
+				  System.out.println("Error message not visible");
+			  }*/
+			  
 			  System.out.println("Broken Link for : "+ driver.getTitle());
 			  BrokenLink.BrokenLinkCheck(reciept_url);
 			  getprint_Receipt().click();

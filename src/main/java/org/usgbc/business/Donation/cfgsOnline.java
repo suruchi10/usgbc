@@ -23,7 +23,7 @@ public class cfgsOnline extends ReusableMethods {
 		
 		Thread.sleep(2000);
 		driver.get(baseUrl+"/donations/center/online/cfgs");
-		driver.navigate().to(baseUrl+"/donations/center/online/cfgs");
+		//driver.navigate().to(baseUrl+"/donations/center/online/cfgs");
 		
 		common.scrolldowntoElement("Donate_Nav");
 		Thread.sleep(2000);

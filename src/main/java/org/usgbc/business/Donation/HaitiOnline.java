@@ -21,7 +21,7 @@ public class HaitiOnline extends ReusableMethods {
 		//driver.navigate().to(baseUrl+"/donations/center/online/haiti");
 		Thread.sleep(2000);
 		driver.get(baseUrl+"/donations/center/online/haiti/");
-		driver.navigate().to(baseUrl+"/donations/center/online/haiti");
+		//driver.navigate().to(baseUrl+"/donations/center/online/haiti");
 		
      	common.isDisplayed("HaitiLogo", "Donation for Haiti");
 		Thread.sleep(2000);

@@ -18,12 +18,12 @@ public class HaitiMail extends ReusableMethods {
 		
 		System.out.println("Donation module for Haiti Mail");
 		
+		driver.get(baseUrl+"/donations/center/mail/haiti");
 		driver.navigate().to(baseUrl+"/donations/center/online/haiti");
-		//driver.get(baseUrl+"/donations/center/mail/haiti");
 		
-//		common.isDisplayed("HaitiLogo", "Donate for Haiti");
-//		Thread.sleep(2000);
-// 		common.testlog("Pass", "Donation for Haiti");
+		common.isDisplayed("HaitiLogo", "Donate for Haiti");
+		Thread.sleep(2000);
+ 		common.testlog("Pass", "Donation for Haiti");
 		
 		common.scrolldowntoElement("Donate_Nav");
 		Thread.sleep(2000);

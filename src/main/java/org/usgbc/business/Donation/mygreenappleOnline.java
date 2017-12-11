@@ -19,7 +19,7 @@ public class mygreenappleOnline extends ReusableMethods {
 		System.out.println("Donation module for mygreenapple Online");
 		
 		driver.get(baseUrl+"/donations/center/online/mygreenapple/");
-		driver.navigate().to(baseUrl+"/donations/center/online/mygreenapple");
+		//driver.navigate().to(baseUrl+"/donations/center/online/mygreenapple");
 		
 		common.isDisplayed("mygreenappleLogo", "Donation for mygreenapple");
 		Thread.sleep(2000);
