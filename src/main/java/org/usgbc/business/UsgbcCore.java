@@ -56,10 +56,19 @@ public class UsgbcCore extends ReusableMethods{
 		signUpForm();//  modified with faker class
 		Thread.sleep(3000);
 		Assert.assertTrue(true);
-		String payment_url = driver.getCurrentUrl();
+		
+		//Earlier it was redirecting to payment url
+		
+//		String payment_url = driver.getCurrentUrl();
+//		Thread.sleep(3000);
+//		System.out.println(payment_url);
+//		Assert.assertEquals(payment_url, baseUrl+"/usgbc/payment");
+		
+		String noauthorised_url = driver.getCurrentUrl();
 		Thread.sleep(3000);
-		//System.out.println(payment_url);
-		Assert.assertEquals(payment_url, baseUrl+"/usgbc/payment");
+		Assert.assertEquals(noauthorised_url, baseUrl+"/notauthorized");
+		
+		
 		System.out.println("-----User registered and created sucessfully-----");
 		
 	}
@@ -76,11 +85,9 @@ public class UsgbcCore extends ReusableMethods{
 		signInForm("signin",3);	//signin 3 => (abi@gmail.com,abi)
 		Thread.sleep(3000);
 		Assert.assertTrue(true);
-		String payment_url = driver.getCurrentUrl();
+		String noauthorised_url = driver.getCurrentUrl();
 		Thread.sleep(3000);
-		Assert.assertEquals(payment_url, baseUrl+"/usgbc/payment");
-		System.out.println("Broken Link for :"+driver.getTitle());
-		BrokenLink.BrokenLinkCheck(payment_url);	
+		Assert.assertEquals(noauthorised_url, baseUrl+"/notauthorized");
 		System.out.println("-----User logged in sucessfully-----");
 	}	
 }

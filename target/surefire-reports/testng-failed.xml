@@ -7,28 +7,6 @@
     <parameter name="environment" value="test"/>
     <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="org.usgbc.regression.ErrorMessageCommRegTest">
-        <methods>
-          <include name="testErrorMessagesCommReg"/>
-          <include name="testErrorMessagesCommRegCondition3"/>
-          <include name="testErrorMessagesCommRegCondition2"/>
-        </methods>
-      </class> <!-- org.usgbc.regression.ErrorMessageCommRegTest -->
-      <class name="org.usgbc.regression.Donation.cfgsOnlineTest">
-        <methods>
-          <include name="testDonateForcfgsByOnline"/>
-        </methods>
-      </class> <!-- org.usgbc.regression.Donation.cfgsOnlineTest -->
-      <class name="org.usgbc.regression.StoreTest">
-        <methods>
-          <include name="testShoppingCartLink2"/>
-          <include name="testShoppingCartLink3"/>
-          <include name="testShoppingCartLink"/>
-          <include name="testStoreGreen"/>
-          <include name="testStoreLEEDandGreen"/>
-          <include name="testStoreLEED"/>
-        </methods>
-      </class> <!-- org.usgbc.regression.StoreTest -->
       <class name="org.usgbc.regression.CommunityRegistrationPriceValidationTest">
         <methods>
           <include name="testCommunityRegistrationForCostValidationEmergingprofessionalMember75"/>
@@ -36,6 +14,11 @@
           <include name="testCommunityRegistrationForCostValidationDefault35"/>
         </methods>
       </class> <!-- org.usgbc.regression.CommunityRegistrationPriceValidationTest -->
+      <class name="org.usgbc.regression.Donation.mygreenappleOnlineTest">
+        <methods>
+          <include name="testDonateFormygreenappleByOnline"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.Donation.mygreenappleOnlineTest -->
       <class name="org.usgbc.regression.UsgbcCoreTest">
         <methods>
           <include name="testUsgbcCoreForNonExistingUser"/>
@@ -50,11 +33,46 @@
           <include name="testCommunityRegistrationForNonExistingUser"/>
         </methods>
       </class> <!-- org.usgbc.regression.CommunityRegistrationTest -->
+      <class name="org.usgbc.regression.ErrorMessageCommRegTest">
+        <methods>
+          <include name="testErrorMessagesCommReg"/>
+          <include name="testErrorMessagesCommRegCondition3"/>
+          <include name="testErrorMessagesCommRegCondition2"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.ErrorMessageCommRegTest -->
       <class name="org.usgbc.regression.Donation.HaitiMailTest">
         <methods>
           <include name="testDonateForHaitiByMail"/>
         </methods>
       </class> <!-- org.usgbc.regression.Donation.HaitiMailTest -->
+      <class name="org.usgbc.regression.StoreTest">
+        <methods>
+          <include name="testShoppingCartLink2"/>
+          <include name="testShoppingCartLink3"/>
+          <include name="testShoppingCartLink"/>
+          <include name="testStoreGreen"/>
+          <include name="testStoreLEEDandGreen"/>
+          <include name="testStoreLEED"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.StoreTest -->
+      <class name="org.usgbc.regression.Donation.cfgsOnlineTest">
+        <methods>
+          <include name="testDonateForcfgsByOnline"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.Donation.cfgsOnlineTest -->
+      <class name="org.usgbc.regression.LoggedUserTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testLoggedUser2"/>
+          <include name="setup"/>
+          <include name="testLoggedUser"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.LoggedUserTest -->
+      <class name="org.usgbc.regression.Donation.HaitiOnlineTest">
+        <methods>
+          <include name="testDonateForHaitiByOnline"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.Donation.HaitiOnlineTest -->
       <class name="org.usgbc.regression.UsgbcStoreTest">
         <methods>
           <include name="testUsgbcStore"/>
@@ -64,6 +82,12 @@
           <include name="testUsgbcStoreLEED2"/>
         </methods>
       </class> <!-- org.usgbc.regression.UsgbcStoreTest -->
+      <class name="org.usgbc.regression.Donation.AmountValidationTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- org.usgbc.regression.Donation.AmountValidationTest -->
       <class name="org.usgbc.regression.Donation.UsgbcOnlineTest">
         <methods>
           <include name="testDonateForUsgbcByOnline"/>
@@ -74,23 +98,6 @@
           <include name="testMembership"/>
         </methods>
       </class> <!-- org.usgbc.regression.MembershipTest -->
-      <class name="org.usgbc.regression.Donation.mygreenappleOnlineTest">
-        <methods>
-          <include name="testDonateFormygreenappleByOnline"/>
-        </methods>
-      </class> <!-- org.usgbc.regression.Donation.mygreenappleOnlineTest -->
-      <class name="org.usgbc.regression.LoggedUserTest">
-        <methods>
-          <include name="tearDown"/>
-          <include name="testLoggedUser2"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- org.usgbc.regression.LoggedUserTest -->
-      <class name="org.usgbc.regression.Donation.HaitiOnlineTest">
-        <methods>
-          <include name="testDonateForHaitiByOnline"/>
-        </methods>
-      </class> <!-- org.usgbc.regression.Donation.HaitiOnlineTest -->
     </classes>
   </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

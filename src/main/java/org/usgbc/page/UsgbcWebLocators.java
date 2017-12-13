@@ -593,10 +593,73 @@ public class UsgbcWebLocators extends Base{
 	 	
 	 	/* Donation module */
 	 	
+	 	// payment page table data 
+	 	
+	 	@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div[2]/div/div/div/div/table/tbody/tr[1]/td")static WebElement Amount_payment;
+	 	public WebElement getAmount_payment() {
+   			return Amount_payment;
+   			}
+	 	@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div[2]/div/div/div/div/table/tbody/tr[3]/td")static WebElement Donor_payment;  
+	 	public WebElement getDonor_payment() {
+   			return Donor_payment;
+   			}
+	 	@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div[2]/div/div/div/div/table/tbody/tr[5]/td" )static WebElement onBehalfOf_payment ;
+	 	public WebElement getonBehalfOf_payment() {
+   			return onBehalfOf_payment;
+   			}
+	 	@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div[2]/div/div/div/div/table/tbody/tr[6]/td")static WebElement SendEcard_payment;
+	 	public WebElement getSendEcard_payment() {
+   			return SendEcard_payment;
+   			}
+	 	@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div[2]/div/div/div/div/table/tbody/tr[7]/td") static WebElement Message_payment ;		
+	 	public WebElement getMessage_payment() {
+   			return Message_payment;
+   			}
+	 	@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div[3]/div/div[2]/b")static WebElement Total_Donation_Payment;
+	 	public WebElement getTotal_Donation_Payment() {
+   			return Total_Donation_Payment;
+   			}
+	 	
+	 	//receipt page table data
+	 	
+		@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div/div[1]/table/tbody/tr[1]/td")static WebElement Order_receipt;
+		public WebElement getOrder_receipt() {
+   			return Order_receipt;
+   			}
+		@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div/div[1]/table/tbody/tr[2]/td")static WebElement Donation_to_receipt;
+		public WebElement getDonation_to_receipt() {
+   			return Donation_to_receipt;
+   			}
+		@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div/div[1]/table/tbody/tr[3]/td")static WebElement Amount_receipt;
+		public WebElement getAmount_receipt() {
+   			return Amount_receipt;
+   			}
+		@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div/div[1]/table/tbody/tr[4]/td")static WebElement Payment_receipt_receipt;
+		public WebElement getPayment_receipt() {
+   			return Payment_receipt_receipt;
+   			}
+		@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div/div[1]/table/tbody/tr[5]/td")static WebElement Donated_on_receipt;
+		public WebElement getDonated_on_receipt() {
+   			return Donated_on_receipt;
+   			}
+		@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div/div[1]/table/tbody/tr[6]/td")static WebElement Donated_by_receipt;
+		public WebElement getDonated_by_receipt() {
+   			return Donated_by_receipt;
+   			}
+		@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div/div[1]/table/tbody/tr[7]/td")static WebElement On_behalf_of_receipt;
+		public WebElement getOn_behalf_of_receipt() {
+   			return On_behalf_of_receipt;
+   			}
+		@FindBy(xpath="html/body/div[2]/div/div[2]/div/div/div/div/form/div[2]/div/div[1]/table/tbody/tr[8]/td")static WebElement eCard_receipt;
+		public WebElement geteCard_receipt() {
+   			return eCard_receipt;
+   			}
+	 	
+	 	
+	 	
 	 	Common common =new Common();
 	 	
 	 	public void donation_By_Mail(String DonationAmount,String DonorName, String DedicatedTo,String Email,String Country,String StreetAddressLine1,String  StreetAddressLine2 ,String City,String Zip  ) throws Exception {
-	 		
 	 		
 	 		common.sendKeys("DonationAmount", DonationAmount );
 	 		Thread.sleep(2000);
@@ -615,43 +678,45 @@ public class UsgbcWebLocators extends Base{
 	 		common.testlog("Pass", "Entering email");
 	 		
 	 		common.scrolldowntoElement("Country");
+	 		
 	 		common.selectdropdown("Country", Country);
 	 		Thread.sleep(2000);
-	 		
 	 		common.testlog("Pass", "Entering Country ");
+	 		
 	 		common.sendKeys("StreetAddressLine1", StreetAddressLine1 );
 	 		Thread.sleep(2000);
-	 		
 	 		common.testlog("Pass", "Entering Street Address Line 1 ");
+	 		
 	 		common.sendKeys("StreetAddressLine2", StreetAddressLine2 );
 	 		Thread.sleep(2000);
-	 		
 	 		common.testlog("Pass", "Entering Street Address Line 2 ");
+	 		
 	 		common.sendKeys("City", City);
 	 		Thread.sleep(3000);
-	 		
 	 		common.testlog("Pass", "Entering City ");
+	 		
 	 		common.sendKeys("Zip", Zip);
 	 		Thread.sleep(2000);
-	 		
 	 		common.testlog("Pass", "Entering Zip ");
+	 		
 	 		common.selectdropdownrandom("State");
 	 		Thread.sleep(2000);
-	 		
 	 		common.testlog("Pass", "Entering State ");
+	 		
 	 		common.submitForm("Continue");
+	 		Thread.sleep(2000);
 	 		common.testlog("Pass", "Clicking Continue ");
 	 		
-	 		//common.waitForJsToLoad();
+	 		common.waitForJsToLoad();
 	 		
-	 		Thread.sleep(2000);
+	 		//Thread.sleep(2000);
 	 	
 	 	}
 	 	
 	 	
 		public void donation_By_Online(String YourContribution,String DonorName, String Name,String Email,String Message) throws Exception {
 			
-			common.sendKeys("YourContribution", YourContribution );
+			common.selectdropdown("YourContribution",YourContribution );
 	 		Thread.sleep(2000);
 	 		common.testlog("Pass", "Entering Your Contribution ");
 	 		
@@ -676,6 +741,7 @@ public class UsgbcWebLocators extends Base{
 	 		Thread.sleep(2000);
 	 		
 	 		common.waitForJsToLoad();
+	 		
 		}
 		
 	 	

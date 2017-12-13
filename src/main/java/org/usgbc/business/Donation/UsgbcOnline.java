@@ -30,7 +30,7 @@ public class UsgbcOnline extends ReusableMethods {
  		common.testlog("Pass", "Scrolled till Donation Nav");
  		
  		donationByOnline("DonationByOnline",3);
-	
+ 		
 		Assert.assertTrue(true);
 		
 		common.assertEqualsMessage("PaymentInfo","Payment info","Verifying Navigation from Donation online page to Payment page");

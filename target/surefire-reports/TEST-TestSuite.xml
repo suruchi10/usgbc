@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="98.412" tests="99" errors="0" skipped="96" failures="3">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="104.655" tests="102" errors="0" skipped="99" failures="2">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\Groupten\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf5471093314336595835.tmp"/>
+    <property name="classworlds.conf" value="C:\Users\Groupten\eclipse-workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2028584074014357868.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin/server;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/bin;C:/Program Files/Java/jdk1.8.0_131/bin/../jre/lib/amd64;C:\Program Files\Java\jdk1.8.0_131\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\DevDesktop\tools;C:\ProgramData\ComposerSetup\bin;C:\xampp\php;C:\Program Files\Apache\maven\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\DevDesktop\php7_0;C:\Program Files\Java\jdk1.8.0_131\bin;C:\Users\Groupten\AppData\Local\Microsoft\WindowsApps;C:\bin;C:\Users\Groupten\AppData\Roaming\Composer\vendor\bin;C:\Users\Groupten\AppData\Local\GitHubDesktop\bin;C:\Program Files\phantomjs-2.1.1-windows\bin;C:\Users\Groupten\AppData\Roaming\npm;;C:\Users\Groupten\Desktop\eclipse\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,75 +60,48 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testDonateForHaitiByOnline" classname="org.usgbc.regression.Donation.HaitiOnlineTest" time="64.381">
-    <failure message="Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//*[@src=&apos;https://qas.usgbc.org/sites/all/themes/secluded/lib/img/promos/haiti/logo.gif&apos;]&quot;}&#10;Command duration or timeout: 60.15 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;&#10;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 7ab70282-36bd-409b-9fdc-bad5ac6466ed&#10;*** Element info: {Using=xpath, value=.//*[@src=&apos;https://qas.usgbc.org/sites/all/themes/secluded/lib/img/promos/haiti/logo.gif&apos;]}" type="java.lang.Error">java.lang.Error: 
-Unable to locate element: {"method":"xpath","selector":".//*[@src='https://qas.usgbc.org/sites/all/themes/secluded/lib/img/promos/haiti/logo.gif']"}
-Command duration or timeout: 60.15 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 7ab70282-36bd-409b-9fdc-bad5ac6466ed
-*** Element info: {Using=xpath, value=.//*[@src='https://qas.usgbc.org/sites/all/themes/secluded/lib/img/promos/haiti/logo.gif']}
-	at org.usgbc.regression.Donation.HaitiOnlineTest.testDonateForHaitiByOnline(HaitiOnlineTest.java:20)
-</failure>
-    <system-out><![CDATA[Report file Created
------Firefox Browser Launched----- 
-Donation module for Haiti Online
-Unable to locate element: {"method":"xpath","selector":".//*[@src='https://qas.usgbc.org/sites/all/themes/secluded/lib/img/promos/haiti/logo.gif']"}
-Command duration or timeout: 60.15 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 7ab70282-36bd-409b-9fdc-bad5ac6466ed
-*** Element info: {Using=xpath, value=.//*[@src='https://qas.usgbc.org/sites/all/themes/secluded/lib/img/promos/haiti/logo.gif']}
-]]></system-out>
-  </testcase>
-  <testcase name="testDonateFormygreenappleByOnline" classname="org.usgbc.regression.Donation.mygreenappleOnlineTest" time="9.208">
-    <failure message="Error communicating with the remote browser. It may have died.&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;&#10;Driver info: driver.version: RemoteWebDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 5eadad08-87fc-411e-ad1a-ffa3e2e8997f" type="java.lang.Error">java.lang.Error: 
+  <testcase name="testDatavalidation" classname="org.usgbc.regression.Donation.AmountValidationTest" time="74.81"/>
+  <testcase name="testLoggedUser" classname="org.usgbc.regression.LoggedUserTest" time="5.166">
+    <failure message="Error communicating with the remote browser. It may have died.&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;&#10;Driver info: driver.version: RemoteWebDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42" type="java.lang.Error">java.lang.Error: 
 Error communicating with the remote browser. It may have died.
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: driver.version: RemoteWebDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5eadad08-87fc-411e-ad1a-ffa3e2e8997f
-	at org.usgbc.regression.Donation.mygreenappleOnlineTest.testDonateFormygreenappleByOnline(mygreenappleOnlineTest.java:18)
+Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42
+	at org.usgbc.regression.LoggedUserTest.testLoggedUser(LoggedUserTest.java:23)
 </failure>
-    <system-out><![CDATA[Screenshot taken
-**********Browser Closed**********
+    <system-out><![CDATA[**********Browser Closed**********
 Report file Created
 -----Firefox Browser Launched----- 
-Donation module for mygreenapple Online
+Logged User  Test
 Error communicating with the remote browser. It may have died.
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: driver.version: RemoteWebDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5eadad08-87fc-411e-ad1a-ffa3e2e8997f
+Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42
 ]]></system-out>
   </testcase>
-  <testcase name="tearDown" classname="org.usgbc.regression.Donation.mygreenappleOnlineTest" time="10.23">
-    <failure message="Error communicating with the remote browser. It may have died.&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;&#10;Driver info: driver.version: FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 5eadad08-87fc-411e-ad1a-ffa3e2e8997f" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: 
+  <testcase name="tearDown" classname="org.usgbc.regression.LoggedUserTest" time="6.196">
+    <failure message="Error communicating with the remote browser. It may have died.&#10;Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;&#10;System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;&#10;Driver info: driver.version: FirefoxDriver&#10;Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42" type="org.openqa.selenium.remote.UnreachableBrowserException">org.openqa.selenium.remote.UnreachableBrowserException: 
 Error communicating with the remote browser. It may have died.
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: driver.version: FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5eadad08-87fc-411e-ad1a-ffa3e2e8997f
+Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42
 Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
 Caused by: java.net.ConnectException: Connection refused: connect
 </failure>
   </testcase>
-  <testcase name="setup" classname="org.usgbc.regression.Donation.cfgsOnlineTest" time="0">
+  <testcase name="tearDown" classname="org.usgbc.regression.LoggedUserTest" time="0">
     <skipped/>
   </testcase>
-  <testcase name="testDonateForcfgsByOnline" classname="org.usgbc.regression.Donation.cfgsOnlineTest" time="0">
+  <testcase name="setup" classname="org.usgbc.regression.LoggedUserTest" time="0">
     <skipped/>
   </testcase>
-  <testcase name="tearDown" classname="org.usgbc.regression.Donation.cfgsOnlineTest" time="0">
+  <testcase name="testLoggedUser2" classname="org.usgbc.regression.LoggedUserTest" time="0">
     <skipped/>
   </testcase>
   <testcase name="setup" classname="org.usgbc.regression.Donation.UsgbcOnlineTest" time="0">
@@ -140,6 +113,33 @@ Caused by: java.net.ConnectException: Connection refused: connect
   <testcase name="tearDown" classname="org.usgbc.regression.Donation.UsgbcOnlineTest" time="0">
     <skipped/>
   </testcase>
+  <testcase name="setup" classname="org.usgbc.regression.Donation.HaitiOnlineTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testDonateForHaitiByOnline" classname="org.usgbc.regression.Donation.HaitiOnlineTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="org.usgbc.regression.Donation.HaitiOnlineTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setup" classname="org.usgbc.regression.Donation.mygreenappleOnlineTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testDonateFormygreenappleByOnline" classname="org.usgbc.regression.Donation.mygreenappleOnlineTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="org.usgbc.regression.Donation.mygreenappleOnlineTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setup" classname="org.usgbc.regression.Donation.cfgsOnlineTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testDonateForcfgsByOnline" classname="org.usgbc.regression.Donation.cfgsOnlineTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="org.usgbc.regression.Donation.cfgsOnlineTest" time="0">
+    <skipped/>
+  </testcase>
   <testcase name="setup" classname="org.usgbc.regression.Donation.HaitiMailTest" time="0">
     <skipped/>
   </testcase>
@@ -147,15 +147,6 @@ Caused by: java.net.ConnectException: Connection refused: connect
     <skipped/>
   </testcase>
   <testcase name="tearDown" classname="org.usgbc.regression.Donation.HaitiMailTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="setup" classname="org.usgbc.regression.MembershipTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="testMembership" classname="org.usgbc.regression.MembershipTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="tearDown" classname="org.usgbc.regression.MembershipTest" time="0">
     <skipped/>
   </testcase>
   <testcase name="setup" classname="org.usgbc.regression.CommunityRegistrationTest" time="0">
@@ -284,24 +275,6 @@ Caused by: java.net.ConnectException: Connection refused: connect
   <testcase name="testUsgbcCoreForExistingUser" classname="org.usgbc.regression.UsgbcCoreTest" time="0">
     <skipped/>
   </testcase>
-  <testcase name="setup" classname="org.usgbc.regression.LoggedUserTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="setup" classname="org.usgbc.regression.LoggedUserTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="testLoggedUser" classname="org.usgbc.regression.LoggedUserTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="tearDown" classname="org.usgbc.regression.LoggedUserTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="tearDown" classname="org.usgbc.regression.LoggedUserTest" time="0">
-    <skipped/>
-  </testcase>
-  <testcase name="testLoggedUser2" classname="org.usgbc.regression.LoggedUserTest" time="0">
-    <skipped/>
-  </testcase>
   <testcase name="setup" classname="org.usgbc.regression.StoreTest" time="0">
     <skipped/>
   </testcase>
@@ -408,6 +381,15 @@ Caused by: java.net.ConnectException: Connection refused: connect
     <skipped/>
   </testcase>
   <testcase name="testUsgbcStoreLEED2" classname="org.usgbc.regression.UsgbcStoreTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="setup" classname="org.usgbc.regression.MembershipTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testMembership" classname="org.usgbc.regression.MembershipTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="tearDown" classname="org.usgbc.regression.MembershipTest" time="0">
     <skipped/>
   </testcase>
 </testsuite>

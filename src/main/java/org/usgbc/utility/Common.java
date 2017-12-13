@@ -121,6 +121,12 @@ public class Common extends Base{
 			findLocater(objectLocater).sendKeys(value);
 	}
 	 
+	public void selectdropdownByIndex(String objectLocator,int value) throws IOException, InterruptedException{
+	    	Select se = new Select(findLocater(objectLocator));
+	    	se.selectByIndex(value);	
+	    	Thread.sleep(3000);
+	}
+	 
 	public void selectdropdown(String objectLocator,String value) throws IOException, InterruptedException{
 	    	Select se = new Select(findLocater(objectLocator));
 	    	se.selectByVisibleText(value);	

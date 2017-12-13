@@ -5,7 +5,8 @@
     <parameter name="browser" value="firefox"/>
   	<parameter name="environment" value="test" />
 	<classes>
-       <class name="org.usgbc.regression.LoggedUserTest"/>
+	    <class name="org.usgbc.regression.Donation.AmountValidationTest"/>
+		<class name="org.usgbc.regression.LoggedUserTest"/>
 	    <class name="org.usgbc.regression.Donation.UsgbcOnlineTest"/>
 		<class name="org.usgbc.regression.Donation.HaitiOnlineTest"/>
 		<class name="org.usgbc.regression.Donation.mygreenappleOnlineTest"/>
