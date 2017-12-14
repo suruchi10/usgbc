@@ -85,31 +85,27 @@ public class AmountValidation extends ReusableMethods{
 	    //System.out.println(eCard);
 	    
 	    YourContribution =YourContribution.concat(".00");
-
-	    if((YourContribution.equals(Amount)) && (YourContribution.equals(Amount_receipt))) {
-	    	Assert.assertTrue(true);
-	    	System.out.println(YourContribution + " :YourContribution  Amount is  Equal  to" + Amount +" :Amount on payment page and Amount on Receipt page amount :" + Amount_receipt);	  
-	    }
 	    
-	    if((DonorName.equals(Donor)) && (DonorName.equals(Donated_by))) {
-	    	Assert.assertTrue(true);
-	    	System.out.println(DonorName+" : DonorName is equal to "+ Donor +": Donor on payment page and Donated by on Receipt page :"+Donated_by);	  
-	    }
+	    Assert.assertEquals(YourContribution, Amount);
+	    Assert.assertEquals(YourContribution, Amount_receipt);
+	    System.out.println(YourContribution + " :YourContribution  Amount is  Equal  to" + Amount +" :Amount on payment page and Amount on Receipt page amount :" + Amount_receipt);	  
+	   	
+	    Assert.assertEquals(DonorName, Donor);
+		Assert.assertEquals(DonorName, Donated_by);
+	    System.out.println(DonorName+" : DonorName is equal to "+ Donor +": Donor on payment page and Donated by on Receipt page :"+Donated_by);	  
 	    
-	    if((Name.equals(onBehalfOf)) && (Name.equals(On_behalf_of))) {
-	    	Assert.assertTrue(true);
-	    	System.out.println(Name+" : Name is equal to "+ onBehalfOf +" : onBehalfOf on payment page and On_behalf_of by on Receipt page : "+On_behalf_of);	  
-	    }
 	    
-	    if((Email.equals(SendEcard))) {
-	    	Assert.assertTrue(true);
-	    	System.out.println(Email+": Email is equal to "+ SendEcard +" :SendEcard on payment page");	
-	    }
+	    Assert.assertEquals(Name, onBehalfOf);
+		Assert.assertEquals(Name, On_behalf_of);
+	    System.out.println(Name+" : Name is equal to "+ onBehalfOf +" : onBehalfOf on payment page and On_behalf_of by on Receipt page : "+On_behalf_of);	  
+	    	    	  
+		Assert.assertEquals(Email, SendEcard);	
+	    System.out.println(Email+": Email is equal to "+ SendEcard +" :SendEcard on payment page");	
+	  
+	    Assert.assertEquals(Message, Message_Payment);
+		Assert.assertEquals(Message, eCard);
+	    System.out.println(Message+" : Message is equal to "+ Message_Payment +": Message on payment page  and eCard on Receipt page :"+eCard);
 	    
-	    if((Message.equals(Message_Payment)) && (Message.equals(eCard))){
-	    	Assert.assertTrue(true);
-	     	System.out.println(Message+" : Message is equal to "+ Message_Payment +": Message_Payment on payment pag  and eCard by on Receipt page :"+eCard);
-	    }
 		
 	}
 }

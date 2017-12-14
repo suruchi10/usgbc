@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" ignored="0" total="1" passed="0">
+<testng-results skipped="5" failed="0" ignored="0" total="5" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="52" started-at="2017-11-19T09:52:03Z" finished-at="2017-11-19T09:52:03Z">
+  <suite name="Default suite" duration-ms="62" started-at="2017-12-14T10:50:02Z" finished-at="2017-12-14T10:50:02Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="52" started-at="2017-11-19T09:52:03Z" finished-at="2017-11-19T09:52:03Z">
-      <class name="org.usgbc.regression.Donation.HaitiTest">
-        <test-method status="FAIL" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:org.usgbc.regression.Donation.HaitiTest@59ec2012]" name="setup" is-config="true" duration-ms="0" started-at="2017-11-19T15:22:03Z" finished-at="2017-11-19T15:22:03Z">
+    <test name="Default test" duration-ms="62" started-at="2017-12-14T10:50:02Z" finished-at="2017-12-14T10:50:02Z">
+      <class name="org.usgbc.regression.CommunityRegistrationTest">
+        <test-method status="FAIL" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:org.usgbc.regression.CommunityRegistrationTest@59ec2012]" name="setup" is-config="true" duration-ms="0" started-at="2017-12-14T16:20:02Z" finished-at="2017-12-14T16:20:02Z">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-in C:\Users\Groupten\eclipse-workspace\usgbc\testng.xml]]>
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-1831523171\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-in C:\Users\Groupten\eclipse-workspace\usgbc\testng.xml
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-1831523171\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParameters(Parameters.java:199)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:443)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:118)
@@ -48,17 +48,17 @@ in C:\Users\Groupten\eclipse-workspace\usgbc\testng.xml
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="SKIP" signature="testCommunityRegistrationForNonExistingUser()[pri:0, instance:org.usgbc.regression.Donation.HaitiTest@59ec2012]" name="testCommunityRegistrationForNonExistingUser" duration-ms="0" started-at="2017-11-19T15:22:03Z" finished-at="2017-11-19T15:22:03Z">
+        <test-method status="SKIP" signature="testCommunityRegistrationForNonExistingUser()[pri:0, instance:org.usgbc.regression.CommunityRegistrationTest@59ec2012]" name="testCommunityRegistrationForNonExistingUser" duration-ms="0" started-at="2017-12-14T16:20:02Z" finished-at="2017-12-14T16:20:02Z">
           <exception class="org.testng.TestNGException">
             <message>
               <![CDATA[
 Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-in C:\Users\Groupten\eclipse-workspace\usgbc\testng.xml]]>
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-1831523171\testng-customsuite.xml]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.testng.TestNGException: 
 Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
-in C:\Users\Groupten\eclipse-workspace\usgbc\testng.xml
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-1831523171\testng-customsuite.xml
 	at org.testng.internal.Parameters.createParameters(Parameters.java:199)
 	at org.testng.internal.Parameters.createParameters(Parameters.java:443)
 	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:118)
@@ -89,7 +89,187 @@ in C:\Users\Groupten\eclipse-workspace\usgbc\testng.xml
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCommunityRegistrationForNonExistingUser -->
-      </class> <!-- org.usgbc.regression.Donation.HaitiTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        <test-method status="SKIP" signature="testCommunityRegistrationForExistingUser()[pri:2, instance:org.usgbc.regression.CommunityRegistrationTest@59ec2012]" name="testCommunityRegistrationForExistingUser" duration-ms="0" started-at="2017-12-14T16:20:02Z" finished-at="2017-12-14T16:20:02Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-1831523171\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-1831523171\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:199)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:443)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:118)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:206)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCommunityRegistrationForExistingUser -->
+        <test-method status="SKIP" signature="testCommunityRegistrationForNonExistingUserToGetRegistered()[pri:1, instance:org.usgbc.regression.CommunityRegistrationTest@59ec2012]" name="testCommunityRegistrationForNonExistingUserToGetRegistered" duration-ms="0" started-at="2017-12-14T16:20:02Z" finished-at="2017-12-14T16:20:02Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-1831523171\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-1831523171\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:199)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:443)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:118)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:206)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCommunityRegistrationForNonExistingUserToGetRegistered -->
+        <test-method status="SKIP" signature="testCommunityRegistrationForNonExistingUserToGetRegistered()[pri:1, instance:org.usgbc.regression.CommunityRegistrationTest@59ec2012]" name="testCommunityRegistrationForNonExistingUserToGetRegistered" duration-ms="0" started-at="2017-12-14T16:20:02Z" finished-at="2017-12-14T16:20:02Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-1831523171\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-1831523171\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:199)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:443)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:118)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:206)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCommunityRegistrationForNonExistingUserToGetRegistered -->
+        <test-method status="SKIP" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:org.usgbc.regression.CommunityRegistrationTest@59ec2012]" name="setup" is-config="true" duration-ms="0" started-at="2017-12-14T16:20:02Z" finished-at="2017-12-14T16:20:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="SKIP" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:org.usgbc.regression.CommunityRegistrationTest@59ec2012]" name="setup" is-config="true" duration-ms="0" started-at="2017-12-14T16:20:02Z" finished-at="2017-12-14T16:20:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="SKIP" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:org.usgbc.regression.CommunityRegistrationTest@59ec2012]" name="setup" is-config="true" duration-ms="0" started-at="2017-12-14T16:20:02Z" finished-at="2017-12-14T16:20:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="SKIP" signature="testCommunityRegistrationForExistingUser()[pri:2, instance:org.usgbc.regression.CommunityRegistrationTest@59ec2012]" name="testCommunityRegistrationForExistingUser" duration-ms="0" started-at="2017-12-14T16:20:02Z" finished-at="2017-12-14T16:20:02Z">
+          <exception class="org.testng.TestNGException">
+            <message>
+              <![CDATA[
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-1831523171\testng-customsuite.xml]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.TestNGException: 
+Parameter 'browser' is required by BeforeMethod on method setup but has not been marked @Optional or defined
+in C:\Users\Groupten\AppData\Local\Temp\testng-eclipse-1831523171\testng-customsuite.xml
+	at org.testng.internal.Parameters.createParameters(Parameters.java:199)
+	at org.testng.internal.Parameters.createParameters(Parameters.java:443)
+	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:118)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:206)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:599)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.TestNGException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCommunityRegistrationForExistingUser -->
+        <test-method status="SKIP" signature="setup(java.lang.String, java.lang.String)[pri:0, instance:org.usgbc.regression.CommunityRegistrationTest@59ec2012]" name="setup" is-config="true" duration-ms="0" started-at="2017-12-14T16:20:02Z" finished-at="2017-12-14T16:20:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+      </class> <!-- org.usgbc.regression.CommunityRegistrationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

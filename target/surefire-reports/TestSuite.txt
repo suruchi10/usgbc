@@ -1,25 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 102, Failures: 2, Errors: 0, Skipped: 99, Time elapsed: 104.655 sec <<< FAILURE! - in TestSuite
-testLoggedUser(org.usgbc.regression.LoggedUserTest)  Time elapsed: 5.166 sec  <<< FAILURE!
-java.lang.Error: 
+Tests run: 103, Failures: 2, Errors: 0, Skipped: 101, Time elapsed: 98.484 sec <<< FAILURE! - in TestSuite
+testDatavalidation(org.usgbc.regression.Donation.AmountValidationTest)  Time elapsed: 67.853 sec  <<< FAILURE!
+java.lang.Error: expected [$50.00] but found [$100.00]
+	at org.usgbc.regression.Donation.AmountValidationTest.testDatavalidation(AmountValidationTest.java:19)
+
+setup(org.usgbc.regression.LoggedUserTest)  Time elapsed: 83.594 sec  <<< FAILURE!
+org.openqa.selenium.remote.UnreachableBrowserException: 
 Error communicating with the remote browser. It may have died.
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: driver.version: RemoteWebDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42
-	at org.usgbc.regression.LoggedUserTest.testLoggedUser(LoggedUserTest.java:23)
-
-tearDown(org.usgbc.regression.LoggedUserTest)  Time elapsed: 6.196 sec  <<< FAILURE!
-org.openqa.selenium.remote.UnreachableBrowserException: 
-Error communicating with the remote browser. It may have died.
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'G10GGNLT049', ip: '192.168.56.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: driver.version: FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42
+Session ID: e25019db-3cf2-494a-bb2d-1417bce50b40
 Caused by: org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:7055 [/127.0.0.1] failed: Connection refused: connect
 Caused by: java.net.ConnectException: Connection refused: connect
 

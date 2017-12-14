@@ -62,7 +62,6 @@
       </class> <!-- org.usgbc.regression.Donation.cfgsOnlineTest -->
       <class name="org.usgbc.regression.LoggedUserTest">
         <methods>
-          <include name="tearDown"/>
           <include name="testLoggedUser2"/>
           <include name="setup"/>
           <include name="testLoggedUser"/>
@@ -86,6 +85,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setup"/>
+          <include name="testDatavalidation"/>
         </methods>
       </class> <!-- org.usgbc.regression.Donation.AmountValidationTest -->
       <class name="org.usgbc.regression.Donation.UsgbcOnlineTest">

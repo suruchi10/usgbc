@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">35 methods, 1 failed,  33 skipped,  1 passed</span>
+                    <span class="method-stats">35 methods, 1 failed,  34 skipped,  </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,7 +101,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.usgbc.regression.LoggedUserTest" hash-for-method="testLoggedUser">testLoggedUser</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.usgbc.regression.Donation.AmountValidationTest" hash-for-method="testDatavalidation">testDatavalidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -195,6 +195,11 @@
                       <br/>
                       <span>
                         <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.usgbc.regression.LoggedUserTest" hash-for-method="testLoggedUser">testLoggedUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.usgbc.regression.LoggedUserTest" hash-for-method="testLoggedUser2">testLoggedUser2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -280,20 +285,6 @@
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.usgbc.regression.Donation.AmountValidationTest" hash-for-method="testDatavalidation">testDatavalidation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
-                  </li>
                 </ul>
               </div> <!-- suite-section-content -->
             </div> <!-- result-section -->
@@ -307,51 +298,23 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">org.usgbc.regression.LoggedUserTest</span>
+              <span class="class-name">org.usgbc.regression.Donation.AmountValidationTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testLoggedUser">
-                  </a> <!-- testLoggedUser -->
-                  <span class="method-name">testLoggedUser</span>
-                  <div class="stack-trace">java.lang.Error: Error communicating with the remote browser. It may have died.
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;G10GGNLT049&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: driver.version: RemoteWebDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=47.0.1, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:665)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy6.click(Unknown Source)
-	at org.usgbc.business.LoggedUser.loggedUserVerification(LoggedUser.java:19)
-	at org.usgbc.regression.LoggedUserTest.testLoggedUser(LoggedUserTest.java:23)
-... Removed 27 stack frames
+                  <a name="testDatavalidation">
+                  </a> <!-- testDatavalidation -->
+                  <span class="method-name">testDatavalidation</span>
+                  <div class="stack-trace">java.lang.Error: expected [$50.00] but found [$100.00]
+	at org.usgbc.business.Donation.AmountValidation.amountTextValidation(AmountValidation.java:90)
+	at org.usgbc.regression.Donation.AmountValidationTest.testDatavalidation(AmountValidationTest.java:19)
+... Removed 32 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">org.usgbc.regression.Donation.mygreenappleOnlineTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testDonateFormygreenappleByOnline">
-                  </a> <!-- testDonateFormygreenappleByOnline -->
-                  <span class="method-name">testDonateFormygreenappleByOnline</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
@@ -384,6 +347,21 @@ Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
+              <span class="class-name">org.usgbc.regression.Donation.mygreenappleOnlineTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testDonateFormygreenappleByOnline">
+                  </a> <!-- testDonateFormygreenappleByOnline -->
+                  <span class="method-name">testDonateFormygreenappleByOnline</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
               <span class="class-name">org.usgbc.regression.UsgbcCoreTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -406,6 +384,35 @@ Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42
                   <a name="testUsgbcCoreForNonExistingUserToGetRegistered">
                   </a> <!-- testUsgbcCoreForNonExistingUserToGetRegistered -->
                   <span class="method-name">testUsgbcCoreForNonExistingUserToGetRegistered</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">org.usgbc.regression.ErrorMessageCommRegTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testErrorMessagesCommReg">
+                  </a> <!-- testErrorMessagesCommReg -->
+                  <span class="method-name">testErrorMessagesCommReg</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testErrorMessagesCommRegCondition2">
+                  </a> <!-- testErrorMessagesCommRegCondition2 -->
+                  <span class="method-name">testErrorMessagesCommRegCondition2</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testErrorMessagesCommRegCondition3">
+                  </a> <!-- testErrorMessagesCommRegCondition3 -->
+                  <span class="method-name">testErrorMessagesCommRegCondition3</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -449,35 +456,6 @@ Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42
                   <a name="testCommunityRegistrationForNonExistingUserToGetRegistered">
                   </a> <!-- testCommunityRegistrationForNonExistingUserToGetRegistered -->
                   <span class="method-name">testCommunityRegistrationForNonExistingUserToGetRegistered</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">org.usgbc.regression.ErrorMessageCommRegTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testErrorMessagesCommReg">
-                  </a> <!-- testErrorMessagesCommReg -->
-                  <span class="method-name">testErrorMessagesCommReg</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testErrorMessagesCommRegCondition2">
-                  </a> <!-- testErrorMessagesCommRegCondition2 -->
-                  <span class="method-name">testErrorMessagesCommRegCondition2</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testErrorMessagesCommRegCondition3">
-                  </a> <!-- testErrorMessagesCommRegCondition3 -->
-                  <span class="method-name">testErrorMessagesCommRegCondition3</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -568,6 +546,13 @@ Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42
               <span class="class-name">org.usgbc.regression.LoggedUserTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLoggedUser">
+                  </a> <!-- testLoggedUser -->
+                  <span class="method-name">testLoggedUser</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="testLoggedUser2">
@@ -672,21 +657,6 @@ Session ID: 327ffd68-135e-4f07-887c-571d2f4ffb42
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-skipped -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">org.usgbc.regression.Donation.AmountValidationTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testDatavalidation">
-                  </a> <!-- testDatavalidation -->
-                  <span class="method-name">testDatavalidation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -758,142 +728,142 @@ data.addRows(35);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testDatavalidation')
 data.setCell(0, 2, 'org.usgbc.regression.Donation.AmountValidationTest')
-data.setCell(0, 3, 74814);
+data.setCell(0, 3, 67843);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testLoggedUser')
-data.setCell(1, 2, 'org.usgbc.regression.LoggedUserTest')
-data.setCell(1, 3, 5159);
+data.setCell(1, 1, 'testDonateForHaitiByMail')
+data.setCell(1, 2, 'org.usgbc.regression.Donation.HaitiMailTest')
+data.setCell(1, 3, 1);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testDonateFormygreenappleByOnline')
-data.setCell(2, 2, 'org.usgbc.regression.Donation.mygreenappleOnlineTest')
+data.setCell(2, 1, 'testShoppingCartLink')
+data.setCell(2, 2, 'org.usgbc.regression.StoreTest')
 data.setCell(2, 3, 0);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testCommunityRegistrationForExistingUser')
-data.setCell(3, 2, 'org.usgbc.regression.CommunityRegistrationTest')
+data.setCell(3, 1, 'testUsgbcStoreGreen')
+data.setCell(3, 2, 'org.usgbc.regression.UsgbcStoreTest')
 data.setCell(3, 3, 0);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testMembership')
-data.setCell(4, 2, 'org.usgbc.regression.MembershipTest')
+data.setCell(4, 1, 'testStoreLEED')
+data.setCell(4, 2, 'org.usgbc.regression.StoreTest')
 data.setCell(4, 3, 0);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testCommunityRegistrationForCostValidationStudentMember50')
-data.setCell(5, 2, 'org.usgbc.regression.CommunityRegistrationPriceValidationTest')
+data.setCell(5, 1, 'testUsgbcStore')
+data.setCell(5, 2, 'org.usgbc.regression.UsgbcStoreTest')
 data.setCell(5, 3, 0);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'testUsgbcStoreGreen')
 data.setCell(6, 2, 'org.usgbc.regression.UsgbcStoreTest')
 data.setCell(6, 3, 0);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testShoppingCartLink2')
-data.setCell(7, 2, 'org.usgbc.regression.StoreTest')
+data.setCell(7, 1, 'testErrorMessagesCommRegCondition2')
+data.setCell(7, 2, 'org.usgbc.regression.ErrorMessageCommRegTest')
 data.setCell(7, 3, 0);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testErrorMessagesCommRegCondition3')
-data.setCell(8, 2, 'org.usgbc.regression.ErrorMessageCommRegTest')
+data.setCell(8, 1, 'testCommunityRegistrationForCostValidationStudentMember50')
+data.setCell(8, 2, 'org.usgbc.regression.CommunityRegistrationPriceValidationTest')
 data.setCell(8, 3, 0);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testUsgbcStore')
-data.setCell(9, 2, 'org.usgbc.regression.UsgbcStoreTest')
+data.setCell(9, 1, 'testDonateForUsgbcByOnline')
+data.setCell(9, 2, 'org.usgbc.regression.Donation.UsgbcOnlineTest')
 data.setCell(9, 3, 0);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'testCommunityRegistrationForCostValidationDefault35')
-data.setCell(10, 2, 'org.usgbc.regression.CommunityRegistrationPriceValidationTest')
+data.setCell(10, 1, 'testStoreGreen')
+data.setCell(10, 2, 'org.usgbc.regression.StoreTest')
 data.setCell(10, 3, 0);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testErrorMessagesCommRegCondition2')
-data.setCell(11, 2, 'org.usgbc.regression.ErrorMessageCommRegTest')
+data.setCell(11, 1, 'testUsgbcStoreLEED2')
+data.setCell(11, 2, 'org.usgbc.regression.UsgbcStoreTest')
 data.setCell(11, 3, 0);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'testDonateForUsgbcByOnline')
-data.setCell(12, 2, 'org.usgbc.regression.Donation.UsgbcOnlineTest')
+data.setCell(12, 1, 'testCommunityRegistrationForNonExistingUserToGetRegistered')
+data.setCell(12, 2, 'org.usgbc.regression.CommunityRegistrationTest')
 data.setCell(12, 3, 0);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'testUsgbcStoreLEED2')
-data.setCell(13, 2, 'org.usgbc.regression.UsgbcStoreTest')
+data.setCell(13, 1, 'testLoggedUser2')
+data.setCell(13, 2, 'org.usgbc.regression.LoggedUserTest')
 data.setCell(13, 3, 0);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'testLoggedUser2')
-data.setCell(14, 2, 'org.usgbc.regression.LoggedUserTest')
+data.setCell(14, 1, 'testCommunityRegistrationForExistingUser')
+data.setCell(14, 2, 'org.usgbc.regression.CommunityRegistrationTest')
 data.setCell(14, 3, 0);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'testDonateForHaitiByOnline')
-data.setCell(15, 2, 'org.usgbc.regression.Donation.HaitiOnlineTest')
+data.setCell(15, 1, 'testUsgbcCoreForNonExistingUser')
+data.setCell(15, 2, 'org.usgbc.regression.UsgbcCoreTest')
 data.setCell(15, 3, 0);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'testUsgbcStoreLEED')
-data.setCell(16, 2, 'org.usgbc.regression.UsgbcStoreTest')
+data.setCell(16, 1, 'testErrorMessagesCommReg')
+data.setCell(16, 2, 'org.usgbc.regression.ErrorMessageCommRegTest')
 data.setCell(16, 3, 0);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'testShoppingCartLink')
-data.setCell(17, 2, 'org.usgbc.regression.StoreTest')
+data.setCell(17, 1, 'testUsgbcStoreGreen2')
+data.setCell(17, 2, 'org.usgbc.regression.UsgbcStoreTest')
 data.setCell(17, 3, 0);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'testCommunityRegistrationForNonExistingUserToGetRegistered')
-data.setCell(18, 2, 'org.usgbc.regression.CommunityRegistrationTest')
+data.setCell(18, 1, 'testLoggedUser')
+data.setCell(18, 2, 'org.usgbc.regression.LoggedUserTest')
 data.setCell(18, 3, 0);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'testErrorMessagesCommReg')
-data.setCell(19, 2, 'org.usgbc.regression.ErrorMessageCommRegTest')
+data.setCell(19, 1, 'testUsgbcCoreForExistingUser')
+data.setCell(19, 2, 'org.usgbc.regression.UsgbcCoreTest')
 data.setCell(19, 3, 0);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'testCommunityRegistrationForCostValidationEmergingprofessionalMember75')
-data.setCell(20, 2, 'org.usgbc.regression.CommunityRegistrationPriceValidationTest')
+data.setCell(20, 1, 'testCommunityRegistrationForNonExistingUser')
+data.setCell(20, 2, 'org.usgbc.regression.CommunityRegistrationTest')
 data.setCell(20, 3, 0);
 data.setCell(21, 0, 21)
-data.setCell(21, 1, 'testCommunityRegistrationForNonExistingUserToGetRegistered')
-data.setCell(21, 2, 'org.usgbc.regression.CommunityRegistrationTest')
+data.setCell(21, 1, 'testMembership')
+data.setCell(21, 2, 'org.usgbc.regression.MembershipTest')
 data.setCell(21, 3, 0);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'testStoreGreen')
-data.setCell(22, 2, 'org.usgbc.regression.StoreTest')
+data.setCell(22, 1, 'testCommunityRegistrationForCostValidationDefault35')
+data.setCell(22, 2, 'org.usgbc.regression.CommunityRegistrationPriceValidationTest')
 data.setCell(22, 3, 0);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'testUsgbcCoreForNonExistingUserToGetRegistered')
-data.setCell(23, 2, 'org.usgbc.regression.UsgbcCoreTest')
+data.setCell(23, 1, 'testStoreLEEDandGreen')
+data.setCell(23, 2, 'org.usgbc.regression.StoreTest')
 data.setCell(23, 3, 0);
 data.setCell(24, 0, 24)
-data.setCell(24, 1, 'testStoreLEEDandGreen')
-data.setCell(24, 2, 'org.usgbc.regression.StoreTest')
+data.setCell(24, 1, 'testCommunityRegistrationForExistingUser')
+data.setCell(24, 2, 'org.usgbc.regression.CommunityRegistrationTest')
 data.setCell(24, 3, 0);
 data.setCell(25, 0, 25)
-data.setCell(25, 1, 'testDonateForHaitiByMail')
-data.setCell(25, 2, 'org.usgbc.regression.Donation.HaitiMailTest')
+data.setCell(25, 1, 'testDonateFormygreenappleByOnline')
+data.setCell(25, 2, 'org.usgbc.regression.Donation.mygreenappleOnlineTest')
 data.setCell(25, 3, 0);
 data.setCell(26, 0, 26)
-data.setCell(26, 1, 'testDonateForcfgsByOnline')
-data.setCell(26, 2, 'org.usgbc.regression.Donation.cfgsOnlineTest')
+data.setCell(26, 1, 'testCommunityRegistrationForCostValidationEmergingprofessionalMember75')
+data.setCell(26, 2, 'org.usgbc.regression.CommunityRegistrationPriceValidationTest')
 data.setCell(26, 3, 0);
 data.setCell(27, 0, 27)
-data.setCell(27, 1, 'testUsgbcCoreForNonExistingUser')
-data.setCell(27, 2, 'org.usgbc.regression.UsgbcCoreTest')
+data.setCell(27, 1, 'testDonateForHaitiByOnline')
+data.setCell(27, 2, 'org.usgbc.regression.Donation.HaitiOnlineTest')
 data.setCell(27, 3, 0);
 data.setCell(28, 0, 28)
-data.setCell(28, 1, 'testCommunityRegistrationForExistingUser')
+data.setCell(28, 1, 'testCommunityRegistrationForNonExistingUserToGetRegistered')
 data.setCell(28, 2, 'org.usgbc.regression.CommunityRegistrationTest')
 data.setCell(28, 3, 0);
 data.setCell(29, 0, 29)
-data.setCell(29, 1, 'testStoreLEED')
-data.setCell(29, 2, 'org.usgbc.regression.StoreTest')
+data.setCell(29, 1, 'testDonateForcfgsByOnline')
+data.setCell(29, 2, 'org.usgbc.regression.Donation.cfgsOnlineTest')
 data.setCell(29, 3, 0);
 data.setCell(30, 0, 30)
-data.setCell(30, 1, 'testUsgbcStoreGreen2')
+data.setCell(30, 1, 'testUsgbcStoreLEED')
 data.setCell(30, 2, 'org.usgbc.regression.UsgbcStoreTest')
 data.setCell(30, 3, 0);
 data.setCell(31, 0, 31)
-data.setCell(31, 1, 'testCommunityRegistrationForNonExistingUser')
-data.setCell(31, 2, 'org.usgbc.regression.CommunityRegistrationTest')
+data.setCell(31, 1, 'testShoppingCartLink3')
+data.setCell(31, 2, 'org.usgbc.regression.StoreTest')
 data.setCell(31, 3, 0);
 data.setCell(32, 0, 32)
-data.setCell(32, 1, 'testShoppingCartLink3')
-data.setCell(32, 2, 'org.usgbc.regression.StoreTest')
+data.setCell(32, 1, 'testErrorMessagesCommRegCondition3')
+data.setCell(32, 2, 'org.usgbc.regression.ErrorMessageCommRegTest')
 data.setCell(32, 3, 0);
 data.setCell(33, 0, 33)
-data.setCell(33, 1, 'testUsgbcStoreGreen')
-data.setCell(33, 2, 'org.usgbc.regression.UsgbcStoreTest')
+data.setCell(33, 1, 'testUsgbcCoreForNonExistingUserToGetRegistered')
+data.setCell(33, 2, 'org.usgbc.regression.UsgbcCoreTest')
 data.setCell(33, 3, 0);
 data.setCell(34, 0, 34)
-data.setCell(34, 1, 'testUsgbcCoreForExistingUser')
-data.setCell(34, 2, 'org.usgbc.regression.UsgbcCoreTest')
+data.setCell(34, 1, 'testShoppingCartLink2')
+data.setCell(34, 2, 'org.usgbc.regression.StoreTest')
 data.setCell(34, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
@@ -931,199 +901,195 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testDatavalidation</span>
-                <span class="method-start">11238 ms</span>
+                <span class="method-start">13541 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=testDatavalidation status=SUCCESS method=AmountValidationTest.testDatavalidation()[...)</span>
-                <span class="method-start">86052 ms</span>
+                <span class="method-name">tearDown([TestResult name=testDatavalidation status=FAILURE method=AmountValidationTest.testDatavalidation()[...)</span>
+                <span class="method-start">81391 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.LoggedUserTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">setup(firefox, test)</span>
-                <span class="method-start">87191 ms</span>
+                <span class="method-start">83463 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">testLoggedUser</span>
-                <span class="method-start">97096 ms</span>
+                <span class="method-start">97136 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">tearDown([TestResult name=testLoggedUser status=FAILURE method=LoggedUserTest.testLoggedUser()[pri:0, instanc...)</span>
-                <span class="method-start">102262 ms</span>
-              </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testLoggedUser2</span>
-                <span class="method-start">103292 ms</span>
+                <span class="method-start">97136 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.Donation.UsgbcOnlineTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testDonateForUsgbcByOnline</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97140 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.Donation.HaitiOnlineTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testDonateForHaitiByOnline</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97142 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.Donation.mygreenappleOnlineTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testDonateFormygreenappleByOnline</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97145 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.Donation.cfgsOnlineTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testDonateForcfgsByOnline</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97147 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.Donation.HaitiMailTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testDonateForHaitiByMail</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97148 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.CommunityRegistrationTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testCommunityRegistrationForNonExistingUser</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97150 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testCommunityRegistrationForNonExistingUserToGetRegistered</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97153 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testCommunityRegistrationForNonExistingUserToGetRegistered</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97153 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testCommunityRegistrationForExistingUser</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97153 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testCommunityRegistrationForExistingUser</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97153 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.CommunityRegistrationPriceValidationTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testCommunityRegistrationForCostValidationDefault35</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97157 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testCommunityRegistrationForCostValidationStudentMember50</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testCommunityRegistrationForCostValidationEmergingprofessionalMember75</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.ErrorMessageCommRegTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testErrorMessagesCommReg</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testErrorMessagesCommRegCondition2</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testErrorMessagesCommRegCondition3</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.UsgbcCoreTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testUsgbcCoreForNonExistingUser</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUsgbcCoreForNonExistingUserToGetRegistered</span>
-                <span class="method-start">103293 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUsgbcCoreForExistingUser</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.StoreTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testStoreGreen</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testStoreLEED</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testStoreLEEDandGreen</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testShoppingCartLink</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testShoppingCartLink2</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testShoppingCartLink3</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97159 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.UsgbcStoreTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testUsgbcStore</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97175 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUsgbcStoreGreen</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97175 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUsgbcStoreGreen</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97175 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUsgbcStoreGreen2</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97175 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUsgbcStoreLEED</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97175 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">testUsgbcStoreLEED2</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97175 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">org.usgbc.regression.MembershipTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testMembership</span>
-                <span class="method-start">103309 ms</span>
+                <span class="method-start">97175 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

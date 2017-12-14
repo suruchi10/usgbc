@@ -12,12 +12,10 @@
 		<class name="org.usgbc.regression.Donation.mygreenappleOnlineTest"/>
 		<class name="org.usgbc.regression.Donation.cfgsOnlineTest"/>
 		<class name="org.usgbc.regression.Donation.HaitiMailTest"/>
-
 	  	<class name="org.usgbc.regression.CommunityRegistrationTest"/>
       	<class name="org.usgbc.regression.CommunityRegistrationPriceValidationTest"/>
 	 	<class name="org.usgbc.regression.ErrorMessageCommRegTest"/>
 	   	<class name="org.usgbc.regression.UsgbcCoreTest"/>
-	  	
 	  	<class name="org.usgbc.regression.StoreTest"/>
 	  	<class name="org.usgbc.regression.UsgbcStoreTest"/>   
 	    <class name="org.usgbc.regression.MembershipTest"/> 
